@@ -1,0 +1,20 @@
+.HeaderContainer{
+    height: 80px;
+    background-color: rgb(41, 41, 41);
+}
+.rowHead{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.links{    
+    cursor: pointer;
+    text-decoration: none;
+}
+.li{
+    list-style: none;
+    color: #C5FFF8;
+}

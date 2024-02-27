@@ -1,0 +1,108 @@
+export const data = [
+  {
+    id: 1,
+    title: "Vista Ensueño Cabañas",
+    desc: "Cabañas de temporada en Potrero de Garay",
+    srcGit: "https://github.com/SilviStani/vista-ensueno",
+    srcWeb: "https://vistaensueno.vercel.app/inicio",
+    image: "/assets/vistaensueno.png",
+  },
+  {
+    id: 2,
+    title: "Silandra Alta Costura",
+    desc: "Casa de novias en Escobar. Bs.As. Argentina",
+    srcGit: "https://github.com/SilviStani/Silandra",
+    srcWeb: "https://silandra.vercel.app/",
+    image: "/assets/silandra.jpeg",
+  },
+  {
+    id: 3,
+    title: "Mirsú Cabañas",
+    desc: "Cabañas en Villa General Belgrano. Mapa de ubicación, links a sitios de interés, sitios de necesidad.",
+    srcGit: "https://github.com/SilviStani/cabanias_mirsu",
+    srcWeb: "https://cabanasmirsu.vercel.app/",
+    image: "/assets/Cabanias-mirsu.png",
+  },
+  {
+    id: 4,
+    title: "Mi Portfolio",
+    desc: "Mi portfolio. Sufrió mas cambios que la economia Argentina",
+    srcGit:
+      "https://github.com/SilviStani/React-Portfolio/tree/main/silvi-portfolio",
+    srcWeb: "https://react-portfolio-silvistani.vercel.app",
+    image: "/assets/PortadaPortfolio.png",
+  },
+  {
+    id: 5,
+    title: "Walter Limpieza Tapizados",
+    desc: "Limpieza de Tapizados en Corrientes y Chaco. Argentina.",
+    srcGit: "https://github.com/SilviStani/Limpieza-Tapizados-Walter",
+    srcWeb: "https://limpieza-tapizados-walter.vercel.app",
+    image: "/assets/Walter-tapizados.png",
+  },
+  {
+    id: 6,
+    title: "Estetyczna Nadja Szewska",
+    desc: "SPA de Estética corporal y facial. Servicio de belleza integral.",
+    srcGit: "https://github.com/SilviStani/Estetyczna-Nadja-Szewska",
+    srcWeb: "https://estetyczna-nadja-szewska.vercel.app/",
+    image: "/assets/introPage.jpg",
+  },
+  {
+    id: 7,
+    title: "Delicias y Manjares",
+    desc: "Las delicias mas exquisitas y frescas de todo Escobar. No dudes en probar :)",
+    srcGit: "https://github.com/SilviStani/deliciasymanjares",
+    srcWeb: "https://deliciasymanjares.vercel.app/",
+    image: "/assets/3.jpg",
+  },
+  {
+    id: 8,
+    title: "Vipets",
+    desc: "Spa pensada en nuestras queridas mascotas. Acceso rápido a las clinicas 24 hs. Proyecto grupal.",
+    srcGit: "https://github.com/Navito-py/PF-PuppyPalace",
+    srcWeb: "",
+    image: "/assets/vipets.png",
+  },
+  {
+    id: 9,
+    title: "Food*HenryApp",
+    desc: "SPA/Proyecto individual, Henry Bootcamp",
+    srcGit: "https://github.com/SilviStani/Pi-Food",
+    srcWeb: "",
+    image: "/assets/foodapp.jpg",
+  },
+  {
+    id: 10,
+    title: "Chronometer",
+    desc: "A Single & Simple Chronometer pure redux",
+    srcGit: "https://github.com/SilviStani/Chronometer-Countdown-Timer",
+    srcWeb: "",
+    image: "/assets/chronometer.png",
+  },
+  {
+    id: 11,
+    title: "TodoList: Vacation",
+    desc: "Una Todo list creada a puro vanilla javascript. Sus efectos y estilos en Css.",
+    srcGit: "https://github.com/SilviStani/Vacation-TodoList",
+    srcWeb: "",
+    image: "/assets/Todolist.png",
+  },
+];
+/*    {
+        id: ,
+        title: "",
+        desc: "",
+        srcGit: "",
+        srcWeb: "",
+        image: ""
+    },
+    {
+        id: ,
+        title: "",
+        desc: "",
+        srcGit: "",
+        srcWeb: "",
+        image: ""
+    }
+    */
