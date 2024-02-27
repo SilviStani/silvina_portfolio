@@ -13,8 +13,14 @@
 .links{    
     cursor: pointer;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .li{
     list-style: none;
-    color: #C5FFF8;
+    color: whitesmoke;
+}
+.links:hover{
+    transform: scale(1.2);
 }

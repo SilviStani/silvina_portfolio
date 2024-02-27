@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
     border-top: 2px solid black;
-    background-color: #C5FFF8;
+    background-color: crimson;
     width: 100%;
     height: 100%;
     border-radius: 40% 0%;
@@ -49,7 +49,7 @@
     margin: 12px;
     font-size: 60px;
     font-style: italic;
-    color: #C5FFF8;
+    color: crimson;
     font-family: "Dancing Script", cursive;
 }
 
@@ -61,7 +61,7 @@
 
 .span {
     font-family: monospace, cursive;
-    color: #C5FFF8;
+    color: crimson;
     font-size: 35px;
     font-style: italic;
 }

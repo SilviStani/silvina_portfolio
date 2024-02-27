@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../Styles/Header.module.css";
-import { data } from "../Header/data.js";
+import { data } from "./data.js";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,6 +27,7 @@ const Header = () => {
             </Link>
           )
         )}
+      <p style={{fontSize:"40px", color: "whitesmoke", fontFamily:"Dancing Script", transform: "rotate(-8deg)"}}>Silvina Dev</p>
       </ul>
     </header>
   );

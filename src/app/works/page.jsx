@@ -42,7 +42,7 @@ const Works = () => {
               objectFit="cover"
               style={{filter: "blur(5px)"}}
             />
-            <article className={styles.contDesc}>
+            <article className={styles.contDesc} key={d.id}>
               <article className={styles.LeftCont}>
               <Image
               key={i}
@@ -62,7 +62,7 @@ const Works = () => {
                     <p>GitHub</p>
                   </Link>
                   {d.srcWeb.length > 0 ?
-                  <Link href={d.srcWeb} className={styles.link}>
+                  <Link href={d.srcWeb} className={styles.link} >
                     <p>Web</p>
                   </Link>
                   :

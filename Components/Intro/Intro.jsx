@@ -31,9 +31,9 @@ const Intro = () => {
   return (
     <section className={styles.Main} id="Main-Section">
       <article className={styles.Left} id="Left">
-        <section className={styles.imageContainer} id="Image-Conatiner">
+        <article className={styles.imageContainer} id="Image-Conatiner">
           <Image src={"/assets/laptopwave.png"} width={600} height={600} id="Image-wave-laptop"/>
-        </section>
+        </article>
       </article>
       <article className={styles.Right} id="Right">
         <div className={styles.wrapper} id="Text-Container">
