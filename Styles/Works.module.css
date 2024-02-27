@@ -24,7 +24,7 @@
 
 .wrapperPublicidad {
     height: 100%;
-    width: 1100vw;
+    width: 1200vw;
     display: flex;
     transition: all 1.5s ease-in-out;
 }
@@ -54,6 +54,8 @@
 }
 
 .imageCarousel{
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 1px rgb(32, 32, 32);
 }
@@ -66,6 +68,10 @@
     border-radius: 20px;
     height: 300px;
     box-shadow: 5px 5px 10px 1px rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {

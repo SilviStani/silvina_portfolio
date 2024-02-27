@@ -1,5 +1,13 @@
 export const data = [
   {
+    id: 0,
+    title: "Este Carrusel",
+    desc: "fué desarrollado con puro CSS & Javascript",
+    srcGit: "",
+    srcWeb: "",
+    image: "/assets/carrusel.jpg",
+  },
+  {
     id: 1,
     title: "Vista Ensueño Cabañas",
     desc: "Cabañas de temporada en Potrero de Garay",
