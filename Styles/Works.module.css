@@ -57,6 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
+    transition: all 1s ease-in-out;
     box-shadow: 5px 5px 10px 1px rgb(32, 32, 32);
 }
 
@@ -110,5 +111,10 @@
     font-style: italic;
     transform: rotate();
 }
-
+.arrowContainerP:hover, .link:hover{
+    transform: scale(1.1);
+}
+.imageCarousel:hover{
+    transform: scale(1.05);
+}
 @media screen and (max-width: 426px) {}

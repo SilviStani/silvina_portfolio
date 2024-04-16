@@ -9,7 +9,6 @@ const Header = () => {
     <header className={styles.HeaderContainer}>
       <ul className={styles.rowHead}>
         {data.map((e) =>
-          e.src ? (
             <Link href={e.url} target={e.target} className={styles.links} key={e.id}>
               <Image
                 src={e.src}
@@ -19,15 +18,7 @@ const Header = () => {
                 id={e.id}
               />
             </Link>
-          ) : (
-            <Link href={e.url} target={e.target} className={styles.links} key={e.id}>
-              <li key={e.id} className={styles.li}>
-                {e.title}
-              </li>
-            </Link>
-          )
         )}
-      <p style={{fontSize:"40px", color: "whitesmoke", fontFamily:"Dancing Script", transform: "rotate(-8deg)"}}>Silvina Dev</p>
       </ul>
     </header>
   );

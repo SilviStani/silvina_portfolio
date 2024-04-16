@@ -21,6 +21,10 @@
     width: 50vw;
     height: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .imageContainer {
@@ -64,4 +68,35 @@
     color: crimson;
     font-size: 35px;
     font-style: italic;
+}
+.wrapper2{
+    color: white;
+    width: 80%;
+    height: 40%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+    border-radius: 60% 0%;
+    margin-bottom: 5%;
+}
+
+.btn{
+    animation:movement linear infinite 5s;
+}
+
+@keyframes movement {
+    
+    0%{
+        transform: rotate(-25deg);
+    }  
+    50%{
+        transform: rotate(25deg);
+    }     
+    100%
+    {
+        transform: rotate(-25deg);
+    }
 }

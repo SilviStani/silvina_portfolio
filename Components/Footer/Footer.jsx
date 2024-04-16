@@ -4,7 +4,8 @@ import { data } from "./data";
 import Link from "next/link";
 
 const Footer = () => {
-  const date = Date();
+  const time = Date();
+  let date = time.substring(0,21);
   return (
     <footer className={styles.FooterContainer}>
       <section className={styles.left}>

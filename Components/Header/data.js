@@ -4,10 +4,12 @@ export const data = [
     title: "Silvina Dev",
     url: "/",
     src: "/assets/github_st.png",
-  },
+  }
+];
+/*
   {
     id: 2,
     title: "Trabajos",
     url: "/works",
-  },
-];
+  }
+  */
