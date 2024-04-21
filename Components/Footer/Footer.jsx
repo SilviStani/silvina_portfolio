@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   const time = Date();
-  let date = time.substring(0,21);
+  let date = time.substring(0, 16);
   return (
     <footer className={styles.FooterContainer}>
       <section className={styles.left}>
