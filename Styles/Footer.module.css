@@ -1,8 +1,9 @@
 .FooterContainer{
-    height: 80px;
+    height: 50px;
     width: 100%;
     background-color: rgb(41, 41, 41);
     display: flex;
+    color: whitesmoke;
 }
 
 .left{
@@ -16,33 +17,16 @@
 .right{
     height: 100%;
     width: 40%;
-    color: whitesmoke;
-    border-left: rgb(122, 122, 122) 2px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(89, 89, 89);
-
 }
 .leftArticle{
     display: flex;
     justify-content: space-around;
     width: 100%;
-}
-.link{
-    text-decoration: none;
-    color: whitesmoke;
-    border: 1px  rgb(89, 89, 89) solid;
-    padding: 1.5%;
-    border-radius: 5px;
-    /*background: linear-gradient(25deg, black, rgb(89, 89, 89));*/
-    border-left: gray 1.5px solid;
-    background-color: rgb(89, 89, 89);
-}
-.link:hover{
-    transform: scale(1.1);
 }
 .row{
     display: flex;
@@ -55,5 +39,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: whitesmoke 1.5px solid;
 }

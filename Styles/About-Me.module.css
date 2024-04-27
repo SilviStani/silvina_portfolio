@@ -1,0 +1,114 @@
+.Container{
+    height: calc(100% - 130px);
+    background-color:rgb(27, 27, 27);
+}
+.UpperContainer{
+    width: 100%;
+    display: flex;
+    color: whitesmoke;
+}
+.h1{
+    padding: 2px;
+    color: whitesmoke;
+    font-family: 'kanit-black' !important;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+.One, .Three, .Four, .Five, .Six{
+    flex: 1;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1%;
+}
+.One{
+    background-color: rgb(239, 239, 0);
+}
+.Two{
+    text-align: center;
+    margin-top: 5%;
+    background-color: crimson;
+    flex: 1;
+    height: 400px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Three{
+    text-align: center;
+    background-color: rgb(0, 174, 0);
+    padding: 10px;
+}
+.Four{
+    text-align: center;
+    background-color: blue;
+    padding: 10px;
+}
+.Five{
+    text-align: center;
+    background-color: purple;
+    padding: 10px;
+    margin-top: 5%;
+
+}
+
+.Six{
+    text-align: center;
+    background-color: rgb(220, 143, 0);
+    padding: 10px;
+}
+.Seven{
+    margin-top: 2%;
+    padding: 5px;
+    background-color: crimson;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.img{
+    transform: rotate(-5deg);
+    border-radius: 10px;
+    height: 250px !important;
+    width: fit-content !important;
+    box-shadow: 5px 5px 3px 5px rgb(183, 183, 0);
+}
+.Span{
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'sedan-italic';
+    text-align: center;
+    font-style: italic;
+}
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'sedan-italic';
+    font-style: italic;
+}
+.desc{
+    padding: 1%;
+    margin: 2px;
+    font-family: 'kanit-black' !important;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+}
+@font-face {
+    font-family: 'sedan-italic';
+    src: url(/Sedan-Italic.ttf);
+}
+@font-face {
+    font-family: 'kanit-black';
+    src: url(/Kanit-Black.ttf);
+}
+.link{
+    color: whitesmoke;
+    text-decoration: none;
+}

@@ -17,6 +17,7 @@ const Header = () => {
                 width={60}
                 id={e.id}
               />
+              <p>{e.title}</p>
             </Link>
         )}
       </ul>

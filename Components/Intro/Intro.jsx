@@ -51,24 +51,6 @@ const Intro = () => {
             <span ref={textRef} className={styles.span}></span>
           </h3>
         </article>
-          <span style={{marginBottom: "5%", width: "100%", height: "2px", backgroundColor: "whitesmoke"}}></span>
-        <article className={styles.wrapper2} id="Text-Container">
-          <h2
-            className={styles.text}
-            style={{ fontStyle: "italic", fontSize: "25px" }}
-          >
-            ¿Quieres ver mis trabajos?
-          </h2>
-          <Link href={"/works"}>
-            <Image
-            src={"/assets/LupaSil.png"}
-            alt="usando la lupa"
-            height={120}
-            width={120}
-            className={styles.btn}
-            />
-          </Link>
-        </article>
       </article>
     </section>
   );
