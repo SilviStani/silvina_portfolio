@@ -2,7 +2,7 @@
 .Main {
     display: flex;
     margin: 0;
-    height: 100vh;
+    height: calc(100vh + 80px);
     width: 100vw;
 }
 

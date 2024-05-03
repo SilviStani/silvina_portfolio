@@ -4,7 +4,7 @@ import styles from "../../Styles/Intro.module.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
-import Link from "next/link";
+
 
 const Intro = () => {
   const textRef = useRef();

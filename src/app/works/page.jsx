@@ -67,14 +67,14 @@ const Works = () => {
                       <p>GitHub</p>
                     </Link>
                   ) : (
-                    <span style={{display: "none"}}></span>
+                    <span style={{ display: "none" }}></span>
                   )}
                   {d.srcWeb.length > 0 ? (
                     <Link href={d.srcWeb} className={styles.link}>
                       <p>Web</p>
                     </Link>
                   ) : (
-                    <span style={{display: "none"}}></span>
+                    <span style={{ display: "none" }}></span>
                   )}
                 </article>
               </article>
@@ -100,25 +100,3 @@ const Works = () => {
 };
 
 export default Works;
-/*  <section className={styles.Container}>
-      <article className={styles.left}>
-        {
-          data.map((e)=>(
-            <article key={e.id} className={styles.imageContainer}>
-              <Image
-              id={e.id}
-              src={e.image}
-              alt={e.desc}
-              height={800}
-              width={800}
-              style={{objectFit: "contain"}}
-              className={styles.image}
-              />
-            </article>
-          ))
-        }
-      </article>
-      <article className={styles.right}>
-
-      </article>
-    </section>*/

@@ -1,5 +1,5 @@
 .ContainerP {
-    height: calc(100vh - 130px);
+    height: calc(100vh + 130px);
     overflow: hidden;
 }
 
@@ -117,4 +117,5 @@
 .imageCarousel:hover{
     transform: scale(1.05);
 }
+
 @media screen and (max-width: 426px) {}

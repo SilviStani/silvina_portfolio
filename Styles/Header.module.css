@@ -1,6 +1,9 @@
 .HeaderContainer{
     height: 80px;
     background-color: rgb(41, 41, 41);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 .rowHead{
     height: 100%;
