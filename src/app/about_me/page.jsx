@@ -4,6 +4,9 @@ import styles from "../../../Styles/About-Me.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+const whatsApp =
+  "https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!";
+
 const AboutMe = () => {
   return (
     <section className={styles.Container}>
@@ -65,9 +68,20 @@ const AboutMe = () => {
           <p className={styles.title}>Trabajo</p>
           <p className={styles.desc}>
             Actualmente, trabajo en un empresa internacional, Accenture, como
-            Tester Automation, donde me capcitan dia a dia con las mejores y mas
-            nuevas tecnologias
+            Tester Automation, donde me capacitan día a día con las mejores y
+            mas nuevas tecnologias
           </p>
+        </article>
+      </article>
+      <article className={styles.UpperContainer}>
+        <article className={styles.One}>
+          <p className={styles.desc}></p>
+        </article>
+        <article className={styles.Two}>
+          <p className={styles.desc}></p>
+        </article>
+        <article className={styles.Three}>
+          <p className={styles.desc}></p>
         </article>
       </article>
       <article className={styles.Seven}>
@@ -75,7 +89,7 @@ const AboutMe = () => {
           Si estás buscando un desarrollador web comprometido y apasionado que
           pueda convertir tus ideas en realidad,
         </p>
-        <Link className={styles.link} href={"https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!"} target="_blank">
+        <Link className={styles.link} href={whatsApp} target="_blank">
           <span className={styles.Span}>
             ¡No dudes en ponerte en Contacto Conmigo!
           </span>

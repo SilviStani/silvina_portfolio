@@ -16,8 +16,9 @@ const Header = () => {
                 height={60}
                 width={60}
                 id={e.id}
+                className={styles.navImage}
               />
-              <p>{e.title}</p>
+              <p className={styles.p}>{e.title}</p>
             </Link>
         )}
       </ul>

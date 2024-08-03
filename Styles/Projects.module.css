@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+
+.cont {
+    height: calc(100% + 130px);
+    background-color: rgb(45, 45, 45);
+}
+
+.Upper {
+    height: calc(50vh + 80px);
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    background-color: crimson;
+}
+
+.Left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.stamp {
+    text-shadow: black 1px 0 10px;
+    transform: rotate(-5deg);
+    height: fit-content;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.Right {
+    flex: 2;
+    display: flex;
+}
+
+.title {
+    font-family: "Sedan SC", serif;
+    letter-spacing: 2px;
+    font-size: 35px;
+}
+
+.DescContainer {
+    margin-top: 4%;
+}
+
+.p {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 20px;
+    text-shadow: black;
+}
+
+.Lower {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.CardContainer {
+    box-shadow: 5px 5px 1px 1px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    margin: 1%;
+    background-color: aliceblue;
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+}
+.CardContainer:hover{
+    box-shadow: 5px 5px 8px 1px gray;
+}
+.Imagen{
+    padding: 1px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.Imagen:hover{
+    transform:scale(1.1) ;
+}
+.Text{
+    height: 40%;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+.h3{
+    font-size: 25px;
+    text-align: center;
+    font-family: "Sedan SC", serif;
+}
+.link{
+    padding: 3px;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 2px;
+    text-align: center;
+    font-family: "Sedan SC", serif;
+    text-shadow: rgb(52, 52, 52) 1px 0 10px;
+}
+.link:hover{
+    transform: scale(1.05);
+}
+.img {
+    border: rgb(200, 200, 200) 1.5px solid;
+    margin-top: 1%;
+    border-radius: 20px;
+    height: fit-content !important; 
+    box-shadow: 5px 8px 3px 5px rgb(187, 187, 187);
+}
+.DescComponent{
+    width: 500px;
+    padding: 10px;
+    margin: 3px;
+    background-color: rgb(197, 241, 255);
+    border-radius: 10px;
+    border: 1px solid lightblue;
+}

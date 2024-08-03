@@ -31,6 +31,7 @@ const Intro = () => {
   }, []);
   return (
     <section className={styles.Main} id="Main-Section">
+      <article className={styles.upper}></article>
       <article className={styles.Left} id="Left">
         <article className={styles.imageContainer} id="Image-Conatiner">
           <Image
@@ -38,6 +39,7 @@ const Intro = () => {
             width={600}
             height={600}
             id="Image-wave-laptop"
+            className={styles.inner_img}
           />
         </article>
       </article>

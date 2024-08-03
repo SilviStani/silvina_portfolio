@@ -28,3 +28,24 @@
 .links:hover{
     transform: scale(1.05);
 }
+.p{
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.pMobile{
+    display: none;
+}
+@media only screen and (max-width: 480px) {
+    .HeaderContainer{
+        height: 50px;
+    }
+    .navImage{
+        height: 28px;
+        width: 28px;
+    }
+    .p{
+        font-size: 12px;
+        font-family: serif;
+    }
+}

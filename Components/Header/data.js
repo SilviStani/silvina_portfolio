@@ -7,13 +7,13 @@ export const data = [
   },
   {
     id: 2,
-    title: "Trabajos",
-    url: "/works",
+    title: "Proyectos",
+    url: "/projects",
     src: "/assets/LupaSil.png",
   },
   {
     id: 3,
-    title: "Sobre Mi",
+    title: "Me & Skills",
     url: "/about_me",
     src: "/assets/laptopwave.png",
   },
