@@ -126,3 +126,39 @@
     border-radius: 10px;
     border: 1px solid lightblue;
 }
+
+@media screen and (max-width: 480px){
+    .Upper{
+        margin-top: 0;
+        flex-direction: column;
+        height: 40vh;
+        padding-top: 0px;
+        align-items: center;
+        justify-content: center;
+        justify-content:space-evenly;
+    }
+    .Right{
+        justify-content: center;
+    }
+    .Left {
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        margin-top: 5%;
+    }
+    .stamp{
+        transform: rotate(0deg);
+        padding: 0px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    .DescContainer{
+        display: none;
+    }
+    .imgTitle{
+        width: 200px;
+        height: 200px;
+    }
+}

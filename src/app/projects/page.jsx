@@ -23,6 +23,7 @@ const Trabajos = () => {
         </div>
         <div className={styles.Right}>
           <Image
+          className={styles.imgTitle}
             src={"/assets/studyings.png"}
             alt="C# knowledge"
             width={300}
