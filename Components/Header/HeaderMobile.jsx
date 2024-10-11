@@ -13,8 +13,8 @@ const HeaderMobile = () => {
           <Image
             src="/assets/menu-principal.png"
             alt="menu inicio"
-            height={40}
-            width={40}
+            height={30}
+            width={30}
             id="inicio"
             className={styles.navImage}
           />

@@ -41,7 +41,7 @@
     display: none;
 }
 
-.movile {
+.mobile {
     display: none;
 }
 
@@ -57,7 +57,7 @@
     }
 
     .mobile {
-        background-color: crimson;
+        height: 50px;
         width: 120px;
         display: flex;
         flex-direction: column;
@@ -66,7 +66,7 @@
         top: 0;
     }
     .acordeon {
-        background-color: crimson;
+        background-color:rgb(41, 41, 41);;
         color: transparent;
         position: absolute;
         top: 0;

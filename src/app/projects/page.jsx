@@ -3,7 +3,6 @@ import styles from "../../../Styles/Projects.module.css";
 import Image from "next/image";
 import Cards from "../../../Components/Cards/Cards";
 
-
 const Trabajos = () => {
   return (
     <div className={styles.cont}>
@@ -13,7 +12,7 @@ const Trabajos = () => {
             <h2 className={styles.title}>Proyectos</h2>
           </div>
           <Image
-          className={styles.imgTitle}
+            className={styles.imgTitle}
             src={"/assets/studyings.png"}
             alt="C# knowledge"
             width={150}
@@ -22,7 +21,7 @@ const Trabajos = () => {
         </div>
       </div>
       <div className={styles.Lower}>
-       <Cards/>
+        <Cards />
       </div>
     </div>
   );
