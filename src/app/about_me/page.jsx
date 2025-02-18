@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../../../Styles/About-Me.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import MobileAboutMe from "../../../Components/About_Me_Mobile/MobileAboutMe";
 
 const whatsApp =
   "https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!";
@@ -95,6 +96,7 @@ const AboutMe = () => {
           </span>
         </Link>
       </article>
+      <MobileAboutMe/>
     </section>
   );
 };

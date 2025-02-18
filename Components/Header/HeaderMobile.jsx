@@ -3,7 +3,6 @@ import styles from "../../Styles/Header.module.css";
 import { data } from "./data.js";
 import Link from "next/link";
 import Image from "next/image";
-import { Artifika } from "next/font/google";
 
 const HeaderMobile = () => {
   return (
@@ -25,8 +24,7 @@ const HeaderMobile = () => {
               href={e.url}
               target={e.target}
               className={styles.links}
-              key={e.id}
-            >
+              >
               <Image
                 src={e.src}
                 alt={e.title}
@@ -34,6 +32,7 @@ const HeaderMobile = () => {
                 width={40}
                 id={e.id}
                 className={styles.navImage}
+                key={e.id}
               />
               <p className={styles.p}>{e.title}</p>
               {e.id < 6 ? (
@@ -50,16 +49,3 @@ const HeaderMobile = () => {
 };
 
 export default HeaderMobile;
-/**    {data.map((e) =>
-            <Link href={e.url} target={e.target} className={styles.links} key={e.id}>
-              <Image
-                src={e.src}
-                alt={e.title}
-                height={60}
-                width={60}
-                id={e.id}
-                className={styles.navImage}
-              />
-              <p className={styles.p}>{e.title}</p>
-            </Link>
-        )} */

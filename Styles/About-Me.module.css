@@ -1,13 +1,15 @@
-.Container{
+.Container {
     height: calc(100% - 130px);
-    background-color:rgb(27, 27, 27);
+    background-color: rgb(27, 27, 27);
 }
-.UpperContainer{
+
+.UpperContainer {
     width: 100%;
     display: flex;
     color: whitesmoke;
 }
-.h1{
+
+.h1 {
     padding: 2px;
     color: whitesmoke;
     font-family: 'kanit-black' !important;
@@ -15,7 +17,12 @@
     font-size: 30px;
     font-style: italic;
 }
-.One, .Three, .Four, .Five, .Six{
+
+.One,
+.Three,
+.Four,
+.Five,
+.Six {
     flex: 1;
     height: 350px;
     display: flex;
@@ -24,10 +31,12 @@
     flex-direction: column;
     margin-top: 1%;
 }
-.One{
+
+.One {
     background-color: rgb(239, 239, 0);
 }
-.Two{
+
+.Two {
     text-align: center;
     margin-top: 5%;
     background-color: crimson;
@@ -39,17 +48,20 @@
     justify-content: center;
     align-items: center;
 }
-.Three{
+
+.Three {
     text-align: center;
     background-color: rgb(0, 174, 0);
     padding: 10px;
 }
-.Four{
+
+.Four {
     text-align: center;
     background-color: blue;
     padding: 10px;
 }
-.Five{
+
+.Five {
     text-align: center;
     background-color: purple;
     padding: 10px;
@@ -57,12 +69,13 @@
 
 }
 
-.Six{
+.Six {
     text-align: center;
     background-color: rgb(220, 143, 0);
     padding: 10px;
 }
-.Seven{
+
+.Seven {
     margin-top: 2%;
     padding: 5px;
     background-color: crimson;
@@ -73,42 +86,109 @@
     align-items: center;
     height: 200px;
 }
-.img{
+
+.img {
     transform: rotate(-5deg);
     border-radius: 10px;
     height: 250px !important;
     width: fit-content !important;
     box-shadow: 5px 5px 3px 5px rgb(183, 183, 0);
 }
-.Span{
+
+.Span {
     font-weight: bold;
     font-size: 25px;
     font-family: 'sedan-italic';
     text-align: center;
     font-style: italic;
 }
-.title{
+
+.title {
     font-size: 25px;
     font-weight: bold;
     font-family: 'sedan-italic';
     font-style: italic;
 }
-.desc{
+
+.desc {
     padding: 1%;
     margin: 2px;
     font-family: 'kanit-black' !important;
     font-size: 18px;
     letter-spacing: 0.2px;
 }
+
 @font-face {
     font-family: 'sedan-italic';
     src: url(/Sedan-Italic.ttf);
 }
+
 @font-face {
     font-family: 'kanit-black';
     src: url(/Kanit-Black.ttf);
 }
-.link{
+
+.link {
     color: whitesmoke;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .acordeonMobile {
+        height: 100%;
+        width: 100vw;
+    }
+    .h1{
+        padding: 3%;
+    }
+    .One{
+        margin: 4%;
+        width: 80%;
+    }
+    .img{
+        width: 150px !important;
+        height: fit-content !important;
+        border-radius: 20px;
+    }
+
+    .summaryMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .articleMobile:nth-of-type(2),
+    .articleMobile:nth-of-type(5),
+    .articleMobile:nth-of-type(8) {
+        background-color: crimson;
+    }
+
+    .articleMobile:nth-of-type(4),
+    .articleMobile:nth-of-type(7) {
+        background-color: green;
+    }
+
+    .articleMobile:nth-of-type(3),
+    .articleMobile:nth-of-type(6) {
+        background-color: blue;
+    }
+
+    .articleMobile {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: fit-content;
+        margin-bottom: 5%;
+        padding: 5%;
+    }
+
+    .p {
+        color: whitesmoke;
+    }
+
+    .UpperContainer,
+    .Seven {
+        display: none;
+    }
 }
