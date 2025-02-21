@@ -29,7 +29,7 @@ const Header = () => {
           </Link>
         ))}
       </ul>
-      <HeaderMobile></HeaderMobile>
+      <HeaderMobile/>
     </header>
   );
 };

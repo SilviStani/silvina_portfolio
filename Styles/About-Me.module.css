@@ -12,7 +12,7 @@
 
 .h1 {
     padding: 2px;
-    color: whitesmoke;
+    color: #5f005f;
     font-family: 'kanit-black' !important;
     text-align: center;
     font-size: 30px;
@@ -204,9 +204,9 @@
         font-family: cursive !important;
         padding: 2%;
     }
-    .p, .h1 {
-        color: black;
-        text-shadow: 0 0 5px gray;
+    .p {
+        color: whitesmoke;
+        text-shadow: 0 0 5px gray, 0 0 7.5px gray, 0 0 10px gray;
     }
     .p:nth-child(odd){
         font-family:cursive;

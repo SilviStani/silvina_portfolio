@@ -8,7 +8,6 @@ const MobileAboutMe = () => {
   return (
     <details className={styles.acordeonMobile}>
       <summary className={styles.summaryMobile}>
-      <h1 className={styles.h1}>Sobre Mi</h1>
         <article className={styles.One}>
           <Image
             src={"/assets/silvina_accenture.jpeg"}

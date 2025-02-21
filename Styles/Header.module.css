@@ -1,6 +1,6 @@
 .HeaderContainer {
     height: 80px;
-    background-color: rgb(41, 41, 41);
+    background-color: #fdbe87;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -68,7 +68,7 @@
         top: 0;
     }
     .acordeon {
-        background-color:rgb(41, 41, 41);;
+        background-color: #fdbe87;
         color: transparent;
         position: absolute;
         top: 0;
@@ -85,6 +85,7 @@
     }
     .p {
         font-size: 15px;
+        text-shadow: 0 0 5px gray, 0 0 7.5px gray, 0 0 10px gray;
     }
     .lines{
         width: 100px;
@@ -95,5 +96,6 @@
     }
     .navImage{
         margin-bottom: 5%;
+        filter: drop-shadow(0 0 4px rgb(61, 60, 60));
     }
 }
