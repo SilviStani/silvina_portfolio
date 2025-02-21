@@ -1,6 +1,7 @@
 .Container {
     height: calc(100% - 130px);
-    background-color: rgb(27, 27, 27);
+    background-image: url("https://images.pexels.com/photos/4252892/pexels-photo-4252892.jpeg?auto=compress&cs=tinysrgb&w=600");
+    ;
 }
 
 .UpperContainer {
@@ -138,17 +139,23 @@
         height: 100%;
         width: 100vw;
     }
-    .h1{
-        padding: 3%;
-    }
-    .One{
+
+    .One {
         margin: 4%;
         width: 80%;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255, 0.2);
+        border-right: 10px solid salmon;
+        box-shadow: 0 4px 8px rgb(50, 50, 50);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
-    .img{
+
+    .img {
         width: 150px !important;
         height: fit-content !important;
         border-radius: 20px;
+        box-shadow: none;
     }
 
     .summaryMobile {
@@ -159,22 +166,33 @@
     }
 
     .articleMobile:nth-of-type(2),
-    .articleMobile:nth-of-type(5),
-    .articleMobile:nth-of-type(8) {
-        background-color: crimson;
+    .articleMobile:nth-of-type(5){
+        border-left: 10px solid purple;
     }
 
     .articleMobile:nth-of-type(4),
     .articleMobile:nth-of-type(7) {
-        background-color: green;
+        border-left: 10px solid #214a4f;
     }
-
+    
     .articleMobile:nth-of-type(3),
     .articleMobile:nth-of-type(6) {
-        background-color: blue;
+        border-left: 10px solid #fdbe87;
+    }
+    .articleMobile:nth-of-type(8) {
+        border-top: 10px solid #fdbe87;
+        border-bottom: 10px solid salmon;
+        border-right: 10px solid #214a4f;
+        border-left: 10px solid purple;
+        
     }
 
     .articleMobile {
+        background-color: rgb(255, 255, 255, 0.2);
+        box-shadow: 0 4px 8px rgb(50, 50, 50);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         width: 80vw;
@@ -182,9 +200,19 @@
         margin-bottom: 5%;
         padding: 5%;
     }
-
-    .p {
-        color: whitesmoke;
+    .h1 {
+        font-family: cursive !important;
+        padding: 2%;
+    }
+    .p, .h1 {
+        color: black;
+        text-shadow: 0 0 5px gray;
+    }
+    .p:nth-child(odd){
+        font-family:cursive;
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 1%;
     }
 
     .UpperContainer,

@@ -114,7 +114,7 @@
         margin-top: 49px;
     }
     .inner_img{
-        width: 100% !important;
+        width: fit-content !important;
         height: 100% !important;
     }
     .wrapper{

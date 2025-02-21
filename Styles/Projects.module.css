@@ -1,6 +1,6 @@
 .cont {
     height: calc(100% + 130px);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Upper {
@@ -35,6 +35,7 @@
     letter-spacing: 2px;
     font-size: 25px;
 }
+
 .p {
     font-size: 18px;
     text-shadow: black;
@@ -61,7 +62,8 @@
     border: 1.5px solid black;
     border-radius: 20px;
 }
-.cover{
+
+.cover {
     width: 100%;
     height: 100%;
     background-color: rgba(245, 245, 245, 0.65);
@@ -72,27 +74,32 @@
     align-items: center;
     justify-content: center;
 }
-.CardContainer:hover{
+
+.CardContainer:hover {
     box-shadow: 5px 5px 8px 1px gray;
 }
-.Imagen{
+
+.Imagen {
     padding: 1px;
     height: 60%;
     display: flex;
     flex-direction: column;
 }
-.Text{
+
+.Text {
     height: 40%;
     padding: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.h3{
+
+.h3 {
     font-size: 25px;
     text-align: center;
 }
-.link{
+
+.link {
     padding: 3px;
     color: black;
     font-size: 18px;
@@ -103,17 +110,20 @@
     width: 300px;
     background-color: whitesmoke;
 }
-.link:hover{
+
+.link:hover {
     transform: scale(1.05);
 }
+
 .img {
     border: rgb(200, 200, 200) 1.5px solid;
     margin-top: 1%;
     border-radius: 20px;
-    height: fit-content !important; 
+    height: fit-content !important;
     box-shadow: 5px 8px 3px 5px rgb(187, 187, 187);
 }
-.DescComponent{
+
+.DescComponent {
     width: fit-content;
     padding: 10px;
     margin: 5px;
@@ -122,38 +132,51 @@
     background-color: whitesmoke;
 }
 
-@media only screen and (max-width: 480px){
-    .Upper {
-        padding: 0%; 
-        height: calc(40px + 50px);
-        background-color: crimson;
-    }
-  
-    .imgTitle{
+
+
+@media only screen and (max-width: 481px) {
+    .Upper,
+    .Lower {
         display: none;
     }
-    .title{
-        margin-top: 30%;
+    .MobileContainer{
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url("https://images.pexels.com/photos/4252892/pexels-photo-4252892.jpeg?auto=compress&cs=tinysrgb&w=600");
     }
-    .CardContainer {
-        width: 300px;
+    .MobileContainerLinks{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardContainer:nth-child(1){
+        margin-top: 60px;
+    }
+    .cardContainer{
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgb(50, 50, 50);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .imageCard{
+        border-radius: 15px;
+        width: 100%;
         height: fit-content;
-        margin-bottom: 1%;
     }
-    .img{
-        height: 120px !important;
-        width: fit-content;
-        box-shadow: 2px 2px 2px 2px rgb(187, 187, 187);
-    }
-    .h3{
-        font-size: 20px;
-    }
-    .link{
-        font-size: 15px;
-        width: 200px;
-        border-radius: 5px;
-    }
-    .DescComponent{
-        display: none;
+    .pTitle{
+        padding: 5px;
+        color: white;
+        border-bottom: 1px solid white;
+        text-shadow: 0 0 5px gray, 0 0 10px gray, 0 0 15px gray, 0 0 20px gray, 0 0 25px gray, 0 0 30px gray, 0 0 35px gray;
     }
 }

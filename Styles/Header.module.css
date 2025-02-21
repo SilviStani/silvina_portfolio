@@ -51,7 +51,9 @@
         display: flex;
         justify-content: left;
     }
-
+    .links{
+        height: 15.5vh;
+    }
     .rowHead {
         display: none;
     }

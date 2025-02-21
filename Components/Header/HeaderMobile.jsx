@@ -1,12 +1,16 @@
+"use client";
 import React from "react";
 import styles from "../../Styles/Header.module.css";
 import { data } from "./data.js";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const HeaderMobile = () => {
+  const navigation = useRouter();
+  const isHome = navigation.pathname === "/";
   return (
-    <section className={styles.mobile}>
+    <section className={styles.mobile} >
       <details className={styles.acordeon}>
         <summary className={styles.summary}>
           <Image
