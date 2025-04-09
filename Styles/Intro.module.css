@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 .Main {
     display: flex;
     margin: 0;
-    height: calc(100vh + 80px);
+    height: calc(100% - 50px);
     width: 100vw;
+    background-color: rgb(20, 20, 20);
 }
 
 .Left {
+    margin-top: 6%;
+    margin-bottom: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50vw;
     height: 100%;
-    background-color: black;
     overflow: hidden;
 }
 
 .Right {
+    margin-top: 15%;
     width: 50vw;
     height: 100%;
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,17 +34,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid black;
-    background-color: #fdbe87;
+    border-top: 2px solid rgb(20, 20, 20);
+    background-color: crimson;
     width: 100%;
-    height: 100%;
+    height: 70%;
     border-radius: 40% 0%;
 }
 
 .wrapper {
     color: white;
-    width: 100%;
-    height: 100%;
+    width: 50vw;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
@@ -53,7 +55,7 @@
     margin: 12px;
     font-size: 60px;
     font-style: italic;
-    color:  #fdbe87;
+    color: crimson;
     font-family: "Dancing Script", cursive;
 }
 
@@ -65,11 +67,12 @@
 
 .span {
     font-family: monospace, cursive;
-    color: #fdbe87;
+    color: crimson;
     font-size: 35px;
     font-style: italic;
 }
-.wrapper2{
+
+.wrapper2 {
     color: white;
     width: 80%;
     height: 40%;
@@ -83,53 +86,101 @@
     margin-bottom: 5%;
 }
 
-.btn{
-    animation:movement linear infinite 5s;
+.btn {
+    animation: movement linear infinite 5s;
 }
-.upper{
-    display: none;
+
+/* Aqui el código de Large_Intro*/
+.Large_intro {
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.Large_intro_h1 {
+    margin-top: 2%;
+    font-size: 45px;
+    color: crimson;
+    font-family: "Dancing Script", cursive;
+}
+
+.Large_intro_text {
+    width: 80vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.Large_intro_p {
+    width: 70%;
+    font-size: 18px;
+    font-family: monospace, cursive;
+    text-align: center;
+    margin-top: 2%;
+}
+.Large_intro_img{
+    width: 30%;
+    
 }
 @keyframes movement {
-    
-    0%{
+
+    0% {
         transform: rotate(-25deg);
-    }  
-    50%{
+    }
+
+    50% {
         transform: rotate(25deg);
-    }     
-    100%
-    {
+    }
+
+    100% {
         transform: rotate(-25deg);
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .Main{
+    .Main {
         flex-direction: column;
     }
-    .Left, .Right{
+
+    .Left,
+    .Right {
         width: 100vw;
     }
-    .Left{
+
+    .Left {
         margin-top: 50px;
     }
-    .inner_img{
+
+    .inner_img {
         width: fit-content !important;
         height: 100% !important;
     }
-    .wrapper{
+
+    .wrapper {
         padding-left: 0.5%;
     }
-    .text{
+
+    .text {
         font-size: 20px;
     }
-    .name{
+
+    .name {
         font-size: 40px;
     }
-    .span{
+
+    .span {
         font-size: 25px;
     }
-    .upper{
+
+    .upper {
         display: flex;
         background-color: black;
         color: aliceblue;

@@ -1,6 +1,6 @@
 .HeaderContainer {
     height: 80px;
-    background-color: #fdbe87;
+    background-color: rgb(43, 43, 43);
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -51,9 +51,11 @@
         display: flex;
         justify-content: left;
     }
-    .links{
+
+    .links {
         height: 15.5vh;
     }
+
     .rowHead {
         display: none;
     }
@@ -67,6 +69,7 @@
         justify-content: center;
         top: 0;
     }
+
     .acordeon {
         background-color: #fdbe87;
         color: transparent;
@@ -77,24 +80,28 @@
         height: auto;
         justify-content: center;
     }
-    .summary{
+
+    .summary {
         width: 120px;
-        display: flex;  
+        display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .p {
         font-size: 15px;
         text-shadow: 0 0 5px gray, 0 0 7.5px gray, 0 0 10px gray;
     }
-    .lines{
+
+    .lines {
         width: 100px;
         height: 2px;
-       
+
         margin-top: 2%;
         margin-bottom: 2%;
     }
-    .navImage{
+
+    .navImage {
         margin-bottom: 5%;
         filter: drop-shadow(0 0 4px rgb(61, 60, 60));
     }
