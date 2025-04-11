@@ -1,41 +1,23 @@
 export const data = [
   {
     id: 1,
-    title: "Inicio",
-    url: "/",
-    src: "/assets/github_st.png",
-  },
-  {
-    id: 2,
-    title: "Proyectos",
-    url: "/projects",
-    src: "/assets/LupaSil.png",
-  },
-  {
-    id: 3,
-    title: "Me & Skills",
-    url: "/about_me",
-    src: "/assets/laptopwave.png",
-  },
-  {
-    id: 4,
     title: "WhatsApp",
     url: "https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!",
     target: "_blank",
-    src: "/assets/contact_me.png"
+    src: "/assets/whatsapp.png"
 },
 {
-    id: 5,
+    id: 2,
     title: "GitHub",
     url: "https://github.com/SilviStani/",
     target: "_blank",
-    src: "/assets/github_st.png"
+    src: "/assets/github.png"
 },
 {
-    id: 6,
+    id: 3,
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/silvina-staniszewski-18493276/",
     target: "_blank",
-    src: "/assets/trabajo.png"
+    src: "/assets/linkedin.png"
 },
 ];
