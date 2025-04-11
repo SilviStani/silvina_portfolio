@@ -1,26 +1,32 @@
 import React from "react";
 import styles from "../../Styles/Intro.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Large_Intro = () => {
   return (
     <div className={styles.Large_intro}>
-      <h1 className={styles.Large_intro_h1}>Proyectos</h1>
-      <div className={styles.Large_intro_text}>
-        <p className={styles.Large_intro_p}>
-          En esta sección verás mis proyectos, los cuales he realizado con mucho
-          esfuerzo y dedicación. Cada uno de ellos tiene su repo en github, y en
-          algunos casos, su página Web
-        </p>
-        <div className={styles.Large_intro_img}>
-        <Image
-        src="/assets/studyings.png" 
-        alt="decorative" 
-        height={200}
-        width={200}
-        style={{marginLeft: "10%"}}
-        />
-        </div>
+      <div className={styles.Large_intro_container}>
+        <Link className={styles.Large_intro_img} href={"/projects"} target="_blank">
+          <p className={styles.Large_intro_h1}>Proyectos</p>
+          <Image
+            src="/assets/muppet_silvi.png"
+            alt="decorative"
+            height={200}
+            width={200}
+            className={styles.img_muppet}
+          />
+        </Link>
+        <Link className={styles.Large_intro_img} href={"/about_me"} target="_blank">
+          <p className={styles.Large_intro_h1}>Sobre Mi & Skills</p>
+          <Image
+            src="/assets/simpson_silvi.png"
+            alt="decorative"
+            height={200}
+            width={200}
+            className={styles.img_muppet}
+          />
+        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../../Styles/About-Me.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import { aboutMe } from "./aboutme.js";
 
 const MobileAboutMe = () => {

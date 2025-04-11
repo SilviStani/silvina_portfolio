@@ -1,4 +1,3 @@
-import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Intro from "../../Components/Intro/Intro";
 import Large_Intro from "../../Components/Intro/Large_Intro";
@@ -12,7 +11,6 @@ export default function Home() {
         <Intro/>
         <Large_Intro/>
       </main>
-      < Footer />
     </div>
   );
 }
