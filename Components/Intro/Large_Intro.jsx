@@ -6,8 +6,8 @@ import Social from "./Social";
 const Large_Intro = () => {
   return (
     <div className={styles.Large_intro}>
-      <Projects_Skills />
       < Social />
+      <Projects_Skills />
     </div>
   );
 };

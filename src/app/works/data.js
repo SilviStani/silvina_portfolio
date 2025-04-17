@@ -1,7 +1,19 @@
+let idNmber = 1;
 export const data = [
   {
-    id: 1,
+    id: idNmber++,
+    title: "All",
+    src: "/projects",
+    desc: "",
+    desc2: "",
+    srcGit: "",
+    srcWeb: "",
+    image: "",
+  },
+  {
+    id: idNmber++,
     title: "Vista Ensueño Cabañas",
+    src: "/projects",
     desc: "Cabañas de temporada en Potrero de Garay",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/vista-ensueno",
@@ -9,8 +21,9 @@ export const data = [
     image: "/assets/vistaensueno.png",
   },
   {
-    id: 2,
+    id: idNmber++,
     title: "Silandra Alta Costura",
+    src: "/projects",
     desc: "Casa de novias en Escobar. Bs.As. Argentina",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/Silandra",
@@ -18,8 +31,9 @@ export const data = [
     image: "/assets/silandra.jpeg",
   },
   {
-    id: 3,
+    id: idNmber++,
     title: "Mirsú Cabañas",
+    src: "/projects",
     desc: "Cabañas en Villa General Belgrano. Mapa de ubicación, links a sitios de interés, sitios de necesidad.",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/cabanias_mirsu",
@@ -27,8 +41,9 @@ export const data = [
     image: "/assets/Cabanias-mirsu.png",
   },
   {
-    id: 4,
+    id: idNmber++,
     title: "Mi Portfolio",
+    src: "/projects",
     desc: "Mi portfolio. Sufrió mas cambios que la economia Argentina",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit:
@@ -37,8 +52,9 @@ export const data = [
     image: "/assets/PortadaPortfolio.png",
   },
   {
-    id: 5,
+    id: idNmber++,
     title: "Walter Limpieza Tapizados",
+    src: "/projects",
     desc: "Limpieza de Tapizados en Corrientes y Chaco. Argentina.",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/Limpieza-Tapizados-Walter",
@@ -46,8 +62,9 @@ export const data = [
     image: "/assets/Walter-tapizados.png",
   },
   {
-    id: 6,
+    id: idNmber++,
     title: "Estetyczna Nadja Szewska",
+    src: "/projects",
     desc: "SPA de Estética corporal y facial. Servicio de belleza integral.",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/Estetyczna-Nadja-Szewska",
@@ -55,8 +72,9 @@ export const data = [
     image: "/assets/introPage.jpg",
   },
   {
-    id: 7,
+    id: idNmber++,
     title: "Delicias y Manjares",
+    src: "/projects",
     desc: "Las delicias mas exquisitas y frescas de todo Escobar. No dudes en probar :)",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/deliciasymanjares",
@@ -64,8 +82,10 @@ export const data = [
     image: "/assets/3.jpg",
   },
   {
-    id: 8,
+    id: idNmber++,
     title: "Vipets",
+    src: "/projects",
+    src: "/projects",
     desc: "Spa pensada en nuestras queridas mascotas. Acceso rápido a las clinicas 24 hs. Proyecto grupal.",
     desc2: "Desarrollado en: React-Redux, Javascript, Css. Express. SQL. PostgresSQL",
     srcGit: "https://github.com/Navito-py/PF-PuppyPalace",
@@ -73,8 +93,9 @@ export const data = [
     image: "/assets/vipets.png",
   },
   {
-    id: 9,
+    id: idNmber++,
     title: "Food*HenryApp",
+    src: "/projects",
     desc: "SPA/Proyecto individual, Henry Bootcamp",
     desc2: "Desarrollado en: React-Redux, Javascript, Css. Express. SQL. PostgresSQL",
     srcGit: "https://github.com/SilviStani/Pi-Food",
@@ -82,8 +103,9 @@ export const data = [
     image: "/assets/foodapp.jpg",
   },
   {
-    id: 10,
+    id: idNmber++,
     title: "Chronometer",
+    src: "/projects",
     desc: "A Single & Simple Chronometer pure redux",
     srcGit: "https://github.com/SilviStani/Chronometer-Countdown-Timer",
     srcWeb: "",
@@ -92,26 +114,10 @@ export const data = [
   {
     id: 11,
     title: "TodoList: Vacation",
+    src: "/projects",
     desc: "Una Todo list creada a puro vanilla javascript. Sus efectos y estilos en Css.",
     srcGit: "https://github.com/SilviStani/Vacation-TodoList",
     srcWeb: "",
     image: "/assets/Todolist.png",
   },
 ];
-/*    {
-        id: ,
-        title: "",
-        desc: "",
-        srcGit: "",
-        srcWeb: "",
-        image: ""
-    },
-    {
-        id: ,
-        title: "",
-        desc: "",
-        srcGit: "",
-        srcWeb: "",
-        image: ""
-    }
-    */

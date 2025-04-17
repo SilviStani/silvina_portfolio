@@ -1,0 +1,104 @@
+.Large_intro_container:nth-child(1) {
+    flex-direction: row !important;
+    align-items: center;
+}
+.Large_intro_container:nth-child(2) {
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.Large_intro_container {
+    height: 100%;
+    width: 70vw;
+    display: flex;
+}
+
+.Large_intro_img_social {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.Large_intro_img {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    align-items: flex-start;
+}
+
+.Large_intro_img:nth-child(3) {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: flex-end;
+}
+
+.Large_intro_img:hover,
+.Large_intro_img_social:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px rgb(51, 51, 51)) drop-shadow(0 0 10px rgb(46, 46, 46)) drop-shadow(0 0 20px rgb(41, 41, 41));
+}
+
+.Large_intro_h1 {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 25px;
+    color: whitesmoke;
+    font-family: monospace, cursive;
+}
+.img_icons{
+    border-radius: 20px;
+    height: fit-content;
+    margin-left: 2%;
+}
+.img_muppet {
+    border-radius: 20px;
+    height: fit-content;
+    margin-left: 2%;
+    filter: drop-shadow(0 0 5px white);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.project_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.project_link{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.project_link_text{
+    margin-bottom: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.project_link_text:hover{
+    transform: scaleX(1.05);
+}
+.SocialContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+    border-radius: 25px;
+    border: 1px solid white;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    height: 80px;
+    width: 40%;
+}

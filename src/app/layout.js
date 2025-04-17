@@ -1,18 +1,13 @@
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
-
-const roboto = Roboto({ 
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ['400', '700'],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
-  keywords: [
-    "desarrollo_Web",
-    "fullstack",
-    "freelancer",
-  ],
+  keywords: ["desarrollo_Web", "fullstack", "freelancer"],
   title: "Silvina-Dev Portfolio",
   description: "Desarrollo Web, Automation Testing, QA Tester",
 };
