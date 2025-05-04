@@ -10,21 +10,7 @@ const Header = () => {
       <ul>
         <Link href={"/"} className={styles.links} key="Inicio">
           <Image
-            src="/assets/arbol.png"
-            alt="decorative"
-            width="35"
-            height="35"
-            style={{ marginLeft: "10px" }}
-          />
-          <Image
             src="/assets/inicio.png"
-            alt="decorative"
-            width="35"
-            height="35"
-            style={{ marginLeft: "10px" }}
-          />
-          <Image
-            src="/assets/arbol.png"
             alt="decorative"
             width="35"
             height="35"

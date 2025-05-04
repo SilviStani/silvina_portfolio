@@ -35,7 +35,7 @@ const Works = () => {
         {data.map((d, i) => (
           <article className={styles.imgContainer} key={i}>
             <Image
-              key={i}
+              id={d.id}
               src={d.image}
               alt={d.title}
               layout="fill"

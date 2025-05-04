@@ -1,7 +1,8 @@
-let idNmber = 1;
+let idNmber = 0;
 export const data = [
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "all",
     title: "All",
     src: "/projects",
     desc: "",
@@ -11,7 +12,8 @@ export const data = [
     image: "",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "vistaensueno",
     title: "Vista Ensueño Cabañas",
     src: "/projects",
     desc: "Cabañas de temporada en Potrero de Garay",
@@ -21,7 +23,8 @@ export const data = [
     image: "/assets/vistaensueno.png",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "silandra",
     title: "Silandra Alta Costura",
     src: "/projects",
     desc: "Casa de novias en Escobar. Bs.As. Argentina",
@@ -31,7 +34,8 @@ export const data = [
     image: "/assets/silandra.jpeg",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "mirsu",
     title: "Mirsú Cabañas",
     src: "/projects",
     desc: "Cabañas en Villa General Belgrano. Mapa de ubicación, links a sitios de interés, sitios de necesidad.",
@@ -41,7 +45,8 @@ export const data = [
     image: "/assets/Cabanias-mirsu.png",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "portfolio",
     title: "Mi Portfolio",
     src: "/projects",
     desc: "Mi portfolio. Sufrió mas cambios que la economia Argentina",
@@ -52,7 +57,8 @@ export const data = [
     image: "/assets/PortadaPortfolio.png",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "walter",
     title: "Walter Limpieza Tapizados",
     src: "/projects",
     desc: "Limpieza de Tapizados en Corrientes y Chaco. Argentina.",
@@ -62,7 +68,8 @@ export const data = [
     image: "/assets/Walter-tapizados.png",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "estetica",
     title: "Estetyczna Nadja Szewska",
     src: "/projects",
     desc: "SPA de Estética corporal y facial. Servicio de belleza integral.",
@@ -72,7 +79,8 @@ export const data = [
     image: "/assets/introPage.jpg",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "delicias",
     title: "Delicias y Manjares",
     src: "/projects",
     desc: "Las delicias mas exquisitas y frescas de todo Escobar. No dudes en probar :)",
@@ -82,7 +90,8 @@ export const data = [
     image: "/assets/3.jpg",
   },
   {
-    id: idNmber++,
+    key: idNmber++,
+    id: "vipets",
     title: "Vipets",
     src: "/projects",
     src: "/projects",
@@ -93,7 +102,8 @@ export const data = [
     image: "/assets/vipets.png",
   },
   {
-    id: idNmber++,
+    id: "henryapp",
+    key: idNmber++,
     title: "Food*HenryApp",
     src: "/projects",
     desc: "SPA/Proyecto individual, Henry Bootcamp",
@@ -103,7 +113,8 @@ export const data = [
     image: "/assets/foodapp.jpg",
   },
   {
-    id: idNmber++,
+    id: "cronometro",
+    key:  idNmber++,
     title: "Chronometer",
     src: "/projects",
     desc: "A Single & Simple Chronometer pure redux",
@@ -112,7 +123,8 @@ export const data = [
     image: "/assets/chronometer.png",
   },
   {
-    id: 11,
+    id: "to-do",
+    key: 11,
     title: "TodoList: Vacation",
     src: "/projects",
     desc: "Una Todo list creada a puro vanilla javascript. Sus efectos y estilos en Css.",

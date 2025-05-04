@@ -1,13 +1,17 @@
+'use client'
 import React from "react";
 import styles from "../../Styles/Intro.module.css";
-import Projects_Skills from "./Projects_Skills";
 import Social from "./Social";
+import Parallax from "../Parallax/Parallax";
 
-const Large_Intro = () => {
+export const Large_Intro = () => {
   return (
     <div className={styles.Large_intro}>
+      <section id="skills"> <Parallax type="skills"/> </section>
+      <section>Skills</section>
+      <section id="portfolio"> <Parallax/> </section>
+      <section>Proyectos</section>
       < Social />
-      <Projects_Skills />
     </div>
   );
 };

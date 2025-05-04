@@ -40,9 +40,9 @@ const Projects_Skills = () => {
         >
           {
           data.map((project) => (
-            <div key={project.id} className={styles.project}>
+            <div key={project.key} className={styles.project}>
               <Link
-                href={project.title === "All" ? "/projects" : project.src}
+                href={project.title === "All" ? "/projects" : `/projects#${project.id}`}
                 target="_blank"
                 className={styles.project_link}
               >

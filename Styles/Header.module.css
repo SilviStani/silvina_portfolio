@@ -1,6 +1,6 @@
 .HeaderContainer {
     height: 50px;
-    background-color: rgb(43, 43, 43);
+    background-color:  rgba(43, 43, 43, 0.541);
     position: fixed;
     width: 100%;
     z-index: 2;
