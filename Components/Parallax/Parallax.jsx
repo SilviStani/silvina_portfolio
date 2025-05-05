@@ -27,3 +27,15 @@ const Parallax = ({type}) => {
 }
 
 export default Parallax;
+/*
+<div className='parallax'
+    ref={ref} 
+    style={{background: type === "skills" 
+      ? "linear-gradient(180deg,  rgb(20, 20, 20), #0c0c1d)" 
+      : "linear-gradient(180deg, rgb(20, 20, 20), #505064)"}}>
+        <motion.h1 style={{y : yText}}>{type === 'skills' ? "Skills" : "Proyectos"}</motion.h1>
+        <motion.div className="mountains"></motion.div>
+        <motion.div className="planets" style={{y : yBg}}></motion.div>
+        <motion.div style={{x : yBg}} className="stars"></motion.div>
+    </div>
+*/

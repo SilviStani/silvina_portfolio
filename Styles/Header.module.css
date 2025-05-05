@@ -3,7 +3,7 @@
     background-color:  rgba(43, 43, 43, 0.541);
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     align-items: center;
 }

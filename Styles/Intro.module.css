@@ -6,6 +6,7 @@
     height: calc(100% - 50px);
     width: 100vw;
     background-color: rgb(20, 20, 20);
+    background-image: url("/assets/stars.png");
 }
 
 .Left {
@@ -35,7 +36,7 @@
     justify-content: center;
     align-items: center;
     border-top: 2px solid rgb(20, 20, 20);
-    background-color: crimson;
+    background-color: rgba(220, 20, 60, 0.687);
     width: 100%;
     height: 70%;
     border-radius: 40% 0%;
@@ -95,15 +96,15 @@
 @keyframes movement {
 
     0% {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
     }
 
     50% {
-        transform: rotate(15deg);
+        transform: rotate(10deg);
     }
 
     100% {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
     }
 }
 
