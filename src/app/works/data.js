@@ -1,18 +1,7 @@
-let idNmber = 0;
+let idNmber = 1;
 export const data = [
   {
-    key: idNmber++,
-    id: "all",
-    title: "All",
-    src: "/projects",
-    desc: "",
-    desc2: "",
-    srcGit: "",
-    srcWeb: "",
-    image: "",
-  },
-  {
-    key: idNmber++,
+    key: idNmber,
     id: "vistaensueno",
     title: "Vista Ensueño Cabañas",
     src: "/projects",

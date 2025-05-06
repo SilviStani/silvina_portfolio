@@ -1,4 +1,4 @@
-import "./globals.scss";
+import "./globals.scss"; 
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -7,7 +7,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  keywords: ["desarrollo_Web", "fullstack", "freelancer"],
+  keywords: ["desarrollo_Web", "desarrollo Web", "fullstack", "freelancer"],
   title: "Silvina-Dev Portfolio",
   description: "Desarrollo Web, Automation Testing, QA Tester",
 };
@@ -18,4 +18,4 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>{children}</body>
     </html>
   );
-}
+}  
