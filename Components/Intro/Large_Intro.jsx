@@ -7,9 +7,9 @@ import PortfolioContainer from "./PortfolioContainer";
 export const Large_Intro = () => {
   return (
     <div>
-      <section id="skills"> <Parallax type="skills"/> </section>
+      <section id="skills"> <Parallax type="servicios" id='Servicios'/> </section>
       <section> <Skills/> </section>
-      <section id="portfolio"> <Parallax/> </section>
+      <section id="Portfolio"> <Parallax/> </section>
       <PortfolioContainer/>
     </div>
   );

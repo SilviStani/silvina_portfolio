@@ -2,7 +2,6 @@ import React from "react";
 import { useRef } from "react";
 import "./PortfolioContainer.scss";
 import { data } from "../../src/app/works/data.js";
-import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const Single = ({ item }) => {

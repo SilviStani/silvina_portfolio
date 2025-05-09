@@ -15,10 +15,10 @@ const Parallax = ({type}) => {
   return (
     <div className='parallax'
     ref={ref} 
-    style={{background: type === "skills" 
+    style={{background: type === "servicios" 
       ? "linear-gradient(180deg,  rgb(20, 20, 20), #0c0c1d)" 
       : "linear-gradient(180deg, rgb(20, 20, 20), #505064)"}}>
-        <motion.h1 style={{y : yText}}>{type === 'skills' ? "Skills" : "Proyectos"}</motion.h1>
+        <motion.h1 style={{y : yText}}>{type === 'servicios' ? "Servicios" : "Proyectos"}</motion.h1>
         <motion.div className="mountains"></motion.div>
         <motion.div className="planets" style={{y : yBg}}></motion.div>
         <motion.div style={{x : yBg}} className="stars"></motion.div>
