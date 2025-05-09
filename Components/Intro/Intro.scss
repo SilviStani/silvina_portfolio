@@ -1,16 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+.hero {
+  height: calc(100vh - 100px);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 0.8),
+      rgba(20, 20, 20, 0.8)
+    ),
+    url("/assets/stars.png") no-repeat center center/cover;
+  .wrapper {
+    max-width: 1166px;
+    height: 100%;
+    margin: auto;
 
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h2 {
+        font-size: 30px;
+        color: crimson;
+        letter-spacing: 10px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      h3 {
+        color: crimson;
+        font-size: 30px;
+      }
+      span {
+        color: white;
+      }
+
+      .buttons {
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          margin-right: 20px;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .imageContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .slidingTextContainer{
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+}
+
+/*
 .Main {
+    height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
     display: flex;
     margin: 0;
-    height: calc(100% - 50px);
     width: 100vw;
     background-color: rgb(20, 20, 20);
     background-image: url("/assets/stars.png");
 }
 
 .Left {
-    margin-bottom: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,21 +161,22 @@
 
 
 @keyframes movement {
-
+    
     0% {
         transform: rotate(-10deg);
     }
-
+    
     50% {
         transform: rotate(10deg);
     }
-
+    
     100% {
         transform: rotate(-10deg);
     }
 }
 
 /* Aqui el código de Large_Intro*/
+/*
 .Large_intro {
     background-color: rgb(20, 20, 20);
     height: 90%;
@@ -118,7 +189,7 @@
 }
 
 /**/
-
+/*
 @media only screen and (max-width: 480px) {
     .Main {
         flex-direction: column;
@@ -160,3 +231,5 @@
         color: aliceblue;
     }
 }
+
+*/

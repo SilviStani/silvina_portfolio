@@ -3,32 +3,40 @@ import {React, useState} from "react";
 import "./SideBar.scss";
 import ToggleButton from "./ToggleButton/ToggleButton.jsx";
 import Links from "./Links/Links.jsx";
-import { motion } from "framer-motion";
+import {delay, transform, motion } from "framer-motion";
 
-const variants ={
-  open:{
+const variants = {
+  open: {
     clipPath: "circle(1200px at 50px 50px)",
-    transition:{
-      type:"spring",
-      stiffness:20,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 30,
     },
   },
-  closed:{
+  closed: {
     clipPath: "circle(30px at 50px 50px)",
-    transition:{
-      delay: 0.5,
+    transition: {
       type: "spring",
-      stiffness:400,
-      damping:40, 
-    }
-  }
-}
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
 const SideBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"} variants={variants}>
-      <motion.div className="bg" variants={variants}>
+    <motion.div 
+    className="sidebar" 
+    initial={open ? "open" : "closed"} 
+    animate={open ? "open" : "closed"} 
+    >
+      <motion.div 
+      className="bg" 
+      variants={variants}
+      >
        <Links />
       </motion.div>
       <ToggleButton setOpen={setOpen}/>

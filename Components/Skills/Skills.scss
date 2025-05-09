@@ -1,53 +1,57 @@
-.skills{
-    height: 100%;
-    width: 90vw;
+.skills {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-weight: 200;
+      font-size: 18px;
+      color: gray;
+      text-align: right;
+    }
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+    }
+  }
+  .titleContainer {
+    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    .textContainer{
-        flex: 1;
-        align-self: flex-end;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        p{
-            font-weight: 200;
-            font-size: 18px;
-            color: gray;
-            text-align: right;
-        }
-        hr{
-            width: 500px;
-            border: none;
-            border-top: 0.5px solid gray;
-        }
-    }
-    .titleContainer{
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-.title{
-    display: flex;
-    gap: 20px;
     align-items: center;
 
-    h1{
+    .title {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      h1 {
         font-size: 60px;
         font-weight: 100;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    
-    span{
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-weight: bold;
-        font-family: 'Poppins', sans-serif;
-        font-style: italic;
-    }
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
 
-    button{
+      span {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+      }
+
+      button {
         width: 300px;
         height: 80px;
         border-radius: 50px;
@@ -55,29 +59,32 @@
         border: none;
         font-size: 24px;
         cursor: pointer;
+      }
     }
-}
+  }
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1166px;
+    margin: auto;
+    margin-bottom: 2%;
 
+    .box {
+      padding: 50px;
+      width: 100%;
+      border: 0.5px solid gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2{
+        text-align: center;
+      }
+      button {
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        cursor: pointer;
+      }
     }
-    .listContainer{
-        flex: 2;
-        display: flex;
-        max-width: 1366px;
-        margin: auto;
-
-        .box{
-            padding: 50px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            button{
-                padding: 10px;
-                background-color: orange;
-                border: none;
-                cursor: pointer;
-            }
-        }
-    }
+  }
 }
