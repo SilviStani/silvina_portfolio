@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import "./Skills.scss";
 import Image from "next/image";
-import { color, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
@@ -70,9 +70,9 @@ const Skills = () => {
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Lenguages de Programación</h2>
-          <p>C#</p>
-          <p>Javascript</p>
+          <h2>Lenguages de Programación <br/> Entorno de Ejecución</h2>
+          <p>C# - .Net</p>
+          <p>Javascript - Node.JS</p>
           <p>SQL</p>
           <button><a href="#Portfolio">Vamos!</a></button>
         </motion.div>
@@ -81,9 +81,10 @@ const Skills = () => {
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
           <h2>IDE's -<br/> Herramientas de desarrollo</h2>
-          <p>Postman</p>
+          <p>Postman - Insomnia</p>
           <p>Visual Studio & Visual Code</p>
           <p>Git & Github</p>
+          <p>Postgresql</p>
           <button><a href="#Portfolio">Vamos!</a></button>
         </motion.div>
         <motion.div
@@ -91,10 +92,10 @@ const Skills = () => {
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
           <h2>Stack</h2>
-          <p>React</p>
-          <p>Next.JS</p>
+          <p>Next.JS - React</p>
+          <p>Jmeter</p>
           <p>Express</p>
-          <p>Selenium</p>
+          <p>Selenium - Playwright</p>
           <button><a href="#Portfolio">Vamos!</a></button>
         </motion.div>
       </motion.div>

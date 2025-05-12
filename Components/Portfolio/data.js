@@ -76,7 +76,7 @@ export const data = [
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit: "https://github.com/SilviStani/deliciasymanjares",
     srcWeb: "https://deliciasymanjares.vercel.app/",
-    image: "/assets/3.jpg",
+    image: "/assets/deliciasymanjares.jpg",
   },
   {
     key: idNmber++,

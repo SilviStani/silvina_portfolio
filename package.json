@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "aos": "^2.3.4",
+    "dotenv": "^16.5.0",
+    "emailjs": "^4.0.3",
     "framer-motion": "^12.9.4",
     "ityped": "^1.0.3",
     "next": "^14.2.28",

@@ -16,12 +16,15 @@ export default function Home() {
       <section id="Servicios">
         <Parallax type="servicios" id="Servicios" />
       </section>
-      <section><Skills/></section>
-      <section id="Portfolio"><Parallax/> </section>
-      <section><Portfolio/></section>
-     {/*
-      <section id="Contacto">Contacto</section>
-      */} 
+      <section>
+        <Skills />
+      </section>
+      <section id="Portfolio">
+        <Parallax />{" "}
+      </section>
+      <section>
+        <Portfolio />
+      </section>
     </div>
   );
 }

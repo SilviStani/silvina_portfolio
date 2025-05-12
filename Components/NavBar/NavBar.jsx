@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import "./NavBar.scss";
-import Image from "next/image";
-import Link from "next/link";
 import { social } from "./Social.js";
 import SideBar from "../SideBar/SideBar.jsx";
 import { motion } from "framer-motion";
@@ -50,16 +48,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-/**
- {data.map((item) => (
-        <Link className={styles.Large_intro_img} href={item.src} target={item.target}>
-            <Image
-            src={item.src}
-            alt={item.alt}
-            height={50}
-            width={50}
-            className={styles.img_muppet}
-            />
-        </Link>
-    ))}
- */

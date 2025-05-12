@@ -1,5 +1,6 @@
 import "./globals.scss"; 
 import { Roboto } from "next/font/google";
+//require('dotenv').config();
 
 const roboto = Roboto({
   subsets: ["latin"],

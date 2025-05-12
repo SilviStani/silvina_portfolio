@@ -1,34 +1,31 @@
 "use client";
-import { React, useRef, useEffect} from "react";
+import { React, useRef, useEffect } from "react";
 import { data } from "./data.js";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./Portfolio.scss";
-import AOS from 'aos';
- import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    /*offset: ["end end", "start start"],*/
+    offset: ["end end", "start start"],
   });
 
   /*const y = useTransform(scrollYProgress, [0, 1], ["-100vh", "100vh"]);*/
-  
-  const scaleX = useSpring(scrollYProgress, 
-    { stiffness: 100, damping: 30 });
 
-useEffect(() => {
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
+  useEffect(() => {
     AOS.init();
-}, []);
+  }, []);
 
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1>Mis Proyectos</h1>
-        <motion.div className="progressBar" 
-        style={{ scaleX }}>
-        </motion.div>
+        <motion.div className="progressBar" style={{ scaleX }}></motion.div>
       </div>
       {data.map((e) => (
         <section key={e.id} ref={ref}>
@@ -37,14 +34,29 @@ useEffect(() => {
               <div className="imageContainer">
                 <img src={e.image} alt={e.alt} />
               </div>
-              <div className="textContainer" 
-              data-aos="fade-up" 
-              data-aos-duration="1000"
+              <div
+                className="textContainer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
               >
-                <h2>{e.title}</h2>
+                <motion.h2 whileHover={{ color: "orange" }}>{e.title}</motion.h2>
                 <p>{e.desc}</p>
                 <p>{e.desc2}</p>
-                <button>See Demo</button>
+                <div className="buttons">
+
+                        <button>
+                    <a href={e.srcGit} target="_blank">
+                      <img src="/assets/github.png" alt="" />
+                    </a>
+                  </button>
+                    { e.srcWeb.length > 0 &&
+                  <button>
+                    <a href={e.srcWeb} target="_blank">
+                      <img src="/assets/sitio-web.png" alt="" />
+                    </a>
+                  </button>
+                }
+                </div>
               </div>
             </div>
           </div>
