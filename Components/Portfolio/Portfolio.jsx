@@ -13,8 +13,6 @@ const Portfolio = () => {
     offset: ["end end", "start start"],
   });
 
-  /*const y = useTransform(scrollYProgress, [0, 1], ["-100vh", "100vh"]);*/
-
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   useEffect(() => {
@@ -44,18 +42,18 @@ const Portfolio = () => {
                 <p>{e.desc2}</p>
                 <div className="buttons">
 
-                        <button>
+                  <button>
                     <a href={e.srcGit} target="_blank">
                       <img src="/assets/github.png" alt="" />
                     </a>
                   </button>
-                    { e.srcWeb.length > 0 &&
-                  <button>
-                    <a href={e.srcWeb} target="_blank">
-                      <img src="/assets/sitio-web.png" alt="" />
-                    </a>
-                  </button>
-                }
+                  {e.srcWeb.length > 0 &&
+                    <button>
+                      <a href={e.srcWeb} target="_blank">
+                        <img src="/assets/sitio-web.png" alt="" />
+                      </a>
+                    </button>
+                  }
                 </div>
               </div>
             </div>

@@ -86,10 +86,14 @@ const Intro = () => {
             <span ref={textRef} className={styles.span}></span>
           </motion.h3>
           <motion.div className="buttons" variants={textvariants}>
-            <motion.button variants={textvariants}>
-              Ultimos Trabajos
-            </motion.button>
+            <motion.a href="/#Portfolio">
+              <motion.button variants={textvariants}>
+                Ultimos Trabajos
+              </motion.button>
+            </motion.a>
+            <motion.a href="/contacto">
             <motion.button variants={textvariants}>Contacto</motion.button>
+            </motion.a>
           </motion.div>
           <motion.img
             variants={textvariants}
@@ -115,7 +119,7 @@ const Intro = () => {
           width={600}
           height={600}
           id="Image-wave-laptop"
-          className={styles.inner_img}
+          className="inner_img"
         />
       </div>
     </div>
@@ -123,30 +127,3 @@ const Intro = () => {
 };
 
 export default Intro;
-/**
- <>
-   <article className={styles.Right} id="Right">
-     <article className={styles.wrapper} id="Text-Container">
-       <h2 className={styles.text}>Hola! Soy</h2>
-       <h3 className={styles.name}>Silvina Staniszewski</h3>
-       <h3 className={styles.text}>* QE Testing Automation Analyst</h3>
-       <h3 className={styles.text}>
-         * Javascript Full Stack Developer <br />
-         <span ref={textRef} className={styles.span}></span>
-       </h3>
-     </article>
-   </article>
-   <article className={styles.Left} id="Left">
-     <article className={styles.imageContainer} id="Image-Conatiner">
-       <Image
-         src={"/assets/laptopwave.png"}
-         width={600}
-         height={600}
-         id="Image-wave-laptop"
-         className={styles.inner_img}
-       />
-     </article>
-   </article>
- </>
- 
- */

@@ -83,8 +83,8 @@ const Contact = () => {
         </motion.h1>
         {data.map((e, i) => (
           <motion.div className="item" variants={variants} key={i}>
-            <h2>{e.title}</h2>
-            <span>{e.text}</span>
+            <motion.h2 whileHover={{color: "orange"}}>{e.title}</motion.h2>
+            <motion.span whileHover={{color: "orange"}}>{e.text}</motion.span>
           </motion.div>
         ))}
         <a href="/" className="btn">
@@ -93,16 +93,13 @@ const Contact = () => {
       </motion.div>
       <div className="formContainer">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" required placeholder="Nombre" name="user_name" />
-          <input type="email" required placeholder="E-Mail" name="user_email" />
-          <input type="title" required placeholder="title" name="input_title" />
-          <textarea rows={10} placeholder="Mensaje" name="user_message" />
-          <input type="submit" value="Send" />
-          {/*
-            <button >
+          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="text" required placeholder="Nombre" name="user_name" />
+          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="email" required placeholder="E-Mail" name="user_email" />
+          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="title" required placeholder="title" name="input_title" />
+          <motion.textarea whileHover={{backgroundColor: "white", color: "black"}} rows={10} placeholder="Mensaje" name="user_message" />
+          <button >
             Enviar
-            </button>
-            */}
+          </button>
           {loading && <div className="loader">Enviando...</div>}
           {error && <div className="error">Error</div>}
           {success && <div className="loader">Envio Exitoso</div>}

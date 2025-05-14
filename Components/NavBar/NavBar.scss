@@ -25,12 +25,26 @@
       z-index: 20;
       pointer-events: auto;
     }
+
     .social a img {
       pointer-events: auto;
     }
+
     img {
       width: 25px;
       height: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1281px) {
+  .navbar {
+    width: 100vw;
+
+    .wrapper {
+      .logo {
+        margin-left: 7%;
+      }
     }
   }
 }

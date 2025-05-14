@@ -94,3 +94,45 @@
     }
   }
 }
+@media only screen and (max-width: 1281px) {
+  .skills {
+
+  .textContainer {
+    p {
+      font-size: 15px;
+    }
+  }
+  .titleContainer {
+
+    .title {
+
+      h1 {
+        font-size: 45px;
+      }
+
+      button {
+        width: 200px;
+        height: 50px;
+        border-radius: 40px;
+        font-size: 20px;
+      }
+    }
+  }
+  .listContainer {
+    .box {
+     
+      h2{
+        font-size: 18px;
+      }
+      p{
+       font-size: 13px;
+      }
+      a{
+       button{
+        width: 100%;
+       } 
+      }
+    }
+  }
+}
+}

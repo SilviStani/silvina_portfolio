@@ -16,6 +16,7 @@
       background-color: white;
     }
   }
+
   .container {
     display: flex;
     align-items: center;
@@ -58,24 +59,66 @@
           color: gray;
           font-size: 20px;
         }
+
         .buttons {
           display: flex;
           gap: 10%;
+
           button {
-              background-color: orange;
-              border: none;
-              border-radius: 20px;
-              width: 200px;
-              padding: 10px;
-              cursor: pointer;
-              transition: all 0.5s ease-in-out;
+            background-color: orange;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+
+            img {
+              height: 30px;
+            }
+          }
+
+          button:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1281px) {
+  .portfolio {
+    .progress {
+      padding: 50px;
+      font-size: 28px;
+
+      .progressBar {
+        margin-top: 1%;
+        height: 5px;
+      }
+    }
+
+    .container {
+      .wrapper {
+        .textContainer {
+          h2 {
+            font-size: 50px;
+          }
+
+          p {
+            font-size: 15px;
+          }
+
+          .buttons {
+            button {
+              border-radius: 10px;
+              width: 150px;
               img {
-                  height: 30px;
-                }
+                height: 25px;
+              }
             }
-            button:hover {
-                transform: scale(1.1);
-            }
+          }
         }
       }
     }

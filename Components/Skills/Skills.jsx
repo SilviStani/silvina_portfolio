@@ -70,7 +70,7 @@ const Skills = () => {
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Lenguages de Programación <br/> Entorno de Ejecución</h2>
+          <h2>Lenguages de Programación <br /> Entorno de Ejecución</h2>
           <p>C# - .Net</p>
           <p>Javascript - Node.JS</p>
           <p>SQL</p>
@@ -80,12 +80,16 @@ const Skills = () => {
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>IDE's -<br/> Herramientas de desarrollo</h2>
+          <h2>IDE's -<br /> Herramientas de desarrollo</h2>
           <p>Postman - Insomnia</p>
           <p>Visual Studio & Visual Code</p>
           <p>Git & Github</p>
           <p>Postgresql</p>
-          <button><a href="#Portfolio">Vamos!</a></button>
+          <a href="#Portfolio">
+            <button>
+              Vamos!
+            </button>
+          </a>
         </motion.div>
         <motion.div
           className="box"

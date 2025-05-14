@@ -3,7 +3,7 @@ import {React, useState} from "react";
 import "./SideBar.scss";
 import ToggleButton from "./ToggleButton/ToggleButton.jsx";
 import Links from "./Links/Links.jsx";
-import {delay, transform, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const variants = {
   open: {

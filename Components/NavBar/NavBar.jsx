@@ -26,7 +26,7 @@ const NavBar = () => {
           <div className="social">
             {social.map((item) => (
               <motion.a className="" 
-              href={item.src} 
+              href={item.url} 
               target={item.target}
               rel="noopener noreferrer"
                  whileHover={{
