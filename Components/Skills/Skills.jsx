@@ -74,7 +74,11 @@ const Skills = () => {
           <p>C# - .Net</p>
           <p>Javascript - Node.JS</p>
           <p>SQL</p>
-          <button><a href="#Portfolio">Vamos!</a></button>
+          <a href="#Portfolio">
+            <button>
+              Vamos!
+            </button>
+          </a>
         </motion.div>
         <motion.div
           className="box"
@@ -100,7 +104,11 @@ const Skills = () => {
           <p>Jmeter</p>
           <p>Express</p>
           <p>Selenium - Playwright</p>
-          <button><a href="#Portfolio">Vamos!</a></button>
+          <a href="#Portfolio">
+            <button>
+              Vamos!
+            </button>
+          </a>
         </motion.div>
       </motion.div>
     </motion.div>
