@@ -1,3 +1,5 @@
+@import "../../src/app/globals.scss";
+
 .portfolio {
   position: relative;
 
@@ -15,6 +17,7 @@
       height: 10px;
       background-color: white;
     }
+    
   }
 
   .container {
@@ -34,14 +37,28 @@
       justify-content: center;
       gap: 50px;
 
+      @include mobile {
+        width: 100%;
+        flex-direction: column;
+      }
+
       .imageContainer {
         flex: 1;
         height: 50%;
+
+        @include mobile {
+          display: none;
+        }
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+
+          @include mobile {
+            width: 85%;
+            object-fit: contain;
+          }
         }
       }
 
@@ -51,8 +68,21 @@
         flex-direction: column;
         gap: 30px;
 
+        @include mobile {
+          gap: 5%;
+          flex: 2;
+          width: 90%;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+
         h2 {
           font-size: 72px;
+
+          @include mobile {
+            font-size: 40px;
+          }
         }
 
         p {
@@ -63,6 +93,11 @@
         .buttons {
           display: flex;
           gap: 10%;
+
+          @include mobile {
+            align-items: center;
+            justify-content: center;
+          }
 
           button {
             background-color: orange;
@@ -76,48 +111,15 @@
             img {
               height: 30px;
             }
+
+            @include mobile {
+              width: 100px;
+              padding: 5px;
+            }
           }
 
           button:hover {
             transform: scale(1.1);
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .portfolio {
-    .progress {
-      padding: 50px;
-      font-size: 28px;
-
-      .progressBar {
-        margin-top: 1%;
-        height: 5px;
-      }
-    }
-
-    .container {
-      .wrapper {
-        .textContainer {
-          h2 {
-            font-size: 50px;
-          }
-
-          p {
-            font-size: 15px;
-          }
-
-          .buttons {
-            button {
-              border-radius: 10px;
-              width: 150px;
-              img {
-                height: 25px;
-              }
-            }
           }
         }
       }

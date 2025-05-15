@@ -92,7 +92,7 @@ const Intro = () => {
               </motion.button>
             </motion.a>
             <motion.a href="/contacto">
-            <motion.button variants={textvariants}>Contacto</motion.button>
+              <motion.button variants={textvariants}>Contacto</motion.button>
             </motion.a>
           </motion.div>
           <motion.img
@@ -120,6 +120,7 @@ const Intro = () => {
           height={600}
           id="Image-wave-laptop"
           className="inner_img"
+          alt="silvina caricatura"
         />
       </div>
     </div>

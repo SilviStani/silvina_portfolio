@@ -1,7 +1,7 @@
-"use client";
+  "use client";
 import { React, useRef, useEffect } from "react";
 import { data } from "./data.js";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import "./Portfolio.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,7 +41,6 @@ const Portfolio = () => {
                 <p>{e.desc}</p>
                 <p>{e.desc2}</p>
                 <div className="buttons">
-
                   <button>
                     <a href={e.srcGit} target="_blank">
                       <img src="/assets/github.png" alt="" />

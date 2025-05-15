@@ -1,3 +1,5 @@
+@import "../../src/app/globals.scss";
+
 .skills {
   height: 100%;
   width: 100%;
@@ -14,6 +16,12 @@
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
     p {
       font-weight: 200;
       font-size: 18px;
@@ -25,6 +33,10 @@
       width: 500px;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
     }
   }
 
@@ -34,23 +46,37 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      width: 100%;
+    }
+
     .title {
       display: flex;
       gap: 20px;
       align-items: center;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
 
       h1 {
         font-size: 60px;
         font-weight: 100;
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
+
+        @include mobile {
+          font-size: 30px;
+        }
       }
 
       span {
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
         font-weight: bold;
-        font-family: "Poppins", sans-serif;
+        color: orange;
         font-style: italic;
       }
 
@@ -62,6 +88,18 @@
         border: none;
         font-size: 24px;
         cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+
+      .skillsImage {
+        @include mobile {
+          display: none;
+        }
       }
     }
   }
@@ -73,6 +111,11 @@
     margin: auto;
     margin-bottom: 2%;
 
+    @include mobile {
+      flex-direction: column;
+      width: 90%;
+    }
+
     .box {
       padding: 50px;
       width: 100%;
@@ -80,6 +123,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      
+      @include mobile {
+        padding: 5%;
+      }
 
       h2 {
         text-align: center;
@@ -100,52 +147,9 @@
           border: none;
           cursor: pointer;
         }
-      }
-    }
-  }
-}
 
-@media only screen and (max-width: 1281px) {
-  .skills {
-
-    .textContainer {
-      p {
-        font-size: 15px;
-      }
-    }
-
-    .titleContainer {
-
-      .title {
-
-        h1 {
-          font-size: 45px;
-        }
-
-        button {
-          width: 200px;
-          height: 50px;
-          border-radius: 40px;
-          font-size: 20px;
-        }
-      }
-    }
-
-    .listContainer {
-      .box {
-
-        h2 {
-          font-size: 18px;
-        }
-
-        p {
-          font-size: 13px;
-        }
-
-        a {
-          button {
-            width: 100%;
-          }
+        @include mobile {
+          display: none;
         }
       }
     }
