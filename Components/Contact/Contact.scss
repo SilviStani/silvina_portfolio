@@ -1,122 +1,117 @@
-   @import "../../src/app/globals.scss";
+@import "../../src/app/globals.scss";
 
-   .contactContainer {
-       height: 100%;
-       max-width: 1166px;
-       margin: auto;
-       display: flex;
-       align-items: center;
-       gap: 50px;
+.contactContainer {
+  height: 100%;
+  max-width: 1166px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 
-       @include mobile {
-           width: 100%;
-           flex-direction: column-reverse;
-       }
+  @include mobile {
+    height: 100dvh;
+    width: 100dvw;
+    flex-direction: column;
+  }
+  .inicioBTN {
+    display: none;
+    @include mobile {
+      margin-top: 5%;
+      display: block;
+      padding: 3%;
+      border: 1px solid white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  }
 
-       .textContainer {
-           flex: 1;
-           display: flex;
-           flex-direction: column;
-           gap: 40px;
+  .mobile {
+    display: none;
+    @include mobile {
+      display: block;
+      color: white;
+    }
+  }
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include mobile {
+      display: none;
+    }
 
-           @include mobile {
-               gap: 10px;
-            }
-            
-            h1 {
-                font-size: 70px;
-                line-height: 88px;
-                
-                span {
-                    color: orange;
-                }
-                
-                @include mobile {
-                   font-size: 30px;
-               }
-           }
+    h1 {
+      font-size: 70px;
+      line-height: 88px;
 
-           .item {
-               @include mobile {
+      span {
+        color: orange;
+      }
+    }
 
-                   h2,
-                   span {
-                       font-size: 20px;
-                   }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      color: white;
+      width: 250px;
+      padding: 5px;
+      height: 50px;
+      border: 1px solid white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
 
-                   h2 {
-                       color: orange;
-                   }
-               }
-           }
+    .btn:hover {
+      background-color: orange;
+      border: none;
+    }
+  }
 
-           .btn {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background-color: transparent;
-               color: white;
-               width: 250px;
-               padding: 5px;
-               height: 50px;
-               border: 1px solid white;
-               border-radius: 10px;
-               cursor: pointer;
+  .formContainer,
+  form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-               @include mobile {
-                   background-color: orange;
-                   border: none;
-               }
-           }
+    @include mobile {
+      margin-top: 2%;
+      gap: 5px;
+      width: 90dvw;
+    }
 
-           .btn:hover {
-               background-color: orange;
-               border: none;
-           }
-       }
+    input,
+    textarea {
+      padding: 20px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      border-radius: 5px;
 
-       .formContainer,
-       form {
-           flex: 1;
-           display: flex;
-           flex-direction: column;
-           gap: 20px;
+      @include mobile {
+        width: 100%;
+      }
+    }
 
-           @include mobile {
-               margin-top: 2%;
-               gap: 5px;
-               width: 90dvw;
-           }
+    button {
+      background-color: orange;
+      padding: 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      height: 50px;
+      cursor: pointer;
+      @include mobile {
+        margin-top: 2%;
+      }
+    }
 
-           input,
-           textarea {
-               padding: 20px;
-               background-color: transparent;
-               border: 1px solid white;
-               color: white;
-               border-radius: 5px;
-
-               @include mobile {
-                   width: 100%;
-               }
-           }
-
-           button {
-               background-color: orange;
-               padding: 20px;
-               font-weight: bold;
-               color: white;
-               border-radius: 10px;
-               border: none;
-               height: 50px;
-               cursor: pointer;
-               @include mobile{
-                margin-top: 2%;
-               }
-           }
-
-           button:hover {
-               transform: scale(1.05);
-           }
-       }
-   }
+    button:hover {
+      transform: scale(1.05);
+    }
+  }
+}

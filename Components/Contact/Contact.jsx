@@ -73,6 +73,12 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
+      <a href="/" className="inicioBTN">
+          Inicio
+        </a>
+        <motion.h1 variants={variants} className="mobile">
+          Enviame tu <span style={{color: "orange"}}>Consulta</span>!
+        </motion.h1>
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>
           Trabajemos{" "}

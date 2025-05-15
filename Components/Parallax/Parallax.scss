@@ -13,7 +13,7 @@
         font-size: 100px;
 
         @include mobile{
-            font-size: 60px;
+            font-size: 60px !important;
             text-align: center;
         }
         @include desktop{

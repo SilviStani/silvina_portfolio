@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const textvariants = {
   initial: {
@@ -75,9 +77,7 @@ const Intro = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 className={styles.name} variants={textvariants}>
-            Silvina Staniszewski
-          </motion.h2>
+          <motion.h2 variants={textvariants}>Silvina Staniszewski</motion.h2>
           <motion.h1 className={styles.text} variants={textvariants}>
             QE Testing Automation
           </motion.h1>
@@ -113,7 +113,12 @@ const Intro = () => {
       >
         Silvina Staniszewski
       </motion.div>
-      <div className="imageContainer">
+      <div
+        className="imageContainer"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+      >
         <Image
           src={"/assets/laptopwave.png"}
           width={600}

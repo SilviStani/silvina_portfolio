@@ -73,7 +73,7 @@
           "Lucida Sans", Arial, sans-serif;
 
         @include mobile {
-          font-size: 30px;
+          font-size: 30px !important;
         }
 
         @include desktop {
@@ -99,9 +99,9 @@
         cursor: pointer;
 
         @include mobile {
-          font-size: 16px;
-          width: 150px;
-          height: 50px;
+          font-size: 16px !important;
+          width: 150px !important;
+          height: 50px !important;
         }
 
         @include desktop {
@@ -128,7 +128,7 @@
 
     @include mobile {
       flex-direction: column;
-      width: 90%;
+      width: 90% !important;
     }
 
     @include desktop {
@@ -144,7 +144,7 @@
       justify-content: space-between;
 
       @include mobile {
-        padding: 5%;
+        padding: 5% !important;
       }
 
       @include desktop {

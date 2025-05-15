@@ -11,6 +11,9 @@
     text-align: center;
     color: orange;
     font-size: 36px;
+    @include mobile{
+      font-size: 25px !important;
+    }
 
     @include desktop {
       font-size: 30px;
@@ -20,7 +23,9 @@
       margin-top: 20px;
       height: 10px;
       background-color: white;
-
+      @include mobile{
+        height: 2.5px !important;
+      }
       @include desktop {
         height: 5px;
       }
@@ -93,7 +98,7 @@
           font-size: 72px;
 
           @include mobile {
-            font-size: 40px;
+            font-size: 40px !important;
           }
 
           @include desktop {
