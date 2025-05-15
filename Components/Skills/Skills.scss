@@ -27,6 +27,10 @@
       font-size: 18px;
       color: gray;
       text-align: right;
+
+      @include desktop {
+        font-size: 15px;
+      }
     }
 
     hr {
@@ -61,6 +65,7 @@
         text-align: center;
       }
 
+
       h1 {
         font-size: 60px;
         font-weight: 100;
@@ -69,6 +74,10 @@
 
         @include mobile {
           font-size: 30px;
+        }
+
+        @include desktop {
+          font-size: 40px;
         }
       }
 
@@ -94,6 +103,12 @@
           width: 150px;
           height: 50px;
         }
+
+        @include desktop {
+          height: 60px;
+          width: 250px;
+          font-size: 20px;
+        }
       }
 
       .skillsImage {
@@ -116,6 +131,10 @@
       width: 90%;
     }
 
+    @include desktop {
+      margin-top: 1%;
+    }
+
     .box {
       padding: 50px;
       width: 100%;
@@ -123,19 +142,29 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+
       @include mobile {
         padding: 5%;
+      }
+
+      @include desktop {
+        padding: 30px;
       }
 
       h2 {
         text-align: center;
         font-size: 22px;
         margin-bottom: 4%;
+        @include desktop{
+          font-size: 18px;
+        }
       }
-
+      
       p {
         margin-bottom: 1%;
+        @include desktop{
+          font-size: 15px;
+        }
       }
 
       a {

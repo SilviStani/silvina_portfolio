@@ -16,6 +16,9 @@
             font-size: 60px;
             text-align: center;
         }
+        @include desktop{
+            font-size: 80px;
+        }
     }
     .mountains{
         background-image: url("/assets/mountains.png");
