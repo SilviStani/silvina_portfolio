@@ -5,8 +5,10 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 import { motion } from "framer-motion";
-import AOS from "aos";
 import "aos/dist/aos.css";
+import AOS from "aos";
+import { usePathname } from "next/navigation";
+import { btEn, btEs } from "./introButtons";
 
 const textvariants = {
   initial: {
@@ -47,7 +49,8 @@ const slidervariants = {
 
 const Intro = () => {
   const textRef = useRef();
-
+  const pathname = usePathname();
+  const data = pathname === "/en" ? btEn : btEs;
   useEffect(() => {
     if (textRef.current) {
       init(textRef.current, {
@@ -86,14 +89,14 @@ const Intro = () => {
             <span ref={textRef} className={styles.span}></span>
           </motion.h3>
           <motion.div className="buttons" variants={textvariants}>
-            <motion.a href="/#Portfolio">
-              <motion.button variants={textvariants}>
-                Ultimos Trabajos
-              </motion.button>
-            </motion.a>
-            <motion.a href="/contacto">
-              <motion.button variants={textvariants}>Contacto</motion.button>
-            </motion.a>
+            {
+              data.map((e) => (
+                <motion.a href={e.url}>
+                  <motion.button variants={textvariants}>
+                    {e.title}
+                  </motion.button>
+                </motion.a>
+              ))}
           </motion.div>
           <motion.img
             variants={textvariants}

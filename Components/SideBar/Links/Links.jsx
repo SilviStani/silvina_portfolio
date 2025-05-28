@@ -1,6 +1,8 @@
 import React from "react";
 import "../SideBar.scss";
 import { motion } from "framer-motion";
+import { linksDataEs, linksDataEn } from "./linksData";
+import { usePathname } from "next/navigation";
 
 const variants = {
   open: {
@@ -27,14 +29,14 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["Homepage", "Servicios", "Portfolio", 
-    "Contacto"];
+  const pathname = usePathname();
+  const items = pathname === "/en" || pathname === "/en/contact"  ? linksDataEn : linksDataEs;
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
-        <motion.a href={item != "Contacto" ? `#${item}`: "/contacto"} key={item} variants={itemVariants}
+        <motion.a href={item.url} key={item} variants={itemVariants}
         whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-          {item}
+          {item.title}
         </motion.a>
       ))}
     </motion.div>

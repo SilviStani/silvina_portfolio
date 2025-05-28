@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
 import "./NavBar.scss";
-import { social } from "./Social.js";
+import { socialEs, socialEn } from "./Social.js";
 import SideBar from "../SideBar/SideBar.jsx";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const pathname = usePathname();
+  const icons = pathname === "/en" ? socialEn : socialEs;
   return (
     <>
       <SideBar />
@@ -24,20 +27,21 @@ const NavBar = () => {
             Silvina Dev
           </motion.span>
           <div className="social">
-            {social.map((item) => (
-              <motion.a className="" 
-              href={item.url} 
-              target={item.target}
-              rel="noopener noreferrer"
-                 whileHover={{
-                scale: 1.4,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-              }}
-              >
-                <img src={item.src} alt={item.alt} className="img" />
+            {
+            icons.map((item) => (
+                <motion.a className="" 
+                href={item.url} 
+                target={item.target}
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.4,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                }}
+                >
+                <img title={item.title} src={item.src} alt={item.alt} className="img" />
               </motion.a>
             ))}
           </div>

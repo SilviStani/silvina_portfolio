@@ -2,7 +2,7 @@
 import "./Contact.scss";
 import React, { useRef, useState, useEffect, use } from "react";
 import emailjs from "@emailjs/browser";
-import { data } from "./data";
+import { dataEn } from "./data";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -21,9 +21,8 @@ const variants = {
   },
 };
 
-const Contact = () => {
+const ContactEn = () => {
   const pathname = usePathname();
- // const contactLanguage = pathname === "/en/contact" ? : ;
   const form = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -78,54 +77,35 @@ const Contact = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>
-          Trabajemos{" "}
+          Let's Work{" "}
           <motion.span whileHover={{ color: "orange", cursor: "arrow" }}>
             {" "}
-            Juntos
+            Together
           </motion.span>
         </motion.h1>
-        {data.map((e, i) => (
+        {dataEn.map((e, i) => (
           <motion.div className="item" variants={variants} key={i}>
-            <motion.h2 whileHover={{color: "orange"}}>{e.title}</motion.h2>
-            <motion.span whileHover={{color: "orange"}}>{e.text}</motion.span>
+            <motion.h2 whileHover={{ color: "orange" }}>{e.title}</motion.h2>
+            <motion.span whileHover={{ color: "orange" }}>{e.text}</motion.span>
           </motion.div>
         ))}
       </motion.div>
       <div className="formContainer">
         <form ref={form} onSubmit={sendEmail}>
-          <motion.input 
-          whileHover={{backgroundColor: "white", color: "black"}} 
-          type="text" 
-          required 
-          placeholder="Nombre" 
-          name="user_name" />
-          <motion.input 
-          whileHover={{backgroundColor: "white", color: "black"}} 
-          type="email" 
-          required 
-          placeholder="E-Mail" 
-          name="user_email" />
-          <motion.input 
-          whileHover={{backgroundColor: "white", color: "black"}} 
-          type="title" 
-          required 
-          placeholder="Titulo" 
-          name="input_title" />
-          <motion.textarea 
-          whileHover={{backgroundColor: "white", color: "black"}} 
-          rows={10} 
-          placeholder="Mensaje" 
-          name="user_message" />
+          <input type="text" required placeholder="Name" name="user_name" />
+          <input whileHover={{ backgroundColor: "white", color: "black" }} type="email" required placeholder="E-Mail" name="user_email" />
+          <input whileHover={{ backgroundColor: "white", color: "black" }} type="title" required placeholder="Title" name="input_title" />
+          <textarea whileHover={{ backgroundColor: "white", color: "black" }} rows={10} placeholder="Message" name="user_message" />
           <button >
-            Enviar
+            Send
           </button>
-          {loading && <div className="loader">Enviando...</div>}
+          {loading && <div className="loader">Sending...</div>}
           {error && <div className="error">Error</div>}
-          {success && <div className="loader">Envio Exitoso</div>}
+          {success && <div className="loader">Success</div>}
         </form>
       </div>
     </motion.div>
   );
 };
 
-export default Contact;
+export default ContactEn;
