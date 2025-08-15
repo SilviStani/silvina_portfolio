@@ -91,8 +91,8 @@ const Intro = () => {
           <motion.div className="buttons" variants={textvariants}>
             {
               data.map((e) => (
-                <motion.a href={e.url}>
-                  <motion.button variants={textvariants}>
+                <motion.a href={e.url} key={e.key}>
+                  <motion.button variants={textvariants} id={e.id}>
                     {e.title}
                   </motion.button>
                 </motion.a>

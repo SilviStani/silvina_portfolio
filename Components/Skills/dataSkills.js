@@ -1,21 +1,24 @@
-let idNumber = 0;
+let keyNumber = 0;
 export const introEs = [
     {
-        id: idNumber++,
+        id: "conocimientos",
+        key: keyNumber++,
         p1: "Conocimientos - Estudios",
         p2: "Servicios y más",
     }
 ]
 export const introEn = [
     {
-        id: idNumber++,
+        id: "knowledge",
+        key: keyNumber++,
         p1: "Knowledge - Studies",
         p2: "Services & more",
     }
 ]
 export const titleEs = [
     {
-        id: idNumber++,
+        id: "conocimientos",
+        key: keyNumber++,
         h1: "Ideas",
         span: "Unicas",
         hone2: "Practicas",
@@ -25,7 +28,8 @@ export const titleEs = [
 ]
 export const titleEn = [
     {
-        id: idNumber++,
+        id: "knowledge",
+        key: keyNumber++,
         h1: "Unique",
         span: "Ideas",
         hone2: "Constant",
@@ -35,7 +39,8 @@ export const titleEn = [
 ]
 export const dataEs = [
     {
-        id: idNumber++,
+        id: "conocimientos",
+        key: keyNumber++,
         h2: "Lenguages de Programación",
         b: "Entorno de Ejecución",
         p1: "C# - .Net",
@@ -45,7 +50,8 @@ export const dataEs = [
         btn: "Vamos!"
     },
     {
-        id: idNumber++,
+        id: "IDE",
+        key: keyNumber++,
         h2: "IDE's -",
         b: " Herramientas de desarrollo",
         p1: "Postman - Insomnia",
@@ -55,7 +61,8 @@ export const dataEs = [
         btn: "Vamos!"
     },
     {
-        id: idNumber++,
+        id: "Stack",
+        key: keyNumber++,
         h2: "Stack",
         p1: "Next.JS - React",
         p2: "JMeter",
@@ -66,7 +73,8 @@ export const dataEs = [
 ]
 export const dataEn = [
     {
-        id: idNumber++,
+        id: "Programming",
+        key: keyNumber++,
         h2: "Programming Languages",
         b: "Excecution Environment",
         p1: "C# - .Net",
@@ -76,7 +84,8 @@ export const dataEn = [
         btn: "Let's Go!"
     },
     {
-        id: idNumber++,
+        id: "IDE",
+        key: keyNumber++,
         h2: "IDE's -",
         b: " Developers Tools",
         p1: "Postman - Insomnia",
@@ -86,7 +95,8 @@ export const dataEn = [
         btn: "Let's Go!"
     },
     {
-        id: idNumber++,
+        id: "Stack",
+        key: keyNumber++,
         h2: "Stack",
         p1: "Next.JS - React",
         p2: "JMeter",

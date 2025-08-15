@@ -1,4 +1,5 @@
 let idNmber = 1;
+let idNmberEn = 50;
 export const dataEs = [
   {
     key: idNmber,
@@ -123,7 +124,7 @@ export const dataEs = [
   },
   {
     id: "to-do",
-    key: 11,
+    key: idNmber++,
     h1Title: "Proyecto Estudiantil",
     title: "TodoList: Vacation",
     src: "/projects",
@@ -135,7 +136,7 @@ export const dataEs = [
 ];
 export const dataEn = [
   {
-    key: idNmber,
+    key: idNmberEn,
     id: "vistaensueno",
     h1Title: "Tourism",
     title: "Vista Ensueño Cabins",
@@ -147,7 +148,7 @@ export const dataEn = [
     image: "/assets/vistaensueno.png",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "mirsu",
     h1Title: "Tourism",
     title: "Mirsu Cabins",
@@ -159,7 +160,7 @@ export const dataEn = [
     image: "/assets/Cabanias-mirsu.png",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "silandra",
     h1Title: "Commerce",
     title: "Silandra Haute Couture",
@@ -171,7 +172,7 @@ export const dataEn = [
     image: "/assets/silandra.jpeg",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "portfolio",
     h1Title: "Portfolio",
     title: "Silvina Portfolio",
@@ -184,7 +185,7 @@ export const dataEn = [
     image: "/assets/PortadaPortfolio.png",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "walter",
     h1Title: "General Services",
     title: "Upholstery Cleaning",
@@ -196,7 +197,7 @@ export const dataEn = [
     image: "/assets/Walter-tapizados.png",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "estetica",
     h1Title: "General Services",
     title: "Estetyczna Nadja Szewska",
@@ -208,7 +209,7 @@ export const dataEn = [
     image: "/assets/introPage.jpg",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     h1Title: "Bakery",
     id: "delicias",
     title: "Delights and Delicacies",
@@ -220,7 +221,7 @@ export const dataEn = [
     image: "/assets/deliciasymanjares.jpg",
 },
 {
-    key: idNmber++,
+    key: idNmberEn++,
     id: "vipets",
     h1Title: "Student Project",
     title: "Vipets",
@@ -234,7 +235,7 @@ export const dataEn = [
 },
 {
     id: "henryapp",
-    key: idNmber++,
+    key: idNmberEn++,
     h1Title: "Student Project",
     title: "Food*HenryApp",
     src: "/projects",
@@ -246,7 +247,7 @@ export const dataEn = [
 },
 {
     id: "cronometro",
-    key:  idNmber++,
+    key:  idNmberEn++,
     h1Title: "Student Project",
     title: "Chronometer",
     src: "/projects",
@@ -257,7 +258,7 @@ export const dataEn = [
 },
 {
     id: "to-do",
-    key: 11,
+    key:  idNmberEn++,
     title: "To-Do List: Vacation",
     h1Title: "Student Project",
     src: "/projects",

@@ -1,44 +1,64 @@
 export const linksDataEn =[
     {
         title: "Spanish",
-        url: "/"
+        url: "/",
+        key: 1
     },
     {
         title: "Homepage", 
-        url: "/en"
+        url: "/en",
+        key: 2
     },
     {
         title: "Services", 
-        url: "/en#Servicios"
+        url: "/en#Servicios",
+        key: 3
     },
     {
-        title: "Portfolio",
-        url: "/en#Portfolio"
+        title: "QA Projects",
+        url: "/en#qa",
+        key: 4
+    },
+    {
+        title: "Web Projects",
+        url: "/en#Portfolio",
+        key: 5
     },
     {
         title: "Contact",
-        url: "/en/contact"
+        url: "/en/contact",
+        key: 6
     },
 ];
 export const linksDataEs =[
     {
         title: "English",
-        url: "/en"
+        url: "/en",
+        key: 1
     },
     {
         title: "Inicio", 
-        url: "/"
+        url: "/",
+        key: 2
     },
     {
         title: "Servicios", 
-        url: "/#Servicios"
+        url: "/#Servicios",
+        key: 3
     },
     {
-        title: "Portfolio",
-        url: "/#Portfolio"
+        title: "Proyectos QA",
+        url: "/#qa",
+        key: 4
+    },
+    {
+        title: "Proyectos Web",
+        url: "/#Portfolio",
+        key: 5
     },
     {
         title: "Contacto",
-        url: "/contacto"
+        url: "/contacto",
+        key: 6
     },
 ];

@@ -4,6 +4,8 @@ import "./globals.scss";
 import Parallax from "../../Components/Parallax/Parallax";
 import Skills from "../../Components/Skills/Skills";
 import Portfolio from "../../Components/Portfolio/Portfolio";
+import QA from "../../Components/QA/QA";
+import QA_Second from "../../Components/QA/QA_Second";
 
 
 export default function Home() {
@@ -18,6 +20,12 @@ export default function Home() {
       </section>
       <section>
         <Skills />
+      </section>
+      <section id="qa">
+        <QA />
+      </section>
+      <section id="qa-second">
+        <QA_Second />
       </section>
       <section id="Portfolio">
         <Parallax />{" "}

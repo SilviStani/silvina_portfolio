@@ -1,23 +1,27 @@
 export const btEn = [
     {
-        id: 1,
+        key: 1,
+        id: "latest-works",
         title: "Latest Works",
         url: "/en#Portfolio",
     },
     {
-        id: 2,
+        key: 2,
+        id: "contact",
         title: "Contact",
         url: "/en/contact"
     }
 ]
 export const btEs = [
       {
-        id: 1,
+        key: 1,
+        id: "ultimos-trabajos",
         title: "Ultimos Trabajos",
         url: "/#Portfolio",
     },
     {
-        id: 2,
+        key: 2,
+        id: "contacto",
         title: "Contacto",
         url: "/contacto"
     }

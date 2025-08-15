@@ -25,13 +25,13 @@ const Portfolio = () => {
   return (
     <>
       {
-        data.map((e) => (
-          <div className="portfolio" ref={ref}>
+        data.map((e, i) => (
+          <div className="portfolio" ref={ref} key={i} >
             <div className="progress">
               <h1>{e.h1Title}</h1>
               {/*<motion.div className="progressBar" style={{ scaleX }}></motion.div>*/}
             </div>
-            <section key={e.id} ref={ref}>
+            <section ref={ref} key={e.id}>
               <div className="container">
                 <div className="wrapper">
                   <div className="imageContainer">

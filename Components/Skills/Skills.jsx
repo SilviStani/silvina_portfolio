@@ -44,7 +44,7 @@ const Skills = () => {
       <motion.div className="textContainer" variants={variants}>
         {
           intro.map((e) => (
-            <p key={e.id} id={e.id}>
+            <p key={e.key} id={e.id}>
               {e.p1}
               <br />
               {e.p2}
@@ -64,9 +64,9 @@ const Skills = () => {
           />
           {
             title.map((e) => (
-              <h1>
+              <h1 key={e.key}>
                 {e.h1}{" "}
-                <motion.span whileHover={{ color: "orange" }}>{e.span}</motion.span>
+                <motion.span id={e.id} whileHover={{ color: "orange" }}>{e.span}</motion.span>
               </h1>
             ))
           }
@@ -74,8 +74,8 @@ const Skills = () => {
         <div className="title">
           {
             title.map((e) => (
-              <h1>
-                <motion.span whileHover={{ color: "orange" }}>
+              <h1 key={e.key}>
+                <motion.span id={e.id} whileHover={{ color: "orange" }}>
                   {e.hone2}
                 </motion.span>{" "}
                 {e.span2}
@@ -84,7 +84,7 @@ const Skills = () => {
           }
           {
             title.map((e) => (
-              <button><a href="https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!" target="_blank">{e.btn}</a></button>
+              <button key={e.key}><a id={e.id} href="https://wa.me/5491163632288?text=Hola!%20Me%20interesa%20información%20sobre%20las%20páginas%20Web.%0AGracias!" target="_blank">{e.btn}</a></button>
             ))
           }
         </div>
@@ -93,6 +93,7 @@ const Skills = () => {
         {
           data.map((e) => (
             <motion.div
+              key={e.key}
               className="box"
               whileHover={{ backgroundColor: "lightgray", color: "black" }}
             >
