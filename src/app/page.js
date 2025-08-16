@@ -21,17 +21,14 @@ export default function Home() {
       <section>
         <Skills />
       </section>
+      <section id="e2e">
+        <Parallax />{" "}
+      </section>
       <section id="qa">
         <QA />
       </section>
       <section id="qa-second">
         <QA_Second />
-      </section>
-      <section id="Portfolio">
-        <Parallax />{" "}
-      </section>
-      <section>
-        <Portfolio />
       </section>
     </div>
   );

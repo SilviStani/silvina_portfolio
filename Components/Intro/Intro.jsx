@@ -82,7 +82,7 @@ const Intro = () => {
         >
           <motion.h2 variants={textvariants}>Silvina Staniszewski</motion.h2>
           <motion.h1 className={styles.text} variants={textvariants}>
-            QE Testing Automation
+            FullStack & QE Automation
           </motion.h1>
           <motion.h3 className={styles.text} variants={textvariants}>
             Full Stack Developer <br />

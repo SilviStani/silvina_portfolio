@@ -27,13 +27,14 @@ const Portfolio = () => {
       {
         data.map((e, i) => (
           <div className="portfolio" ref={ref} key={i} >
-            <div className="progress">
-              <h1>{e.h1Title}</h1>
-              {/*<motion.div className="progressBar" style={{ scaleX }}></motion.div>*/}
-            </div>
-            <section ref={ref} key={e.id}>
+            <section
+              ref={ref}
+              key={e.id}
+              className={i === 0 ? "first-section" : ""}
+            >
               <div className="container">
                 <div className="wrapper">
+                  <h1 className="wrapper_title">Proyectos Web</h1>
                   <div className="imageContainer">
                     <img src={e.image} alt={e.alt} />
                   </div>

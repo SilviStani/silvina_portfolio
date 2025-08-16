@@ -32,11 +32,8 @@ const QA = () => {
                 <div className="content" >
                     {/* Título */}
                     <h2 className="title">
-                        Proyectos QA
-                    </h2>
-                    <p className="description">
                         ¿Qué es E2E Testing?
-                    </p>
+                    </h2>
                     {/* Grid de proyectos */}
                     <div className="projects-grid">
                         {/* Proyecto 1 */}

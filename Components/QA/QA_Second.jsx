@@ -32,11 +32,8 @@ const QA_Second = () => {
                 <div className="content" >
                     {/* Título */}
                     <h2 className="title">
-                        Proyectos QA
+                        Steps and Best Practices
                     </h2>
-                    <p className="description">
-                        Steps and Best Practices - End 2 End Testing
-                    </p>
                     {/* Grid de proyectos */}
                     <div className="projects-grid">
                         {/* Proyecto 2 */}

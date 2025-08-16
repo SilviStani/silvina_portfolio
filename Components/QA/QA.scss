@@ -12,23 +12,19 @@
             margin: auto;
 
             .title {
+                padding: 10px;
+                border: 1px solid orange;
+                border-radius: 10px;
                 text-align: center;
                 font-size: 2.5rem;
                 color: whitesmoke;
                 margin-bottom: 10px;
             }
-
-            .description {
-                text-align: center;
-                font-size: 1.1rem;
-                color: whitesmoke;
-                max-width: 800px;
-                margin: 0 auto 10px;
-            }
-
+            
             .title:hover,
             .description:hover {
                 color: orange;
+                border: 1px solid whitesmoke;
             }
 
             .projects-grid {
@@ -44,10 +40,12 @@
                     color: white;
                     border: 0.5px solid orange;
                     border-radius: 10px;
+                    transition: all ease-in-out 0.3s;
                 }
                 .download_button:hover {
                     color: orange;
                     border: 0.5px solid white;
+                    transform: scale(1.1);
                 }
                 .project-card {
                     background: transparent;

@@ -1,64 +1,75 @@
+let i = 1;
 export const linksDataEn =[
     {
         title: "Spanish",
         url: "/",
-        key: 1
+        key: i
     },
     {
         title: "Homepage", 
         url: "/en",
-        key: 2
+        key: i++
     },
     {
         title: "Services", 
         url: "/en#Servicios",
-        key: 3
+        key: i++
+    },
+    {
+        title: "E2E Testing",
+        url: "/en#e2e",
+        key: i++
     },
     {
         title: "QA Projects",
-        url: "/en#qa",
-        key: 4
+        url: "/en/qa",
+        key: i++
     },
     {
         title: "Web Projects",
-        url: "/en#Portfolio",
-        key: 5
+        url: "/en/dev",
+        key: i++
     },
     {
         title: "Contact",
         url: "/en/contact",
-        key: 6
+        key: i++
     },
 ];
 export const linksDataEs =[
     {
         title: "English",
         url: "/en",
-        key: 1
+        key: i++
     },
     {
         title: "Inicio", 
         url: "/",
-        key: 2
+        key: i++
     },
     {
         title: "Servicios", 
         url: "/#Servicios",
-        key: 3
+        key: i++
+    },
+    {
+        title: "E2E Testing", 
+        url: "/#e2e",
+        key: i++
     },
     {
         title: "Proyectos QA",
-        url: "/#qa",
-        key: 4
+        url: "/qa",
+        key: i++
     },
     {
         title: "Proyectos Web",
-        url: "/#Portfolio",
-        key: 5
+        url: "/dev",
+        key: i++
     },
     {
         title: "Contacto",
         url: "/contacto",
-        key: 6
+        key: i++
     },
 ];
