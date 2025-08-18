@@ -3,29 +3,18 @@ import React, { useState } from "react";
 import "./QA.scss";
 
 const images = [
-    "/carouseltwo/slide1.png",
-    "/carouseltwo/slide2.png",
-    "/carouseltwo/slide3.png",
-    "/carouseltwo/slide4.png",
-    "/carouseltwo/slide5.png"
+    "/assets/E2E_BriefGuide_1.png",
+    "/assets/E2E_BriefGuide_2.png",
+    "/assets/E2E_BriefGuide_3.png",
+    "/assets/E2E_BriefGuide_4.png",
+    "/assets/E2E_BriefGuide_5.png"
 ];
-const imagesTwo = [
-    "/carousel/slide1.png",
-    "/carousel/slide2.png",
-    "/carousel/slide3.png",
-    "/carousel/slide4.png",
-    "/carousel/slide5.png",
-    "/carousel/slide6.png",
-    "/carousel/slide7.png",
-];
+
 const QA = () => {
     const [current, setCurrent] = useState(0);
-    const [currentTwo, setCurrentTwo] = useState(0);
 
     const nextSlide = () => setCurrent((current + 1) % images.length);
     const prevSlide = () => setCurrent((current - 1 + images.length) % images.length);
-    const nextSlideTwo = () => setCurrentTwo((currentTwo + 1) % imagesTwo.length);
-    const prevSlideTwo = () => setCurrentTwo((currentTwo - 1 + imagesTwo.length) % imagesTwo.length);
     return (
         <div className="Container">
             <section id="qa-projects" className="id_projects">
