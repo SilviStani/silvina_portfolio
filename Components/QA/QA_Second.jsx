@@ -36,12 +36,14 @@ const QA_Second = () => {
                                         src={imagesTwo[currentTwo]}
                                         alt={`slide-${currentTwo}`}
                                         className="carousel-image"
-                                        style={{ width: "500px", height: "auto" }} />
+                                        style={{ width: "500px", height: "auto" }}
+                                        loading="eager"
+                                    />
                                     <button className="carousel-button" onClick={nextSlideTwo}>{">"}</button>
                                 </div>
                             </div>
                         </div>
-                        <a href="/carouseltwo/E2E_Testing_Best_Practices.pptx" download className="download_button">
+                        <a href="/assets/E2E_Testing_Best_Practices.pptx" download className="download_button">
                             <p>Descargar Presentación: 'Steps & Best Practices: E2E Testing'</p>
                         </a>
                     </div>

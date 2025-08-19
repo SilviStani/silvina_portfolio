@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
 import { motion } from "framer-motion";
-import "aos/dist/aos.css";
-import AOS from "aos";
 import { usePathname } from "next/navigation";
 import { btEn, btEs } from "./introButtons";
 
@@ -118,17 +116,15 @@ const Intro = () => {
       </motion.div>
       <div
         className="imageContainer"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
       >
         <Image
-          src={"/assets/laptopwave.png"}
+          src="/assets/laptopwave.png"
           width={600}
           height={600}
           id="Image-wave-laptop"
           className="inner_img"
           alt="silvina caricatura"
+          loading="eager"
         />
       </div>
     </div>

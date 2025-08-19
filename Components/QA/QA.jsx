@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import "./QA.scss";
+import Image from "next/image";
 
 const images = [
     "/assets/E2E_BriefGuide_1.png",
@@ -35,12 +36,14 @@ const QA = () => {
                                         src={images[current]}
                                         alt={`slide-${current}`}
                                         style={{ width: "500px", height: "auto" }}
+                                        loading="eager"
+                                        className="carousel-image"
                                     />
                                     <button className="carousel-button" onClick={nextSlide}>{">"}</button>
                                 </div>
                             </div>
                         </div>
-                        <a href="/carousel/Brief_Guide_E2E_Testing_Key_Takeaways.pptx" download >
+                        <a href="/assets/Brief_Guide_E2E_Testing_Key_Takeaways.pptx" download >
                             <p className="download_button">Descargar Presentación: 'Brief Guide E2E Testing'</p>
                         </a>
                     </div>

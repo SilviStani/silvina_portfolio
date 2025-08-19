@@ -1,3 +1,5 @@
+@import "../../src/app/globals.scss";
+
 .Container {
     height: 100vh;
     display: flex;
@@ -6,6 +8,13 @@
 
     .id_projects {
         padding: 20px;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         .content {
             max-width: 1100px;
@@ -19,8 +28,12 @@
                 font-size: 2.5rem;
                 color: whitesmoke;
                 margin-bottom: 10px;
+
+                @include mobile {
+                    font-size: 1.5rem;
+                }
             }
-            
+
             .title:hover,
             .description:hover {
                 color: orange;
@@ -31,8 +44,8 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
                 gap: 10px;
-                
-                .download_button{
+
+                .download_button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -42,11 +55,13 @@
                     border-radius: 10px;
                     transition: all ease-in-out 0.3s;
                 }
+
                 .download_button:hover {
                     color: orange;
                     border: 0.5px solid white;
                     transform: scale(1.1);
                 }
+
                 .project-card {
                     background: transparent;
                     border-radius: 15px;
@@ -63,13 +78,14 @@
                         align-items: center;
 
                         .project-title {
-                            font-size: 1.5rem;
-                            color: #444;
-                        }
+                            display: none;
 
-                        .project-description {
-                            color: #666;
-                            font-size: 1rem;
+                            @include mobile {
+                                display: block;
+                                font-size: 1.5rem;
+                                color: orange;
+                                padding: 5%;
+                            }
                         }
 
                         .carousel {
@@ -77,6 +93,17 @@
                             align-items: center;
                             justify-content: center;
                             height: 15em;
+
+                            @include mobile {
+                                width: 90%;
+                            }
+
+                            .carousel-image {
+                                @include mobile {
+                                    height: auto !important;
+                                    width: 100% !important;
+                                }
+                            }
 
                             .carousel-button {
                                 background: none;
@@ -87,7 +114,7 @@
 
                                 &:hover {
                                     color: orange;
-                                    text-shadow: white 0px 0px 10px; 
+                                    text-shadow: white 0px 0px 10px;
                                 }
                             }
                         }
