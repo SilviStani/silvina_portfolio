@@ -46,9 +46,10 @@
           display: none;
         }
       }
-
+      
       .imageContainer {
         flex: 1;
+        transition: all ease-in-out 3s;
        // height: 50%;
 
         @keyframes floating {

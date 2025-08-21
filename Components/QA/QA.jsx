@@ -44,7 +44,7 @@ const QA = () => {
                             </div>
                         </div>
                         <a href="/assets/Brief_Guide_E2E_Testing_Key_Takeaways.pptx" download >
-                            <p className="download_button">Descargar Presentación: 'Brief Guide E2E Testing'</p>
+                            <p className="download_button"><img src="/assets/download.png" alt="Download Icon" style={{ height: "20px" }}/> 'Brief Guide E2E Testing'</p>
                         </a>
                     </div>
                 </div>

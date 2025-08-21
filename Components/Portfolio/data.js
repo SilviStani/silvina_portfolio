@@ -149,6 +149,18 @@ export const dataEs = [
 export const dataEn = [
   {
     key: idNmberEn,
+    id: "presentacion",
+    h1Title: "My Personal Projects",
+    title: "My Personal Projects",
+    src: "/projects",
+    desc: "",
+    desc2: "",
+    srcGit: "",
+    srcWeb: "",
+    image: "/assets/contact_me.png",
+  },
+  {
+    key: idNmberEn++,
     id: "vistaensueno",
     h1Title: "Tourism",
     title: "Vista Ensueño Cabins",

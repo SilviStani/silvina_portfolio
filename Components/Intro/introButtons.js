@@ -3,7 +3,7 @@ export const btEn = [
         key: 1,
         id: "latest-works",
         title: "Latest Works",
-        url: "/en#Portfolio",
+        url: "/en/dev",
     },
     {
         key: 2,
@@ -17,7 +17,7 @@ export const btEs = [
         key: 1,
         id: "ultimos-trabajos",
         title: "Ultimos Trabajos",
-        url: "/#Portfolio",
+        url: "/dev",
     },
     {
         key: 2,

@@ -15,11 +15,13 @@ export const linksDataEn =[
         url: "/en#e2e",
         key: i++
     },
+    /*
     {
         title: "QA Projects",
         url: "/en/qa",
         key: i++
     },
+    */
     {
         title: "Web Projects",
         url: "/en/dev",
@@ -52,11 +54,13 @@ export const linksDataEs =[
         url: "/#e2e",
         key: i++
     },
+    /*
     {
         title: "Proyectos QA",
         url: "/qa",
         key: i++
     },
+    */
     {
         title: "Proyectos Web",
         url: "/dev",

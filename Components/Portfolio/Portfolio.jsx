@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const Portfolio = () => {
   const pathname = usePathname();
-  const data = pathname === "/en" ? dataEn : dataEs;
+  const data = pathname === "/en/dev" ? dataEn : dataEs;
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,

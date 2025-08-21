@@ -30,7 +30,7 @@ const itemVariants = {
 
 const Links = () => {
   const pathname = usePathname();
-  const items = pathname === "/en" || pathname === "/en/contact"  ? linksDataEn : linksDataEs;
+  const items = pathname === "/en" || pathname === "/en/contact" || pathname === "/en/dev" ? linksDataEn : linksDataEs;
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (

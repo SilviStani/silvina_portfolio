@@ -3,7 +3,6 @@ import NavBar from "../../Components/NavBar/NavBar";
 import "./globals.scss";
 import Parallax from "../../Components/Parallax/Parallax";
 import Skills from "../../Components/Skills/Skills";
-import Portfolio from "../../Components/Portfolio/Portfolio";
 import QA from "../../Components/QA/QA";
 import QA_Second from "../../Components/QA/QA_Second";
 

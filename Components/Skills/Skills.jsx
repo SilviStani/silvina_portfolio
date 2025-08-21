@@ -102,7 +102,7 @@ const Skills = () => {
               <p>{e.p2}</p>
               <p>{e.p3}</p>
               <p>{e.p4.length > 0 ? e.p4 : ""}</p>
-              <a href="#Portfolio">
+              <a href= {pathname === "/" ?"/dev" : "/en/dev"} >
                 <button>
                   {e.btn}
                 </button>

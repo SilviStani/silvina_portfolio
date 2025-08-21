@@ -44,7 +44,7 @@ const QA_Second = () => {
                             </div>
                         </div>
                         <a href="/assets/E2E_Testing_Best_Practices.pptx" download className="download_button">
-                            <p>Descargar Presentación: 'Steps & Best Practices: E2E Testing'</p>
+                            <p><img src="/assets/download.png" alt="Download Icon" style={{ height: "20px" }}/> 'Steps & Best Practices: E2E Testing'</p>
                         </a>
                     </div>
                 </div>
