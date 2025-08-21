@@ -32,10 +32,12 @@ const QA = () => {
                                 <h3 className="project-title">E2E TESTING</h3>
                                 <div className="carousel">
                                     <button className="carousel-button" onClick={prevSlide}>{"<"}</button>
-                                    <img
+                                    <Image
                                         src={images[current]}
                                         alt={`slide-${current}`}
-                                        style={{ width: "500px", height: "auto" }}
+                                        width={500}
+                                        height={300}
+                                        style={{ objectFit: "cover" }}
                                         loading="eager"
                                         className="carousel-image"
                                     />
