@@ -36,7 +36,10 @@ const Portfolio = () => {
                 <div className="wrapper">
                   <h1 className="wrapper_title">Proyectos Web</h1>
                   <div className="imageContainer">
-                    <img src={e.image} alt={e.alt} />
+                    <img 
+                    src={e.image} 
+                    alt={e.alt} 
+                    className={e.id == "presentacion" ? "my_img" : "img"}/>
                   </div>
                   <div
                     className="textContainer"
@@ -47,11 +50,14 @@ const Portfolio = () => {
                     <p>{e.desc}</p>
                     <p>{e.desc2}</p>
                     <div className="buttons">
+                     {
+                      e.srcGit.length > 0 &&
                       <button>
                         <a href={e.srcGit} target="_blank">
                           <img src="/assets/github.png" alt="" />
                         </a>
                       </button>
+                      }
                       {e.srcWeb.length > 0 &&
                         <button>
                           <a href={e.srcWeb} target="_blank">

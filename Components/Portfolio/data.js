@@ -3,6 +3,18 @@ let idNmberEn = 50;
 export const dataEs = [
   {
     key: idNmber,
+    id: "presentacion",
+    h1Title: "Mis Proyectos Personales",
+    title: "Mis Proyectos Personales",
+    src: "/projects",
+    desc: "",
+    desc2: "",
+    srcGit: "",
+    srcWeb: "",
+    image: "/assets/contact_me.png",
+  },
+  {
+    key: idNmber++,
     id: "vistaensueno",
     h1Title: "Turismo",
     title: "Vista Ensueño Cabañas",

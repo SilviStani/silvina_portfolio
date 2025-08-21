@@ -1,11 +1,6 @@
 let i = 1;
 export const linksDataEn =[
     {
-        title: "Spanish",
-        url: "/",
-        key: i
-    },
-    {
         title: "Homepage", 
         url: "/en",
         key: i++
@@ -35,13 +30,13 @@ export const linksDataEn =[
         url: "/en/contact",
         key: i++
     },
-];
-export const linksDataEs =[
     {
-        title: "English",
-        url: "/en",
+        title: "Spanish",
+        url: "/",
         key: i++
     },
+];
+export const linksDataEs =[
     {
         title: "Inicio", 
         url: "/",
@@ -70,6 +65,11 @@ export const linksDataEs =[
     {
         title: "Contacto",
         url: "/contacto",
+        key: i++
+    },
+    {
+        title: "English",
+        url: "/en",
         key: i++
     },
 ];
