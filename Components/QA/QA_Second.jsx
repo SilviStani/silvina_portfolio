@@ -1,8 +1,16 @@
 'use client'
 import React, { useState } from "react";
 import "./QA.scss";
-import { imagesTwo } from "./data.js";
 
+const imagesTwo = [
+    "/assets/Best_Practices_1.jpg",
+    "/assets/Best_Practices_2.jpg",
+    "/assets/Best_Practices_3.jpg",
+    "/assets/Best_Practices_4.jpg",
+    "/assets/Best_Practices_5.jpg",
+    "/assets/Best_Practices_6.jpg",
+    "/assets/Best_Practices_7.jpg"
+];
 
 const QA_Second = () => {
     const [currentTwo, setCurrentTwo] = useState(0);

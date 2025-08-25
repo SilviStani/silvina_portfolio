@@ -2,8 +2,14 @@
 import React, { useState } from "react";
 import "./QA.scss";
 import Image from "next/image";
-import { images } from "./data.js";
 
+const images = [
+    "/assets/Brief_1.jpg",
+    "/assets/Brief_2.jpg",
+    "/assets/Brief_3.jpg",
+    "/assets/Brief_4.jpg",
+    "/assets/Brief_5.jpg"
+];
 
 const QA = () => {
     const [current, setCurrent] = useState(0);
@@ -26,20 +32,15 @@ const QA = () => {
                                 <h3 className="project-title">E2E TESTING</h3>
                                 <div className="carousel">
                                     <button className="carousel-button" onClick={prevSlide}>{"<"}</button>
-                                    {
-                                        images.map((e) => (
-                                            <Image
-                                                key={e.id}
-                                                src={e.src[current]}
-                                                alt={e.alt}
-                                                width={500}
-                                                height={300}
-                                                style={{ objectFit: "cover" }}
-                                                loading="eager"
-                                                className="carousel-image"
-                                            />
-                                        ))
-                                    }
+                                    <Image
+                                        src={images[current]}
+                                        alt={`slide-${current}`}
+                                        width={500}
+                                        height={300}
+                                        style={{ objectFit: "cover" }}
+                                        loading="eager"
+                                        className="carousel-image"
+                                    />
                                     <button className="carousel-button" onClick={nextSlide}>{">"}</button>
                                 </div>
                             </div>
