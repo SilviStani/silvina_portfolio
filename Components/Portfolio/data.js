@@ -204,7 +204,7 @@ export const dataEn = [
     desc: "My Portfolio. Suffer more changes that Argentina's Economy",
     desc2: "Developed in: Next.Js, Javascript, Css.",
     srcGit:
-    "https://github.com/SilviStani/React-Portfolio/tree/main/silvi-portfolio",
+    "https://github.com/SilviStani/silvina_portfolio",
     srcWeb: "https://react-portfolio-silvistani.vercel.app",
     image: "/assets/PortadaPortfolio.png",
 },
