@@ -58,7 +58,7 @@ export const dataEs = [
     desc: "Mi portfolio. Sufrió mas cambios que la economia Argentina",
     desc2: "Desarrollado en: Next.Js, Javascript, Css.",
     srcGit:
-    "https://github.com/SilviStani/React-Portfolio/tree/main/silvi-portfolio",
+    "https://github.com/SilviStani/silvina_portfolio",
     srcWeb: "https://react-portfolio-silvistani.vercel.app",
     image: "/assets/PortadaPortfolio.png",
   },
