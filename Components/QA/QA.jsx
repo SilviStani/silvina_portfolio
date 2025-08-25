@@ -2,14 +2,8 @@
 import React, { useState } from "react";
 import "./QA.scss";
 import Image from "next/image";
+import{ images } from "./data.js";
 
-const images = [
-    "/assets/E2E_BriefGuide_1.png",
-    "/assets/E2E_BriefGuide_2.png",
-    "/assets/E2E_BriefGuide_3.png",
-    "/assets/E2E_BriefGuide_4.png",
-    "/assets/E2E_BriefGuide_5.png"
-];
 
 const QA = () => {
     const [current, setCurrent] = useState(0);
