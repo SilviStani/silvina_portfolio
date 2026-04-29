@@ -2,42 +2,76 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: monospace, cursive;
+  font-family: var(--font-principal), cursive;
+}
+:root {
+  --font-principal: "Roboto";
+  --fondo_negroazulado: #0b0f1a;
+  --fondo_fuxiaoscuro: #7d2451;
+  --fondo_secciones: #0f172a;
+  --profundidad: #111827;
+  --violeta: #a855f7;
+  --violeta_suave: #c084fc;
+  --fuxia: #ec4899;
+  --fuxia_claro: #f472b6;
+  --azul-neon: #22d3ee;
+  --azul_claro: #38bff8;
+  --texto_ppal: #f9fafb;
+  --texto_secondary: #d1d5db;
+  --texto_muted: #9ca3af;
 }
 
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
-body{
-    background-color: #0c0c1d;
-    color:lightgray;
+body {
+  background-color: var(--fondo_negroazulado);
+  color: lightgray;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-:root{
-  --font-principal: "Jersey-20";
-}
-section{
+section {
   scroll-snap-align: center;
   height: 100vh;
 }
 
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
 @mixin mobile {
-  @media (max-width: 739px){
+  @media (max-width: 739px) {
     @content;
   }
 }
 @mixin tablet {
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     @content;
   }
 }
 @mixin desktop {
-  @media (max-width: 1366px){
+  @media (max-width: 1366px) {
     @content;
   }
 }

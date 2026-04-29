@@ -1,7 +1,14 @@
-import { Roboto } from "next/font/google";
-//require('dotenv').config();
+import { Roboto, Space_Grotesk, Inter } from "next/font/google";
 
 const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -14,8 +21,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body className={roboto.className}>{children}</body>
+    <html lang="en">
+      <body className={`${spaceGrotesk.variable} ${roboto.variable} ${inter.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }  

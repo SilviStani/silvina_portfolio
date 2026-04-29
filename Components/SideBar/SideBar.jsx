@@ -1,5 +1,5 @@
-'use client';
-import {React, useState} from "react";
+"use client";
+import { React, useState } from "react";
 import "./SideBar.scss";
 import ToggleButton from "./ToggleButton/ToggleButton.jsx";
 import Links from "./Links/Links.jsx";
@@ -28,18 +28,15 @@ const SideBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div 
-    className="sidebar" 
-    initial={open ? "open" : "closed"} 
-    animate={open ? "open" : "closed"} 
+    <motion.div
+      className="sidebar"
+      initial={open ? "open" : "closed"}
+      animate={open ? "open" : "closed"}
     >
-      <motion.div 
-      className="bg" 
-      variants={variants}
-      >
-       <Links />
+      <motion.div className="bg" variants={variants}>
+        <Links />
       </motion.div>
-      <ToggleButton setOpen={setOpen}/>
+      <ToggleButton setOpen={setOpen} />
     </motion.div>
   );
 };

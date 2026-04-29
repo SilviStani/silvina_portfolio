@@ -1,6 +1,6 @@
 "use client";
 import "./Contact.scss";
-import React, { useRef, useState, useEffect, use } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { data } from "./data";
 import { motion } from "framer-motion";
@@ -49,7 +49,7 @@ const Contact = () => {
         form.current,
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-        }
+        },
       )
       .then(
         (result) => {
@@ -62,7 +62,7 @@ const Contact = () => {
           setError(true);
           setLoading(false);
           console.log(error.text);
-        }
+        },
       );
   };
 
@@ -74,41 +74,62 @@ const Contact = () => {
       whileInView="animate"
     >
       <a href="/" className="inicioBTN">
-          Inicio
-        </a>
-        <motion.h1 variants={variants} className="mobile">
-          Enviame tu <span style={{color: "orange"}}>Consulta</span>!
-        </motion.h1>
+        Home
+      </a>
+      <motion.h1 variants={variants} className="mobile">
+        Let's Work <span style={{ color: "var(--fuxia)" }}>Togheter</span>!
+      </motion.h1>
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>
-          Trabajemos{" "}
-          <motion.span whileHover={{ color: "orange", cursor: "arrow" }}>
-            {" "}
-            Juntos
-          </motion.span>
+          Let's Work <motion.span className="together_effect"> Together!</motion.span>
         </motion.h1>
         {data.map((e, i) => (
           <motion.div className="item" variants={variants} key={i}>
-            <motion.h2 whileHover={{color: "orange"}}>{e.title}</motion.h2>
-            <motion.span whileHover={{color: "orange"}}>{e.text}</motion.span>
+            <motion.h2 whileHover={{ color: "var(--fuxia)" }}>
+              {e.title}
+            </motion.h2>
+            <motion.span whileHover={{ color: "var(--fuxia)" }}>
+              {e.text}
+            </motion.span>
           </motion.div>
         ))}
         <a href="/" className="btn">
-          Inicio
+         Home
         </a>
       </motion.div>
       <div className="formContainer">
         <form ref={form} onSubmit={sendEmail}>
-          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="text" required placeholder="Nombre" name="user_name" />
-          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="email" required placeholder="E-Mail" name="user_email" />
-          <motion.input whileHover={{backgroundColor: "white", color: "black"}} type="title" required placeholder="title" name="input_title" />
-          <motion.textarea whileHover={{backgroundColor: "white", color: "black"}} rows={10} placeholder="Mensaje" name="user_message" />
-          <button >
-            Enviar
-          </button>
-          {loading && <div className="loader">Enviando...</div>}
+          <motion.input
+            whileHover={{ backgroundColor: "white", color: "black" }}
+            type="text"
+            required
+            placeholder="Name"
+            name="user_name"
+          />
+          <motion.input
+            whileHover={{ backgroundColor: "white", color: "black" }}
+            type="email"
+            required
+            placeholder="E-Mail"
+            name="user_email"
+          />
+          <motion.input
+            whileHover={{ backgroundColor: "white", color: "black" }}
+            type="title"
+            required
+            placeholder="title"
+            name="input_title"
+          />
+          <motion.textarea
+            whileHover={{ backgroundColor: "white", color: "black" }}
+            rows={10}
+            placeholder="Message"
+            name="user_message"
+          />
+          <button>Send Email</button>
+          {loading && <div className="loader">Sending...</div>}
           {error && <div className="error">Error</div>}
-          {success && <div className="loader">Envio Exitoso</div>}
+          {success && <div className="loader">Success!!</div>}
         </form>
       </div>
     </motion.div>

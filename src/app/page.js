@@ -1,18 +1,17 @@
-import Intro from "../../Components/Intro/Intro";
-import NavBar from "../../Components/NavBar/NavBar";
 import "./globals.scss";
-import Parallax from "../../Components/Parallax/Parallax";
-import Skills from "../../Components/Skills/Skills";
-import Portfolio from "../../Components/Portfolio/Portfolio";
-
+import Intro from "../../Components/Intro/Intro";
+import Banner from "../../Components/Banner/Banner";
+import Aboutme from "../../Components/About-Me/Aboutme";
 
 export default function Home() {
   return (
     <div>
       <section id="Homepage">
-        <NavBar />
         <Intro />
+        <Banner />
+        <Aboutme />
       </section>
+      {/*
       <section id="Servicios">
         <Parallax type="servicios" id="Servicios" />
       </section>
@@ -25,6 +24,7 @@ export default function Home() {
       <section>
         <Portfolio />
       </section>
+        */}
     </div>
   );
 }

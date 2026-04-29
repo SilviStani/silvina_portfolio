@@ -3,10 +3,13 @@
 .contactContainer {
   height: 100%;
   max-width: 1166px;
+  padding: 0 5%;
   margin: auto;
   display: flex;
   align-items: center;
   gap: 50px;
+
+  background-color: var(--fondo_secciones);
 
   @include mobile {
     height: 100dvh;
@@ -45,8 +48,29 @@
       font-size: 70px;
       line-height: 88px;
 
-      span {
-        color: orange;
+      .together_effect {
+        position: relative;
+        display: inline-block;
+        color: var(--fuxia_claro);
+      }
+      
+      .together_effect::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 3px;
+
+        background: linear-gradient(
+          90deg,
+          var(--fondo_secciones),
+          var(--fuxia),
+          var(--fondo_secciones)
+        );
+        background-size: 200% 100%;
+        border-radius: 2px;
+        animation: moveGradient 2s linear infinite;
       }
     }
 
@@ -65,7 +89,7 @@
     }
 
     .btn:hover {
-      background-color: orange;
+      background-color: var(--fuxia);
       border: none;
     }
   }
@@ -97,7 +121,15 @@
     }
 
     button {
-      background-color: orange;
+      background: linear-gradient(
+        to right,
+        var(--fondo_secciones),
+        var(--fuxia),
+        var(--fondo_secciones)
+      );
+      background-size: 400% 400%;
+      animation: gradientFlow 3s infinite;
+
       padding: 20px;
       font-weight: bold;
       color: white;

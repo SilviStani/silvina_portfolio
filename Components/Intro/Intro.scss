@@ -1,165 +1,131 @@
 @import "../../src/app/globals.scss";
 
 .hero {
-  height: calc(100vh - 100px);
-  position: relative;
+  height: 100vh;
   overflow: hidden;
-  background: linear-gradient(180deg,
-      rgba(20, 20, 20, 0.8),
-      rgba(20, 20, 20, 0.8)),
-    url("/assets/stars.png") no-repeat center center/cover;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 
   .wrapper {
-    max-width: 1166px;
-    height: 100%;
+    width: 100%;
+    height: 90vh;
     margin: auto;
+    display: flex;
+    background: url("/assets/fondo-pantalla.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
 
-    .textContainer {
-      width: 50%;
+    .leftContainer {
       height: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 40px;
+      justify-content: space-around;
+      padding: 5%;
+      background: linear-gradient(to left, var(--fuxia_claro), transparent);
 
-      @include mobile {
-        height: 50%;
-        width: 100%;
+      .title {
+        font-size: 8vh;
+        span {
+          color: var(--fuxia);
+        }
+      }
+      .description {
+        font-size: 3vh;
+        color: var(--gris_claro);
+        padding: 10%;
+      }
+      .buttonsContainer {
+        display: flex;
         gap: 20px;
-        align-items: center;
+        justify-content: space-around;
         text-align: center;
-      }
-
-      h2 {
-        font-size: 30px;
-        color: crimson;
-        letter-spacing: 10px;
-        @include mobile {
-          font-size: 25px;
-        }
-      }
-
-      h1 {
-        font-size: 50px;
-
-        @include mobile {
-          font-size: 25px;
-        }
-      }
-      
-      h3 {
-        color: crimson;
-        font-size: 30px;
-        @include mobile {
-          font-size: 25px;
-        }
-      }
-      
-      span {
-        color: white;
-      }
-      
-      .buttons {
-        z-index: 4;
-        
-        button {
-          padding: 20px;
-          border: 1px solid white;
-          border-radius: 10px;
-          background-color: transparent;
-          margin-right: 20px;
+        .solidBtn {
+          width: 200px;
+          padding: 15px 25px;
+          background-color: var(--fuxia);
           color: white;
           cursor: pointer;
-          font-weight: 300;
-          @include mobile {
-            padding: 15px;
+          font-size: 2vh;
+          cursor: pointer;
+          transition: all 1s ease-in-out;
+
+          &:hover {
+            background: linear-gradient(
+              to right,
+              var(--fondo_secciones),
+              var(--fuxia),
+              var(--fondo_secciones)
+            );
+            background-size: 400% 400%;
+            animation: gradientFlow 3s infinite;
+            scale: 1.1;
+          }
+        }
+        .contact {
+          cursor: pointer;
+          width: 200px;
+          padding: 15px 25px;
+          background: linear-gradient(
+            to right,
+            var(--fondo_secciones),
+            var(--fuxia),
+            var(--fondo_secciones)
+          );
+          background-size: 400% 400%;
+          color: #f0f0f0;
+          animation: gradientFlow 3s infinite;
+          transition: all 1s ease-in-out;
+
+          &:hover {
+            scale: 1.1;
           }
         }
       }
-      img{
-        width: 40px;
-        height: 40px;
-      }
     }
   }
 
-  .imageContainer {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    .inner_img {
+  .slider {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: end;
+    height: 10vh;
+    .sliderTract {
+      display: flex;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      animation: scrollX 30s linear infinite;
 
-      @include mobile {
-        height: 75%;
-        width: 75%;
-        margin-left: 10%;
+      .sliderItem {
+        width: 100%;
+        height: 100%;
+        font-size: 8vh;
+        white-space: nowrap;
+        color: var(--fuxia_claro);
+        font-weight: bold;
+        padding-right: 45px;
       }
     }
-
-    @include mobile {
-      height: 50%;
-      width: 100%;
-      top: unset;
-      bottom: 0;
+  }
+  @keyframes scrollX {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
-
-  .slidingTextContainer {
-    position: absolute;
-    font-size: 50vh;
-    bottom: -120px;
+  /*.slidingTextContainer {
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+    position: relative;
+    font-size: 30vh;
+    bottom: -100px;
     white-space: nowrap;
-    color: #ffffff09;
-    width: 50%;
+    color: var(--fuxia_claro);
     font-weight: bold;
-  }
+  }*/
 }
-
-
-/*
-@media only screen and (max-width: 1281px) {
-  .hero {
-    .wrapper {
-      width: 100%;
-      margin-left: 8%;
-      
-      .textContainer {
-        h2 {
-          font-size: 30px;
-        }
-        
-        h1 {
-          font-size: 50px;
-        }
-        
-        h3 {
-          font-size: 20px;
-        }
-        
-        .buttons {
-          button {}
-        }
-      }
-      
-      img {
-        height: 45px;
-        width: 45px;
-      }
-    }
-    
-    .imageContainer {
-      margin-right: 2%;
-      
-      .inner_img {
-        width: 450px;
-        height: 450px;
-      }
-    }
-  }
-}
-*/

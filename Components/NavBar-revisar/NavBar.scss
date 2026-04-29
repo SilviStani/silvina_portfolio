@@ -2,9 +2,10 @@
 
 .navbar {
   height: 100px;
-  max-width: 1166px;
+  width: 500px;
   margin: auto;
   z-index: 3;
+  background-color: red;
 
   .wrapper {
     display: flex;

@@ -1,0 +1,102 @@
+.mainContainer {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .AboutMe-Container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    border: 2.5px solid var(--fondo_secciones);
+    gap: 5%;
+    .aboutme {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 2.5%;
+      .title {
+        font-size: 5vh;
+        color: var(--texto_ppal);
+        span {
+          color: var(--fuxia);
+        }
+      }
+      .description {
+        font-size: 2.5vh;
+        color: var(--gris_claro);
+      }
+      .metrics {
+        display: flex;
+        gap: 20px;
+        .metric {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          .number {
+            font-size: 4vh;
+            color: var(--fuxia);
+            font-weight: bold;
+          }
+          .label {
+            text-align: center;
+            font-size: 2vh;
+            color: var(--gris_claro);
+          }
+        }
+      }
+    }
+    .rightContainer {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+
+      .technologies,
+      .drivesMe {
+        background-color: var(--fondo_secciones);
+        width: 95%;
+        border-radius: 8px;
+        border: 2px solid #131d35;
+      }
+      .technologies {
+        height: 40%;
+      }
+      .drivesMe {
+        padding: 2%;
+        height: 30%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: center;
+        .subtitleRight {
+          font-size: 2vh;
+          color: var(--fuxia);
+          font-weight: bold;
+          margin-bottom: 3%;
+        }
+        .insideDesc {
+          justify-content: space-between;
+          display: flex;
+          gap: 20px;
+          .descRight{
+            color: var(--texto_ppal);
+          }
+          .icon{
+            font-size: 6vh;
+            color: var(--fuxia);
+            font-weight: bold;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

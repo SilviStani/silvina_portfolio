@@ -1,135 +1,74 @@
-"use client";
 import React from "react";
-import styles from "./Intro.scss";
-import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { init } from "ityped";
-import { motion } from "framer-motion";
-import AOS from "aos";
+import "./Intro.scss";
 import "aos/dist/aos.css";
-
-const textvariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
+import Link from "next/link";
 
 const slidervariants = {
   initial: {
     x: 0,
   },
   animate: {
-    x: "-220%",
+    x: "50%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 20,
+      duration: 10,
     },
   },
 };
 
 const Intro = () => {
-  const textRef = useRef();
-
-  useEffect(() => {
-    if (textRef.current) {
-      init(textRef.current, {
-        showcursor: true,
-        typeSpeed: 150,
-        backDelay: 1000,
-        backSpeed: 100,
-        strings: [
-          " Automation Tester",
-          " Selenium",
-          " Web Developer",
-          " Javascript & C#",
-          "Front: Next.Js",
-          "Front: React",
-          " Back: Node.Js",
-          "Back: Express.Js",
-        ],
-      });
-    }
-  }, []);
   return (
     <div className="hero">
       <div className="wrapper">
-        <motion.div
-          className="textContainer"
-          variants={textvariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h2 variants={textvariants}>Silvina Staniszewski</motion.h2>
-          <motion.h1 className={styles.text} variants={textvariants}>
-            QE Testing Automation
-          </motion.h1>
-          <motion.h3 className={styles.text} variants={textvariants}>
-            Full Stack Developer <br />
-            <span ref={textRef} className={styles.span}></span>
-          </motion.h3>
-          <motion.div className="buttons" variants={textvariants}>
-            <motion.a href="/#Portfolio">
-              <motion.button variants={textvariants}>
-                Ultimos Trabajos
-              </motion.button>
-            </motion.a>
-            <motion.a href="/contacto">
-              <motion.button variants={textvariants}>Contacto</motion.button>
-            </motion.a>
-          </motion.div>
-          <motion.img
-            variants={textvariants}
-            animate="scrollButton"
-            src={"/assets/scroll.png"}
-            width={50}
-            height={50}
-            alt="scroll"
-          />
-        </motion.div>
+        <div className="leftContainer">
+          <h1 className="title">
+            I build reliable apps with <span>Q•U•A•L•I•T•Y</span> at the core.
+          </h1>
+          <p className="description">
+            I design, develop and test, scalable web applications combining solid
+            code with strong testing practices to deliver value with confidence.
+          </p>
+          <div className="buttonsContainer">
+            <Link href={"/projects"} className="solidBtn">
+              <div>View Projects</div>
+            </Link>
+            <Link href={"/contact"} className="contact">
+              <div>Let's work together</div>
+            </Link>
+          </div>
+        </div>
       </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={slidervariants}
-        initial="initial"
-        animate="animate"
-      >
-        Silvina Staniszewski
-      </motion.div>
-      <div
-        className="imageContainer"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
-      >
-        <Image
-          src={"/assets/laptopwave.png"}
-          width={600}
-          height={600}
-          id="Image-wave-laptop"
-          className="inner_img"
-          alt="silvina caricatura"
-        />
+      <div className="slider">
+        <div className="sliderTract">
+          <div className="sliderItem">• Silvina Staniszewski</div>
+          <div className="sliderItem">• QA Automation Engineer</div>
+          <div className="sliderItem">• Web Developer</div>
+          <div className="sliderItem">• Let's work together</div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Intro;
+{
+  /*
+  
+  <div
+  className="imageContainer"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+  data-aos-delay="500"
+  >
+  <Image
+  src={"/assets/profile.png"}
+  width={600}
+  height={600}
+  id="Image-wave-laptop"
+  className="inner_img"
+  alt="silvina caricatura"
+  />
+  </div>
+  */
+}
