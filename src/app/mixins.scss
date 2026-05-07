@@ -1,0 +1,24 @@
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin card {
+  background-color: var(--fondo_secciones);
+  border-radius: 8px;
+  border: 2px solid #131d35;
+}
+
+@mixin title {
+  font-size: 5vh;
+  color: var(--texto_ppal);
+}
+
+@mixin subtitle {
+  font-size: 2vh;
+  color: var(--fuxia);
+  font-weight: bold;
+}

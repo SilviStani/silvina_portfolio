@@ -1,60 +1,17 @@
 import React from "react";
 import "./Aboutme.scss";
+import My_Info from "../My_Info/My_Info.jsx";
+import TechTools from "../TechTools/TechTools.jsx";
+import Drives_Me from "../My_Info/Drives_Me";
 
 const Aboutme = () => {
   return (
     <div className="mainContainer">
       <section className="AboutMe-Container">
-        <div className="aboutme">
-          <p
-            className="subtitle"
-            style={{ color: "var(--fuxia)", fontWeight: "bold" }}
-          >
-            ABOUT ME
-          </p>
-          <h2 className="title">
-            Tech enthusiast.
-            <br />
-            <span>Quality </span>
-            advocate.
-          </h2>
-          <p className="description">
-            I'm a QA Automation Engineer and Web Developer passionate about
-            building reliable applications with quality at the core. I design,
-            develop and test scalable web applications combining solid code with
-            strong testing practices to deliver value with confidence.
-          </p>
-          <div className="metrics">
-            <div className="metric">
-              <span className="number">3+</span>
-              <p className="label">Years learning and building</p>
-            </div>
-            <div className="metric">
-              <span className="number">10+</span>
-              <p className="label">Projects Completed</p>
-            </div>
-            <div className="metric">
-              <span className="number">100%</span>
-              <p className="label">Commitment to Quality</p>
-            </div>
-          </div>
-        </div>
+        <My_Info />
         <div className="rightContainer">
-          <div className="technologies">
-            <p >TECHNOLOGIES I WORK WITH</p>
-          </div>
-          <div className="drivesMe">
-            <p className="subtitleRight">WHAT DRIVES ME</p>
-            <div className="insideDesc">
-              <p className="descRight">
-                Clean code, meaningful tests, and continuous improvement. <br />{" "}
-                I belive quality is everyone's responsibility and automation is{" "}
-                <br />
-                the key to scaling with confidence.
-              </p>
-              <p className="icon">{"</>"} </p>
-            </div>
-          </div>
+          <TechTools />
+          <Drives_Me />
         </div>
       </section>
     </div>
