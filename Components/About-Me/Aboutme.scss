@@ -9,14 +9,12 @@
     @include flex-center(row, 5%);
     height: 100%;
     width: 90%;
-    border: 2.5px solid var(--fondo_secciones);
 
     .aboutme {
       width: 30%;
       @include flex-center(column, 20px);
       padding: 2.5%;
       border: 2.5px solid var(--fondo_secciones);
-      border-left: none;
 
       .title {
         @include title;
@@ -31,7 +29,7 @@
       .metrics {
         @include flex-center(row, 20px);
         .metric {
-          @include flex-center(column, 5px);
+          @include flex-center(column, 5px, center);
           .number {
             font-size: 4vh;
             color: var(--fuxia);
@@ -52,6 +50,7 @@
 
       .drivesMe:nth-child(1) {
         height: 40vh;
+        align-items: center;
       }
 
       .drivesMe {
@@ -81,13 +80,13 @@
             margin-right: 20px;
           }
         }
-        .gridTechTools{
+        .gridTechTools {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 40px;
           width: 90%;
           .techTool {
-            @include flex-center(column, 10px);
+            @include flex-center(column, 10px, center);
             height: 50px;
             width: 50px;
             img {

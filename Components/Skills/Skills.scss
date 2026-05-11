@@ -1,0 +1,32 @@
+@import "../../src/app/globals.scss";
+
+.skills {
+  height: 35vh;
+  width: 100%;
+  border-top: 2.5px solid var(--fondo_secciones);
+  justify-content: space-between;
+  @include flex-center(row, 0px);
+  .connect,
+  .sendButton,
+  .social,
+  .imagen {
+    padding: 5px;
+    height: 100%;
+    width: 25%;
+    @include flex-center(column, 0px);
+    padding: 20px;
+
+    span,
+    p:nth-child(1) {
+      color: var(--fuxia);
+      font-weight: bold;
+      margin-bottom: 2%;
+    }
+    p:nth-child(2) {
+        font-size: 30px;
+    }
+  }
+  .sendButton {
+    background-color: var(--fondo_secciones);
+  }
+}
