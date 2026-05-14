@@ -4,6 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import Aboutme from "../../Components/About-Me/Aboutme";
 import NavBar from "../../Components/NavBar/NavBar";
 import Skills from "../../Components/Skills/Skills";
+import Footer from "../../Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
         <Aboutme />
         <div style={{ height: "20px", width: "100%" }} />
         <Skills />
-        <div style={{ height: "30px", width: "100%", marginTop: "20px" , backgroundColor: "var(--fondo_secciones)"}} />
+        <div style={{ height: "20px", width: "100%" }} />
+        <Footer />
       </section>
     </div>
   );

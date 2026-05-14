@@ -31,10 +31,10 @@ const Intro = () => {
           </p>
           <div className="buttonsContainer">
             <Link href={"/projects"} className="solidBtn">
-              <div>View Projects</div>
+              <p>View Projects</p>
             </Link>
             <Link href={"/contact"} className="contact">
-              <div>Let's work together</div>
+              <div>Let's work together →</div>
             </Link>
           </div>
         </div>
@@ -52,23 +52,3 @@ const Intro = () => {
 };
 
 export default Intro;
-{
-  /*
-  
-  <div
-  className="imageContainer"
-  data-aos="fade-up"
-  data-aos-duration="1000"
-  data-aos-delay="500"
-  >
-  <Image
-  src={"/assets/profile.png"}
-  width={600}
-  height={600}
-  id="Image-wave-laptop"
-  className="inner_img"
-  alt="silvina caricatura"
-  />
-  </div>
-  */
-}

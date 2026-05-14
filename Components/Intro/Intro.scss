@@ -43,12 +43,11 @@
         justify-content: space-around;
         text-align: center;
         .solidBtn {
-          width: 200px;
+          width: 250px;
           padding: 15px 25px;
           background-color: var(--fuxia);
           color: white;
           cursor: pointer;
-          font-size: 2vh;
           cursor: pointer;
           transition: all 1s ease-in-out;
 
@@ -66,7 +65,7 @@
         }
         .contact {
           cursor: pointer;
-          width: 200px;
+          width: 250px;
           padding: 15px 25px;
           background: linear-gradient(
             to right,
@@ -77,7 +76,7 @@
           background-size: 400% 400%;
           color: #f0f0f0;
           animation: gradientFlow 3s infinite;
-          transition: all 1s ease-in-out;
+          transition: all 1.5s ease-in-out;
 
           &:hover {
             scale: 1.1;

@@ -6,6 +6,13 @@
   gap: $gap;
 }
 
+@mixin grid($grid-template-columns: repeat(6, 1fr), $gap: 40px, $width: 90%) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  gap: $gap;
+  width: $width;
+}
+
 @mixin card {
   background-color: var(--fondo_secciones);
   border-radius: 8px;
@@ -22,12 +29,13 @@
   color: var(--fuxia);
   font-weight: bold;
 }
-@mixin button {
-  height: 50px;
+
+@mixin button($height: 50px, $padding: 20px) {
+  height: $height;
   background-color: var(--fondo_secciones);
   color: var(--texto_ppal);
   border: var(--fuxia) solid 1px;
-  padding: 20px;
+  padding: $padding;
   font-family: monospace;
   font-size: 15px;
   font-weight: bold;

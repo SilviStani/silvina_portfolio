@@ -5,7 +5,7 @@ import { social } from "./Social.js";
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="connect">
         <p>LET'S CONNECT</p>
         <p>

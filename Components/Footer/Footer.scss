@@ -1,0 +1,22 @@
+@import "../../src/app/globals.scss";
+
+.footerContainer {
+    height: 10vh;
+    @include grid(repeat(4, 1fr), 10px, 100%);
+    
+    p {
+        @include flex-center(row, 5px, center);
+        font-size: 15px;
+        color: var(--texto_ppal);
+        span {
+            color: var(--fuxia);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        img{
+            height: fit-content;
+            width: 50px;
+        }
+    }
+}

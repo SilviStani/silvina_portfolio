@@ -3,7 +3,7 @@ import "../About-Me/Aboutme.scss";
 
 const My_Info = () => {
   return (
-    <div className="aboutme">
+    <div className="aboutme" id="about">
           <p
             className="subtitle"
             style={{ color: "var(--fuxia)", fontWeight: "bold" }}

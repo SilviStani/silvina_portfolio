@@ -52,6 +52,7 @@
   }
 
   .social {
+    @include grid(repeat(1, 1fr),0px, 25%);
     .LinkItems {
       display: flex;
       justify-content: space-between;

@@ -4,8 +4,9 @@
   height: 8vh;
   width: 100%;
   background-color: var(--fondo_secciones);
-  @include flex-center(row, 5px);
+  @include flex-center(row, 5px, center);
   h3 {
+    flex: 1;
     @include flex-center(row, 5px);
     @include title;
     font-weight: lighter;
@@ -13,6 +14,42 @@
       @include title;
       font-weight: lighter;
       color: var(--fuxia);
+    }
+  }
+  .List{
+    @include grid(repeat(6, 1fr), 20px);
+    list-style: none;
+    flex: 4;
+
+    .List_Item{
+      @include flex-center(row, 5px, center);
+      a {
+        color: var(--texto_ppal);
+        text-decoration: none;
+        font-size: 15px;
+        &:hover {
+          color: var(--fuxia);
+        }
+      }
+    }
+    .List_Button{
+      @include flex-center(row, 5px, center);
+      a {
+        @include button(5vh, 15px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        &:hover {
+          background: linear-gradient(
+            to right,
+            var(--fondo_secciones),
+            var(--fuxia),
+            var(--fondo_secciones)
+          );
+          color: #f0f0f0;
+        }
+      }
     }
   }
 }

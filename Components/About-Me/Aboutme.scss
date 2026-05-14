@@ -81,10 +81,7 @@
           }
         }
         .gridTechTools {
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 40px;
-          width: 90%;
+          @include grid();
           .techTool {
             @include flex-center(column, 10px, center);
             height: 50px;
