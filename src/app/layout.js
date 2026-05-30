@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "Silvina.Dev",
     images: [
       {
-        url: "/assets/my-webpage.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Silvina.Dev Portfolio",
@@ -44,7 +44,7 @@ export const metadata = {
     title: "Silvina Staniszewski · Web Developer & QA Automation Engineer",
     description:
       "Portfolio de Silvina Staniszewski — desarrollo web con Next.js, React y testing con Selenium y Playwright.",
-    images: ["/assets/my-webpage.png"],
+    images: ["/opengraph-image"],
   },
 };
 
