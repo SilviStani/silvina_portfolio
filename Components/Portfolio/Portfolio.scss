@@ -1,183 +1,208 @@
 @import "../../src/app/globals.scss";
 
-.portfolio {
-  position: relative;
-  background-image: url("../../public/assets/stars.png");
-  background-size: contain;
+.projectsPage {
+  min-height: 100vh;
+  padding: 5% 6% 6%;
+  background-color: var(--fondo_negroazulado);
 
-  .container {
+  // ── Header ──────────────────────────────────────────────
+  .projectsHeader {
+    text-align: center;
+    margin-bottom: 52px;
+
+    .projectsSubtitle {
+      @include subtitle;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    .projectsTitle {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--texto_ppal);
+      font-weight: 700;
+      margin-bottom: 16px;
+      span {
+        color: var(--fuxia);
+      }
+    }
+
+    .projectsDesc {
+      color: var(--texto_muted);
+      font-size: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  // ── Filter bar ──────────────────────────────────────────
+  .filterBar {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    gap: 10px;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+
+    .filterBtn {
+      @include button(36px, 10px 22px);
+      font-size: 13px;
+      border-radius: 2px;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+      &.active,
+      &:hover {
+        background-color: var(--fuxia);
+        border-color: var(--fuxia);
+        color: #fff;
+      }
+    }
+  }
+
+  // ── Grid ────────────────────────────────────────────────
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: 770px) and (max-width: 1025px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (min-width: 427px) and (max-width: 769px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 426px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  // ── Card ────────────────────────────────────────────────
+  .projectCard {
+    @include card;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    .wrapper {
-      max-width: 1166px;
-      height: 100%;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 50px;
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(236, 72, 153, 0.18);
+    }
 
-      @include mobile {
+    // Image + overlay
+    .cardImage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      img {
         width: 100%;
-        flex-direction: column;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
       }
 
-      @include tablet {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-      }
-
-      .wrapper_title:nth-child(1) {
-        display: none;
-      }
-
-      .wrapper_title {
-        color: orange;
-        padding-top: 5%;
-
-        @include mobile {
-          display: none;
-        }
-      }
-      
-      .imageContainer {
-        flex: 1;
-        transition: all ease-in-out 3s;
-       // height: 50%;
-
-        @keyframes floating {
-          from {
-            transform: translateX(-50px) rotate(15deg);
-          }
-
-          to {
-            transform: translateX(50px) rotate(-15deg);
-          }
-        }
-
-        @include mobile {
-          display: none;
-        }
-
-        .my_img {
-          width: 80%;
-          height: 80%;
-          object-fit: contain;
-          animation: floating 8s ease-in-out infinite alternate;
-          
-          @include tablet {
-            width: 100%;
-            height: 100%;
-          }
-        }
-
-        .img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
-          @include mobile {
-            width: 85%;
-            object-fit: contain;
-          }
-        }
-      }
-
-      .textContainer {
-        flex: 1;
+      .cardOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(11, 15, 26, 0.85);
         display: flex;
-        flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
 
-        @include mobile {
-          gap: 5%;
-          flex: 2;
-          width: 90%;
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-        }
-
-        @include desktop {
-          margin-top: 2%;
-        }
-
-        @include tablet {
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-top: 1px solid white;
-        }
-
-
-        h2 {
-          font-size: 72px;
-          text-align: center;
-
-          @include mobile {
-            font-size: 40px !important;
-          }
-
-          @include desktop {
-            font-size: 55px;
-          }
-        }
-
-        p {
-          color: whitesmoke;
-          font-size: 20px;
-
-          @include desktop {
-            font-size: 15px;
-          }
-        }
-
-        .buttons {
+        .overlayLink {
           display: flex;
-          gap: 10%;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          color: var(--texto_ppal);
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          padding: 12px 22px;
+          border: 1px solid var(--fuxia);
+          transition: background-color 0.2s ease, color 0.2s ease;
 
-          @include mobile {
-            align-items: center;
-            justify-content: center;
+          img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
           }
 
-          button {
-            background-color: orange;
-            border: none;
-            border-radius: 20px;
-            width: 200px;
-            padding: 10px;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-
-            img {
-              height: 30px;
-
-              @include desktop {
-                height: 25px;
-              }
-            }
-
-            @include mobile {
-              width: 100px;
-              padding: 5px;
-            }
-
-            @include desktop {
-              width: 150px;
-            }
+          .overlayIcon {
+            font-size: 22px;
+            color: var(--fuxia);
+            line-height: 1;
           }
 
-          button:hover {
-            transform: scale(1.1);
+          &:hover {
+            background-color: var(--fuxia);
+            color: #fff;
+            .overlayIcon { color: #fff; }
           }
+        }
+      }
+
+      &:hover img { transform: scale(1.06); }
+      &:hover .cardOverlay { opacity: 1; }
+    }
+
+    // Body
+    .cardBody {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+
+      .cardMeta {
+        .cardCategory {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: var(--fuxia);
+          text-transform: uppercase;
+          font-family: monospace;
+        }
+      }
+
+      .cardTitle {
+        font-size: 17px;
+        color: var(--texto_ppal);
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .cardDesc {
+        font-size: 13px;
+        color: var(--texto_secondary);
+        line-height: 1.6;
+        flex: 1;
+      }
+
+      .cardTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+
+        .tag {
+          font-size: 10px;
+          padding: 3px 10px;
+          border: 1px solid var(--fuxia_claro);
+          color: var(--fuxia_claro);
+          border-radius: 20px;
+          font-family: monospace;
+          white-space: nowrap;
         }
       }
     }

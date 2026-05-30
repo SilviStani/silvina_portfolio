@@ -1,156 +1,212 @@
 @import "../../src/app/globals.scss";
 
 .hero {
-  height: calc(100vh - 100px);
-  position: relative;
+  height: 100vh;
   overflow: hidden;
-  background: linear-gradient(180deg,
-      rgba(20, 20, 20, 0.8),
-      rgba(20, 20, 20, 0.8)),
-    url("/assets/stars.png") no-repeat center center/cover;
-
-  @include tablet {
-    height: 100vh;
-  }
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 
   .wrapper {
-    max-width: 1166px;
-    height: 100%;
+    width: 100%;
+    height: 90vh;
     margin: auto;
-
-    @include tablet{
-      height: 90vh;
+    display: flex;
+    background: url("/assets/fondo-pantalla.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    @media (max-width: 426px) {
+      height: auto;
+      min-height: 85svh;
+      background-size: auto 100%;
+      background-position: right center;
+    }
+    @media (min-width: 427px) and (max-width: 769px) {
+      background-size: cover;
+      background-position: right center;
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      background-size: contain;
+      background-position: right center;
     }
 
-    .textContainer {
-      width: 50%;
+    .leftContainer {
       height: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 40px;
-
-      @include mobile {
-        height: 50%;
+      justify-content: space-around;
+      padding: 5%;
+      background: linear-gradient(to left, var(--fuxia_claro), transparent);
+      @media (max-width: 426px) {
         width: 100%;
-        align-items: center;
-        text-align: center;
-        gap: 5px;
+        height: auto;
+        min-height: 85svh;
+        padding: 8% 6%;
+        justify-content: center;
+        gap: 24px;
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 15, 26, 0.88) 55%,
+          rgba(11, 15, 26, 0.45)
+        );
+      }
+      @media (min-width: 427px) and (max-width: 769px) {
+        width: 70%;
+        padding: 5%;
+        gap: 20px;
+      }
+      @media (min-width: 770px) and (max-width: 1025px) {
+        width: 60%;
+        padding: 5%;
+        gap: 20px;
       }
 
-      @include desktop {
-        gap: 15px;
-        padding: 2%;
+      .title {
+        font-size: 8vh;
+        @media (max-width: 426px) { font-size: 7.5vw; }
+        @media (min-width: 427px) and (max-width: 769px) { font-size: 5vw; }
+        @media (min-width: 770px) and (max-width: 1025px) { font-size: 4.5vw; }
+        span {
+          color: var(--fuxia);
+        }
       }
-
-      @include tablet {
-        gap: 5px;
-        height: 80vh;
+      .description {
+        font-size: 3vh;
+        color: var(--gris_claro);
+        padding: 10%;
+        @media (max-width: 426px) {
+          font-size: 3.8vw;
+          padding: 0;
+          line-height: 1.6;
+        }
+        @media (min-width: 427px) and (max-width: 769px) {
+          font-size: 2vw;
+          padding: 5%;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          font-size: 1.8vw;
+          padding: 5% 0;
+        }
+      }
+      .buttonsContainer {
+        display: flex;
+        gap: 20px;
         justify-content: space-around;
-      }
-
-      h2 {
-        font-size: 30px;
-        color: crimson;
-        letter-spacing: 10px;
-        
-        @include mobile {
-          letter-spacing: 5px;
-          font-size: 20px;
-        }
-      }
-
-      h1 {
-        font-size: 50px;
-
-        @include mobile {
-          font-size: 18px;
-        }
-      }
-
-      h3 {
-        color: crimson;
-        font-size: 30px;
-
-        @include mobile {
-          font-size: 18px;
-        }
-      }
-
-      span {
-        color: white;
-      }
-
-      .buttons {
-        z-index: 4;
-
-        button {
-          padding: 20px;
-          border: 1px solid white;
-          border-radius: 10px;
-          background-color: transparent;
-          margin-right: 20px;
+        text-align: center;        @media (max-width: 426px) {
+          flex-direction: column;
+          gap: 12px;
+          align-items: stretch;
+        }        .solidBtn {
+          width: 250px;
+          padding: 15px 25px;
+          background-color: var(--fuxia);
           color: white;
           cursor: pointer;
-          font-weight: 300;
+          cursor: pointer;
+          transition: all 1s ease-in-out;
+          @media (max-width: 426px) {
+            width: 100%;
+            padding: 14px 20px;
+            text-align: center;
+          }
+          @media (min-width: 427px) and (max-width: 769px) {
+            width: 180px;
+            padding: 12px 20px;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            width: 200px;
+            padding: 13px 22px;
+          }
 
-          @include mobile {
-            padding: 15px;
+          &:hover {
+            background: linear-gradient(
+              to right,
+              var(--fondo_secciones),
+              var(--fuxia),
+              var(--fondo_secciones)
+            );
+            background-size: 400% 400%;
+            animation: gradientFlow 3s infinite;
+            scale: 1.1;
+          }
+        }
+        .contact {
+          cursor: pointer;
+          width: 250px;
+          padding: 15px 25px;
+          background: linear-gradient(
+            to right,
+            var(--fondo_secciones),
+            var(--fuxia),
+            var(--fondo_secciones)
+          );
+          background-size: 400% 400%;
+          color: #f0f0f0;
+          animation: gradientFlow 3s infinite;
+          transition: all 1.5s ease-in-out;
+          @media (max-width: 426px) {
+            width: 100%;
+            padding: 14px 20px;
+            text-align: center;
+          }
+          @media (min-width: 427px) and (max-width: 769px) {
+            width: 180px;
+            padding: 12px 20px;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            width: 200px;
+            padding: 13px 22px;
+          }
+
+          &:hover {
+            scale: 1.1;
           }
         }
       }
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
     }
   }
 
-  .imageContainer {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    .inner_img {
+  .slider {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: end;
+    height: 10vh;
+    .sliderTract {
+      display: flex;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      animation: normal 2.5s tatan;
-    }
+      animation: scrollX 30s linear infinite;
 
-    @include mobile {
-      height: 50%;
-      width: 100%;
-      top: unset;
-      bottom: 0;
-    }
-
-    @include tablet {
-       display: none;
-      }
-
-    @keyframes tatan {
-      0% {
-        margin-top: 120%;
-        margin-left: 120%;
-      }
-
-      100% {
-        margin-top: 0%;
-        margin-right: 0%;
+      .sliderItem {
+        width: 100%;
+        height: 100%;
+        font-size: 8vh;
+        white-space: nowrap;
+        color: var(--fuxia_claro);
+        font-weight: bold;
+        padding-right: 45px;
       }
     }
   }
-
-  .slidingTextContainer {
-    position: absolute;
-    font-size: 50vh;
-    bottom: -120px;
+  @keyframes scrollX {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  /*.slidingTextContainer {
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+    position: relative;
+    font-size: 30vh;
+    bottom: -100px;
     white-space: nowrap;
-    color: #ffffff09;
-    width: 50%;
+    color: var(--fuxia_claro);
     font-weight: bold;
-  }
+  }*/
 }

@@ -1,78 +1,93 @@
 "use client";
-import { React, useRef, useEffect } from "react";
-import { dataEs, dataEn } from "./data.js";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useState, useMemo } from "react";
+import { data } from "./data.js";
 import "./Portfolio.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { usePathname } from "next/navigation";
+
+const CATEGORIES = ["All", "Frontend", "Full Stack", "QA Automation", "Vanilla JS"];
 
 const Portfolio = () => {
-  const pathname = usePathname();
-  const data = pathname === "/en/dev" ? dataEn : dataEs;
-  const ref = useRef();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  //const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const filtered = useMemo(
+    () =>
+      activeCategory === "All"
+        ? data
+        : data.filter((p) => p.category === activeCategory),
+    [activeCategory]
+  );
 
   return (
-    <>
-      {
-        data.map((e, i) => (
-          <div className="portfolio" ref={ref} key={i} >
-            <section
-              ref={ref}
-              key={e.id}
-              className={i === 0 ? "first-section" : ""}
-            >
-              <div className="container">
-                <div className="wrapper">
-                  <h1 className="wrapper_title">Proyectos Web</h1>
-                  <div className="imageContainer">
-                    <img 
-                    src={e.image} 
-                    alt={e.alt} 
-                    className={e.id == "presentacion" ? "my_img" : "img"}/>
-                  </div>
-                  <div
-                    className="textContainer"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    <motion.h2 whileHover={{ color: "orange" }}>{e.title}</motion.h2>
-                    <p>{e.desc}</p>
-                    <p>{e.desc2}</p>
-                    <div className="buttons">
-                     {
-                      e.srcGit.length > 0 &&
-                      <button>
-                        <a href={e.srcGit} target="_blank">
-                          <img src="/assets/github.png" alt="" />
-                        </a>
-                      </button>
-                      }
-                      {e.srcWeb.length > 0 &&
-                        <button>
-                          <a href={e.srcWeb} target="_blank">
-                            <img src="/assets/sitio-web.png" alt="" />
-                          </a>
-                        </button>
-                      }
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
+    <section className="projectsPage">
+      <div className="projectsHeader">
+        <p className="projectsSubtitle">MY WORK</p>
+        <h1 className="projectsTitle">
+          Projects <span>&</span> Case Studies
+        </h1>
+        <p className="projectsDesc">
+          A selection of projects built with care, tested with rigor.
+        </p>
+      </div>
+
+      <div className="filterBar">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat}
+            className={`filterBtn ${activeCategory === cat ? "active" : ""}`}
+            onClick={() => setActiveCategory(cat)}
+          >
+            {cat}
+          </button>
         ))}
-    </>
+      </div>
+
+      <div className="projectsGrid">
+        {filtered.map((project) => (
+          <article key={project.id} className="projectCard">
+            <div className="cardImage">
+              <img src={project.image} alt={project.title} />
+              <div className="cardOverlay">
+                {project.srcGit && (
+                  <a
+                    href={project.srcGit}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="overlayLink"
+                  >
+                    <img src="/icons/github.png" alt="GitHub" />
+                    Code
+                  </a>
+                )}
+                {project.srcWeb && (
+                  <a
+                    href={project.srcWeb}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="overlayLink"
+                  >
+                    <span className="overlayIcon">↗</span>
+                    Live
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="cardBody">
+              <div className="cardMeta">
+                <span className="cardCategory">{project.category}</span>
+              </div>
+              <h2 className="cardTitle">{project.title}</h2>
+              <p className="cardDesc">{project.desc}</p>
+              <div className="cardTags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -1,11 +1,10 @@
-import Intro from "../../Components/Intro/Intro";
-import NavBar from "../../Components/NavBar/NavBar";
 import "./globals.scss";
-import Parallax from "../../Components/Parallax/Parallax";
+import Intro from "../../Components/Intro/Intro";
+import Banner from "../../Components/Banner/Banner";
+import Aboutme from "../../Components/About-Me/Aboutme";
+import NavBar from "../../Components/NavBar/NavBar";
 import Skills from "../../Components/Skills/Skills";
-import QA from "../../Components/QA/QA";
-import QA_Second from "../../Components/QA/QA_Second";
-
+import Footer from "../../Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -13,21 +12,14 @@ export default function Home() {
       <section id="Homepage">
         <NavBar />
         <Intro />
-      </section>
-      <section id="Servicios">
-        <Parallax type="servicios" id="Servicios" />
-      </section>
-      <section>
+        <div style={{ height: "20px", width: "100%" }} />
+        <Banner />
+        <div style={{ height: "20px", width: "100%" }} />
+        <Aboutme />
+        <div style={{ height: "20px", width: "100%" }} />
         <Skills />
-      </section>
-      <section id="e2e">
-        <Parallax />{" "}
-      </section>
-      <section id="qa">
-        <QA />
-      </section>
-      <section id="qa-second">
-        <QA_Second />
+        <div style={{ height: "20px", width: "100%" }} />
+        <Footer />
       </section>
     </div>
   );

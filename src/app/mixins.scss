@@ -1,0 +1,44 @@
+@mixin flex-center($direction: row, $gap: 0, $align-items: left) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin grid($grid-template-columns: repeat(6, 1fr), $gap: 40px, $width: 90%) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  gap: $gap;
+  width: $width;
+}
+
+@mixin card {
+  background-color: var(--fondo_secciones);
+  border-radius: 8px;
+  border: 2px solid #131d35;
+}
+
+@mixin title {
+  font-size: 5vh;
+  color: var(--texto_ppal);
+}
+
+@mixin subtitle {
+  font-size: 2vh;
+  color: var(--fuxia);
+  font-weight: bold;
+}
+
+@mixin button($height: 50px, $padding: 20px) {
+  height: $height;
+  background-color: var(--fondo_secciones);
+  color: var(--texto_ppal);
+  border: var(--fuxia) solid 1px;
+  padding: $padding;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
