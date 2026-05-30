@@ -8,7 +8,7 @@ const Footer = () => {
       <p><span>{"<"}</span>Silvina.Dev <span>{"/>"}</span></p>
       <p>® {new Date().getFullYear()} Silvina Dev. <span>All Rights</span> reserved.</p>
       <p>Follow me on 
-        <span>SOCIAL MEDIA</span>!</p>
+        <span>SOCIAL MEDIA</span></p>
       <p>Build with <img src="/icons/next.png" alt="Next.JS Logo" /></p>
     </div>
   )
