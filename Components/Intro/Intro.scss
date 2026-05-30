@@ -187,6 +187,10 @@
         color: var(--fuxia_claro);
         font-weight: bold;
         padding-right: 45px;
+        @media (max-width: 426px) {
+          font-size: 5vh;
+          padding-right: 28px;
+        }
       }
     }
   }
