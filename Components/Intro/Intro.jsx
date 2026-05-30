@@ -1,21 +1,6 @@
 import React from "react";
 import "./Intro.scss";
-import "aos/dist/aos.css";
 import Link from "next/link";
-
-const slidervariants = {
-  initial: {
-    x: 0,
-  },
-  animate: {
-    x: "50%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 10,
-    },
-  },
-};
 
 const Intro = () => {
   return (
@@ -33,7 +18,7 @@ const Intro = () => {
             <Link href={"/projects"} className="solidBtn">
               <p>View Projects</p>
             </Link>
-            <Link href={"/contact"} className="contact">
+            <Link href={"https://wa.me/5491163632288?text=Hello!%20I'm%20interested%20in%20learning%20more%20about%20your%20web%20development%20services.%20Could%20you%20please%20provide%20me%20with%20more%20information?"} target="_blank" rel="noopener noreferrer" className="contact">
               <div>Let's work together →</div>
             </Link>
           </div>

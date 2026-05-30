@@ -1,28 +1,57 @@
-import { Roboto, Space_Grotesk, Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
-});
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  variable: "--font-principal",
 });
 
+const siteUrl = "https://silvina-portfolio.vercel.app";
+
 export const metadata = {
-  keywords: ["desarrollo_Web", "desarrollo Web", "fullstack", "freelancer"],
-  title: "Silvina-Dev Portfolio",
-  description: "Desarrollo Web, Automation Testing, QA Tester",
+  metadataBase: new URL(siteUrl),
+  title: "Silvina Staniszewski · Web Developer & QA Automation Engineer",
+  description:
+    "Portfolio de Silvina Staniszewski — desarrollo web con Next.js, React y testing con Selenium y Playwright.",
+  keywords: [
+    "Web Developer",
+    "QA Automation",
+    "Next.js",
+    "React",
+    "Selenium",
+    "Playwright",
+    "freelancer",
+    "Argentina",
+  ],
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: "Silvina Staniszewski · Web Developer & QA Automation Engineer",
+    description:
+      "Portfolio de Silvina Staniszewski — desarrollo web con Next.js, React y testing con Selenium y Playwright.",
+    siteName: "Silvina.Dev",
+    images: [
+      {
+        url: "/assets/my-webpage.png",
+        width: 1200,
+        height: 630,
+        alt: "Silvina.Dev Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Silvina Staniszewski · Web Developer & QA Automation Engineer",
+    description:
+      "Portfolio de Silvina Staniszewski — desarrollo web con Next.js, React y testing con Selenium y Playwright.",
+    images: ["/assets/my-webpage.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${roboto.variable} ${inter.variable}`}>
+    <html lang="es">
+      <body className={roboto.variable}>
         {children}
       </body>
     </html>

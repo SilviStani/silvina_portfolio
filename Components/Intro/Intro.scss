@@ -16,6 +16,20 @@
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
+    @media (max-width: 426px) {
+      height: auto;
+      min-height: 85svh;
+      background-size: auto 100%;
+      background-position: right center;
+    }
+    @media (min-width: 427px) and (max-width: 769px) {
+      background-size: cover;
+      background-position: right center;
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      background-size: contain;
+      background-position: right center;
+    }
 
     .leftContainer {
       height: 100%;
@@ -25,9 +39,35 @@
       justify-content: space-around;
       padding: 5%;
       background: linear-gradient(to left, var(--fuxia_claro), transparent);
+      @media (max-width: 426px) {
+        width: 100%;
+        height: auto;
+        min-height: 85svh;
+        padding: 8% 6%;
+        justify-content: center;
+        gap: 24px;
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 15, 26, 0.88) 55%,
+          rgba(11, 15, 26, 0.45)
+        );
+      }
+      @media (min-width: 427px) and (max-width: 769px) {
+        width: 70%;
+        padding: 5%;
+        gap: 20px;
+      }
+      @media (min-width: 770px) and (max-width: 1025px) {
+        width: 60%;
+        padding: 5%;
+        gap: 20px;
+      }
 
       .title {
         font-size: 8vh;
+        @media (max-width: 426px) { font-size: 7.5vw; }
+        @media (min-width: 427px) and (max-width: 769px) { font-size: 5vw; }
+        @media (min-width: 770px) and (max-width: 1025px) { font-size: 4.5vw; }
         span {
           color: var(--fuxia);
         }
@@ -36,13 +76,29 @@
         font-size: 3vh;
         color: var(--gris_claro);
         padding: 10%;
+        @media (max-width: 426px) {
+          font-size: 3.8vw;
+          padding: 0;
+          line-height: 1.6;
+        }
+        @media (min-width: 427px) and (max-width: 769px) {
+          font-size: 2vw;
+          padding: 5%;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          font-size: 1.8vw;
+          padding: 5% 0;
+        }
       }
       .buttonsContainer {
         display: flex;
         gap: 20px;
         justify-content: space-around;
-        text-align: center;
-        .solidBtn {
+        text-align: center;        @media (max-width: 426px) {
+          flex-direction: column;
+          gap: 12px;
+          align-items: stretch;
+        }        .solidBtn {
           width: 250px;
           padding: 15px 25px;
           background-color: var(--fuxia);
@@ -50,6 +106,19 @@
           cursor: pointer;
           cursor: pointer;
           transition: all 1s ease-in-out;
+          @media (max-width: 426px) {
+            width: 100%;
+            padding: 14px 20px;
+            text-align: center;
+          }
+          @media (min-width: 427px) and (max-width: 769px) {
+            width: 180px;
+            padding: 12px 20px;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            width: 200px;
+            padding: 13px 22px;
+          }
 
           &:hover {
             background: linear-gradient(
@@ -77,6 +146,19 @@
           color: #f0f0f0;
           animation: gradientFlow 3s infinite;
           transition: all 1.5s ease-in-out;
+          @media (max-width: 426px) {
+            width: 100%;
+            padding: 14px 20px;
+            text-align: center;
+          }
+          @media (min-width: 427px) and (max-width: 769px) {
+            width: 180px;
+            padding: 12px 20px;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            width: 200px;
+            padding: 13px 22px;
+          }
 
           &:hover {
             scale: 1.1;

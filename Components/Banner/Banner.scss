@@ -2,12 +2,38 @@
     height: 25vh;
     width: 100%;
     display: flex;
+    @media (max-width: 426px) {
+      height: auto;
+    }
+    @media (min-width: 427px) and (max-width: 769px) {
+      height: auto;
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      height: auto;
+    }
 
     .skillsList {
       display: flex;
       width: 100%;
       justify-content: space-around;
       align-items: center;
+      @media (max-width: 426px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        place-items: center;
+      }
+      @media (min-width: 427px) and (max-width: 769px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        place-items: center;
+      }
+      @media (min-width: 770px) and (max-width: 1025px) {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 0;
+      }
 
       .skillItem {
         display: flex;
@@ -15,19 +41,44 @@
         align-items: center;
         gap: 10px;
         padding: 2%;
+        @media (max-width: 426px) {
+          padding: 14px 6%;
+          gap: 6px;
+          text-align: center;
+        }
+        @media (min-width: 427px) and (max-width: 769px) {
+          padding: 16px 4%;
+          gap: 8px;
+          text-align: center;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          padding: 14px 3%;
+          gap: 8px;
+          text-align: center;
+          align-items: center;
+        }
 
         .icon {
           font-size: 4vh;
           color: var(--fuxia_claro);
+          @media (max-width: 426px) { font-size: 6vw; }
+          @media (min-width: 427px) and (max-width: 769px) { font-size: 4vw; }
+          @media (min-width: 770px) and (max-width: 1025px) { font-size: 3.5vh; }
         }
         .name {
           font-size: 3vh;
           color: var(--texto_ppal);
+          @media (max-width: 426px) { font-size: 4vw; }
+          @media (min-width: 427px) and (max-width: 769px) { font-size: 3vw; }
+          @media (min-width: 770px) and (max-width: 1025px) { font-size: 2.5vh; }
         }
         .description{
             font-size: 2vh;
             color: var(--texto_secondary);
             text-align: center;
+            @media (max-width: 426px) { font-size: 3.2vw; }
+            @media (min-width: 427px) and (max-width: 769px) { font-size: 2.4vw; }
+            @media (min-width: 770px) and (max-width: 1025px) { font-size: 1.8vh; }
         }
        }
        .skillItem:nth-child(odd){

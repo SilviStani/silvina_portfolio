@@ -5,6 +5,15 @@
   width: 100%;
   background-color: var(--fondo_secciones);
   @include flex-center(row, 5px, center);
+  @media (max-width: 426px) {
+    padding: 0 4%;
+  }
+  @media (min-width: 427px) and (max-width: 769px) {
+    padding: 0 3%;
+  }
+  @media (min-width: 770px) and (max-width: 1025px) {
+    padding: 0 2%;
+  }
   h3 {
     flex: 1;
     @include flex-center(row, 5px);
@@ -15,39 +24,52 @@
       font-weight: lighter;
       color: var(--fuxia);
     }
+    @media (max-width: 426px) {
+      font-size: 3.5vw;
+      p { font-size: 3.5vw; }
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      font-size: 2.2vw;
+      p { font-size: 2.2vw; }
+    }
   }
   .List{
-    @include grid(repeat(6, 1fr), 20px);
+    @include grid(repeat(5, 1fr), 20px);
     list-style: none;
     flex: 4;
+    @media (min-width: 427px) and (max-width: 769px) {
+      gap: 6px;
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      gap: 10px;
+    }
+    @media (max-width: 426px) {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar { display: none; }
+    }
 
     .List_Item{
       @include flex-center(row, 5px, center);
+      @media (max-width: 426px) {
+        flex-shrink: 0;
+        padding: 0 10px;
+      }
+      &.hide-mobile {
+        @media (max-width: 426px) { display: none; }
+      }
       a {
         color: var(--texto_ppal);
         text-decoration: none;
         font-size: 15px;
+        @media (min-width: 427px) and (max-width: 769px) { font-size: 13px; }
+        @media (min-width: 770px) and (max-width: 1025px) { font-size: 14px; }
+        @media (max-width: 426px) { font-size: 12px; }
         &:hover {
           color: var(--fuxia);
-        }
-      }
-    }
-    .List_Button{
-      @include flex-center(row, 5px, center);
-      a {
-        @include button(5vh, 15px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        &:hover {
-          background: linear-gradient(
-            to right,
-            var(--fondo_secciones),
-            var(--fuxia),
-            var(--fondo_secciones)
-          );
-          color: #f0f0f0;
         }
       }
     }

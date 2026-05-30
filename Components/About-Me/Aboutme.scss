@@ -4,17 +4,59 @@
   height: 70vh;
   width: 100%;
   @include flex-center();
+  @media (max-width: 426px) {
+    height: auto;
+    padding: 6% 0;
+  }
+  @media (min-width: 427px) and (max-width: 769px) {
+    height: auto;
+    padding: 5% 0;
+  }
+  @media (min-width: 770px) and (max-width: 1025px) {
+    height: auto;
+    padding: 4% 0;
+  }
 
   .AboutMe-Container {
     @include flex-center(row, 5%);
     height: 100%;
     width: 90%;
+    @media (max-width: 426px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      width: 94%;
+    }
+    @media (min-width: 427px) and (max-width: 769px) {
+      flex-direction: column;
+      gap: 16px;
+      width: 94%;
+    }
+    @media (min-width: 770px) and (max-width: 1025px) {
+      gap: 3%;
+      width: 94%;
+    }
 
     .aboutme {
       width: 30%;
       @include flex-center(column, 20px);
       padding: 2.5%;
       border: 2.5px solid var(--fondo_secciones);
+      @media (max-width: 426px) {
+        width: 100%;
+        padding: 5%;
+        gap: 14px;
+      }
+      @media (min-width: 427px) and (max-width: 769px) {
+        width: 100%;
+        padding: 4%;
+        gap: 12px;
+      }
+      @media (min-width: 770px) and (max-width: 1025px) {
+        width: 32%;
+        padding: 2%;
+        gap: 14px;
+      }
 
       .title {
         @include title;
@@ -47,10 +89,31 @@
     .rightContainer {
       width: 70%;
       @include flex-center(column, 25px);
+      @media (max-width: 426px) {
+        width: 100%;
+        gap: 14px;
+      }
+      @media (min-width: 427px) and (max-width: 769px) {
+        width: 100%;
+        gap: 12px;
+      }
+      @media (min-width: 770px) and (max-width: 1025px) {
+        width: 65%;
+        gap: 16px;
+      }
 
       .drivesMe:nth-child(1) {
         height: 40vh;
         align-items: center;
+        @media (max-width: 426px) {
+          height: auto;
+        }
+        @media (min-width: 427px) and (max-width: 769px) {
+          height: auto;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          height: auto;
+        }
       }
 
       .drivesMe {
@@ -70,6 +133,14 @@
           width: 100%;
           flex-wrap: wrap;
           justify-content: space-between;
+          @media (min-width: 427px) and (max-width: 769px) {
+            flex-direction: column;
+            gap: 10px;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            flex-direction: column;
+            gap: 10px;
+          }
           .descRight {
             color: var(--texto_ppal);
           }
@@ -82,14 +153,62 @@
         }
         .gridTechTools {
           @include grid();
+          @media (max-width: 426px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: 100%;
+            place-items: center;
+          }
+          @media (min-width: 427px) and (max-width: 769px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            width: 100%;
+            place-items: center;
+          }
+          @media (min-width: 770px) and (max-width: 1025px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 100%;
+            place-items: center;
+          }
           .techTool {
             @include flex-center(column, 10px, center);
             height: 50px;
             width: 50px;
+            @media (max-width: 426px) {
+              height: auto;
+              width: auto;
+              text-align: center;
+            }
+            @media (min-width: 427px) and (max-width: 769px) {
+              height: auto;
+              width: auto;
+              text-align: center;
+            }
+            @media (min-width: 770px) and (max-width: 1025px) {
+              height: auto;
+              width: auto;
+              text-align: center;
+            }
             img {
               height: 40px;
               width: 40px;
               margin: 10px;
+              @media (max-width: 426px) {
+                height: 30px;
+                width: 30px;
+                margin: 4px;
+              }
+              @media (min-width: 427px) and (max-width: 769px) {
+                height: 36px;
+                width: 36px;
+                margin: 6px;
+              }
+              @media (min-width: 770px) and (max-width: 1025px) {
+                height: 38px;
+                width: 38px;
+                margin: 8px;
+              }
             }
           }
         }

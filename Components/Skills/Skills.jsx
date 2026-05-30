@@ -9,7 +9,7 @@ const Skills = () => {
       <div className="connect">
         <p>LET'S CONNECT</p>
         <p>
-          Let's build something amazing <span>togheter</span> !
+          Let's build something amazing <span>together</span> !
         </p>
       </div>
       <div className="sendButton">
