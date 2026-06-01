@@ -61,6 +61,15 @@
       &.hide-mobile {
         @media (max-width: 426px) { display: none; }
       }
+      
+      // Hide QA Automation and Skills on mobile
+      &:nth-child(3),
+      &:nth-child(4) {
+        @media (max-width: 426px) {
+          display: none;
+        }
+      }
+      
       a {
         color: var(--texto_ppal);
         text-decoration: none;
