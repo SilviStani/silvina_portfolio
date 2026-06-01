@@ -1,9 +1,13 @@
+#nullable enable
+
+using System;
+using System.Drawing;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace SilvanaPortfolioTests.Utilities;
+namespace SilvinaPortfolioTests.Utilities;
 
 public class DriverManager
 {
@@ -11,21 +15,21 @@ public class DriverManager
 
     public static IWebDriver InitializeDriver(bool headless = false)
     {
-        new DriverManager().SetUpDriver(new ChromeConfig());
+        new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
         
-        var options = new ChromeOptions();
+        var chromeOptions = new ChromeOptions();
         if (headless)
         {
-            options.AddArgument("--headless");
+            chromeOptions.AddArgument("--headless");
         }
         
-        options.AddArgument("--no-sandbox");
-        options.AddArgument("--disable-dev-shm-usage");
-        options.AddArgument("--disable-blink-features=AutomationControlled");
-        options.AddExcludedArgument("enable-automation");
-        options.AddAdditionalOption("useAutomationExtension", false);
+        chromeOptions.AddArgument("--no-sandbox");
+        chromeOptions.AddArgument("--disable-dev-shm-usage");
+        chromeOptions.AddArgument("--disable-blink-features=AutomationControlled");
+        chromeOptions.AddExcludedArgument("enable-automation");
+        chromeOptions.AddAdditionalOption("useAutomationExtension", false);
 
-        _driver = new ChromeDriver(options);
+        _driver = new ChromeDriver(chromeOptions);
         return _driver;
     }
 

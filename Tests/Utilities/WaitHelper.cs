@@ -1,7 +1,9 @@
+using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace SilvanaPortfolioTests.Utilities;
+namespace SilvinaPortfolioTests.Utilities;
 
 public class WaitHelper
 {
@@ -16,19 +18,27 @@ public class WaitHelper
 
     public IWebElement WaitForElementVisible(By locator)
     {
-        return _wait.Until(ExpectedConditions.VisibilityOfElementLocated(locator));
+        return _wait.Until(driver => 
+        {
+            var element = driver.FindElement(locator);
+            return element.Displayed ? element : null;
+        });
     }
 
     public IWebElement WaitForElementClickable(By locator)
     {
-        return _wait.Until(ExpectedConditions.ElementToBeClickable(locator));
+        return _wait.Until(driver => 
+        {
+            var element = driver.FindElement(locator);
+            return element.Displayed && element.Enabled ? element : null;
+        });
     }
 
     public bool WaitForElementPresent(By locator)
     {
         try
         {
-            _wait.Until(ExpectedConditions.PresenceOfElementLocated(locator));
+            _wait.Until(driver => driver.FindElement(locator));
             return true;
         }
         catch
@@ -41,7 +51,18 @@ public class WaitHelper
     {
         try
         {
-            _wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
+            _wait.Until(driver => 
+            {
+                try
+                {
+                    var element = driver.FindElement(locator);
+                    return !element.Displayed ? true : false;
+                }
+                catch
+                {
+                    return true; // element not found, considered invisible
+                }
+            });
             return true;
         }
         catch

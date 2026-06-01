@@ -1,6 +1,10 @@
+#nullable enable
+
+using System;
+using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace SilvanaPortfolioTests.Utilities;
+namespace SilvinaPortfolioTests.Utilities;
 
 public class TestConfig
 {
@@ -10,8 +14,9 @@ public class TestConfig
     {
         if (_configuration == null)
         {
+            var basePath = Directory.GetCurrentDirectory();
             _configuration = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
+                .SetBasePath(basePath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
         }

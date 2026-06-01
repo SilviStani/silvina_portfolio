@@ -1,9 +1,11 @@
+using System;
+using System.Threading;
 using NUnit.Framework;
-using SilvanaPortfolioTests.Pages;
-using SilvanaPortfolioTests.Utilities;
+using SilvinaPortfolioTests.Pages;
+using SilvinaPortfolioTests.Utilities;
 using OpenQA.Selenium;
 
-namespace SilvanaPortfolioTests.TestCases;
+namespace SilvinaPortfolioTests.TestCases;
 
 [TestFixture]
 public class ProjectNavigationTests
@@ -35,9 +37,9 @@ public class ProjectNavigationTests
         _myProjectsPage.ScrollToElement(By.CssSelector("[data-testid='featured-projects-grid']"));
         
         // Check featured projects
-        Assert.IsTrue(_myProjectsPage.IsFeaturedProjectDisplayed("henryapp"), "henryapp project should be displayed");
-        Assert.IsTrue(_myProjectsPage.IsFeaturedProjectDisplayed("pom-selenium"), "pom-selenium project should be displayed");
-        Assert.IsTrue(_myProjectsPage.IsFeaturedProjectDisplayed("walter"), "walter project should be displayed");
+        Assert.That(_myProjectsPage.IsFeaturedProjectDisplayed("henryapp"), Is.True, "henryapp project should be displayed");
+        Assert.That(_myProjectsPage.IsFeaturedProjectDisplayed("pom-selenium"), Is.True, "pom-selenium project should be displayed");
+        Assert.That(_myProjectsPage.IsFeaturedProjectDisplayed("walter"), Is.True, "walter project should be displayed");
     }
 
     [Test]
@@ -49,7 +51,7 @@ public class ProjectNavigationTests
         var expectedHref = "/projects#project-henryapp";
         var actualHref = _myProjectsPage.GetFeaturedProjectLinkHref("henryapp");
         
-        Assert.AreEqual(expectedHref, actualHref, "Featured project link should point to correct project");
+        Assert.That(actualHref, Is.EqualTo(expectedHref), "Featured project link should point to correct project");
     }
 
     [Test]
@@ -60,7 +62,7 @@ public class ProjectNavigationTests
         _myProjectsPage.ClickFeaturedProjectLink("henryapp");
         
         Thread.Sleep(1000);
-        Assert.IsTrue(_driver.Url.Contains("/projects#project-henryapp"), "Should navigate to henryapp project");
+        Assert.That(_driver.Url, Does.Contain("/projects#project-henryapp"), "Should navigate to henryapp project");
     }
 
     [Test]
@@ -70,7 +72,7 @@ public class ProjectNavigationTests
         _myProjectsPage.ScrollToElement(By.CssSelector("[data-testid='view-all-projects-button']"));
         
         var href = _myProjectsPage.GetViewAllButtonHref();
-        Assert.AreEqual("/projects", href, "View All button should link to /projects");
+        Assert.That(href, Is.EqualTo("/projects"), "View All button should link to /projects");
     }
 
     [Test]
@@ -81,7 +83,7 @@ public class ProjectNavigationTests
         _myProjectsPage.ClickViewAllProjectsButton();
         
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/projects", _driver.Url, "Should navigate to full projects page");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/projects"), "Should navigate to full projects page");
     }
 
     [Test]
@@ -93,8 +95,8 @@ public class ProjectNavigationTests
         var title = _myProjectsPage.GetFeaturedProjectTitle("henryapp");
         var category = _myProjectsPage.GetFeaturedProjectCategory("henryapp");
         
-        Assert.IsNotEmpty(title, "Project title should not be empty");
-        Assert.IsNotEmpty(category, "Project category should not be empty");
+        Assert.That(title, Is.Not.Empty, "Project title should not be empty");
+        Assert.That(category, Is.Not.Empty, "Project category should not be empty");
     }
 
     [Test]
@@ -104,8 +106,8 @@ public class ProjectNavigationTests
         _portfolioPage.ScrollToElement(By.CssSelector("[data-testid='projects-grid']"));
         
         // Test some featured projects are visible on portfolio page
-        Assert.IsTrue(_portfolioPage.IsProjectCardDisplayed("henryapp"), "henryapp should be on portfolio page");
-        Assert.IsTrue(_portfolioPage.IsProjectCardDisplayed("pom-selenium"), "pom-selenium should be on portfolio page");
+        Assert.That(_portfolioPage.IsProjectCardDisplayed("henryapp"), Is.True, "henryapp should be on portfolio page");
+        Assert.That(_portfolioPage.IsProjectCardDisplayed("pom-selenium"), Is.True, "pom-selenium should be on portfolio page");
     }
 
     [Test]
@@ -114,7 +116,7 @@ public class ProjectNavigationTests
         _portfolioPage.NavigateToProject("henryapp");
         
         Thread.Sleep(1000);
-        Assert.IsTrue(_driver.Url.Contains("/projects#project-henryapp"), "Should navigate to henryapp project");
+        Assert.That(_driver.Url, Does.Contain("/projects#project-henryapp"), "Should navigate to henryapp project");
     }
 
     [Test]
@@ -124,7 +126,7 @@ public class ProjectNavigationTests
         _portfolioPage.ScrollToElement(By.CssSelector("[data-testid='project-card-henryapp']"));
         
         var title = _portfolioPage.GetProjectTitle("henryapp");
-        Assert.IsNotEmpty(title, "Project title should be displayed");
+        Assert.That(title, Is.Not.Empty, "Project title should be displayed");
     }
 
     [Test]
@@ -134,7 +136,7 @@ public class ProjectNavigationTests
         _portfolioPage.ScrollToElement(By.CssSelector("[data-testid='project-card-henryapp']"));
         
         var category = _portfolioPage.GetProjectCategory("henryapp");
-        Assert.IsNotEmpty(category, "Project category should be displayed");
-        Assert.AreEqual("Full Stack", category, "Henry App should be Full Stack category");
+        Assert.That(category, Is.Not.Empty, "Project category should be displayed");
+        Assert.That(category, Is.EqualTo("Full Stack"), "Henry App should be Full Stack category");
     }
 }

@@ -23,7 +23,7 @@ Tests/
 │   ├── WaitHelper.cs              # Explicit waits and scroll helpers
 │   └── TestConfig.cs              # Configuration management
 ├── appsettings.json               # Test configuration
-└── SilvanaPortfolioTests.csproj   # Project file
+└── SilvinaPortfolioTests.csproj   # Project file
 ```
 
 ## 🛠️ Prerequisites
@@ -58,7 +58,7 @@ dotnet test
 
 ### Run specific test class:
 ```bash
-dotnet test --filter "ClassName=SilvanaPortfolioTests.TestCases.NavigationTests"
+dotnet test --filter "ClassName=SilvinaPortfolioTests.TestCases.NavigationTests"
 ```
 
 ### Run with verbose output:

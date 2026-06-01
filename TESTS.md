@@ -26,7 +26,7 @@ This is an **automated end-to-end test suite** for the Silvina portfolio website
 - **Testing Framework**: NUnit
 - **Browser Automation**: Selenium WebDriver
 - **.NET Version**: 8.0+
-- **Total Tests**: 37 automated test cases
+- **Total Tests**: 39 automated test cases
 
 ### What Gets Tested?
 
@@ -150,6 +150,8 @@ Expected output:
 Build succeeded. ✓
 ```
 
+⚠️ **Note**: The build will automatically copy `appsettings.json` to the output directory (`bin/Debug/net8.0/`). This is configured in the `.csproj` file to ensure tests can find the configuration file at runtime.
+
 ---
 
 ## ▶️ Running Tests
@@ -204,6 +206,10 @@ Shows detailed info about each test:
 - ✗ FAILED
 - ⊘ SKIPPED
 
+**Verbosity levels**: `quiet`, `minimal`, `normal`, `detailed`, `diagnostic`
+
+Use `--verbosity detailed` when debugging failing tests to see configuration loading and wait conditions.
+
 ### Run in Headed Mode (See Browser)
 
 By default, tests run **headless** (no browser window).
@@ -253,19 +259,16 @@ Tests that navigation links work correctly:
 - Logo navigates to home
 - CTA buttons navigate correctly
 
-### 2️⃣ Component Visibility Tests (10 tests)
+### 2️⃣ Component Visibility Tests (7 tests)
 
 **File**: `TestCases/ComponentVisibilityTests.cs`
 
 Tests that all components are visible and display correctly:
 
 ```
-✓ TestHeroSectionIsDisplayedOnHome
 ✓ TestHeroTitleIsDisplayed
-✓ TestHeroDescriptionIsDisplayed
-✓ TestCTAButtonsAreDisplayedOnHero
+✓ TestHeroSectionIsDisplayed
 ✓ TestMyProjectsSectionIsDisplayedOnHome
-✓ TestFeaturedGridIsDisplayedInMyProjects
 ✓ TestViewAllButtonInMyProjects
 ✓ TestPortfolioSectionIsDisplayedOnProjectsPage
 ✓ TestProjectsGridIsDisplayed
@@ -278,7 +281,7 @@ Tests that all components are visible and display correctly:
 - Text content displays
 - Grids load correctly
 
-### 3️⃣ Responsive Tests (8 tests)
+### 3️⃣ Responsive Tests (12 tests)
 
 **File**: `TestCases/ResponsiveTests.cs`
 
@@ -293,6 +296,10 @@ Tests responsive design across devices:
 ✓ TestMyProjectsGridResponsiveOnMobile     (426px → 1 col)
 ✓ TestMyProjectsGridResponsiveOnTablet     (768px → 2 cols)
 ✓ TestMyProjectsGridResponsiveOnDesktop    (1920px → 3 cols)
+✓ TestMobileViewportRendering
+✓ TestTabletViewportRendering
+✓ TestDesktopViewportRendering
+✓ TestResponsiveImageScaling
 ```
 
 **What it checks:**
@@ -302,7 +309,7 @@ Tests responsive design across devices:
 - Grid columns adjust per breakpoint
 - No horizontal scrolling on mobile
 
-### 4️⃣ Project Navigation Tests (10 tests)
+### 4️⃣ Project Navigation Tests (11 tests)
 
 **File**: `TestCases/ProjectNavigationTests.cs`
 
@@ -319,6 +326,7 @@ Tests featured projects and portfolio navigation:
 ✓ TestDirectProjectNavigation
 ✓ TestProjectCardTitleDisplay
 ✓ TestProjectCardCategoryDisplay
+✓ TestProjectGridLayout
 ```
 
 **What it checks:**
@@ -331,6 +339,23 @@ Tests featured projects and portfolio navigation:
 ---
 
 ## ⚙️ Configuration
+
+### Critical: appsettings.json Setup
+
+The `appsettings.json` file contains all test configuration. During the build process, this file is automatically copied to the output directory so tests can access it at runtime.
+
+**File Location**: `Tests/appsettings.json`
+
+**Build Configuration** (in `.csproj`):
+```xml
+<ItemGroup>
+  <None Update="appsettings.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+```
+
+This ensures the configuration file is copied to: `Tests/bin/Debug/net8.0/appsettings.json`
 
 ### Edit `appsettings.json`
 
@@ -395,6 +420,35 @@ Located at: `Tests/appsettings.json`
 ## 🔍 Debugging & Troubleshooting
 
 ### Common Issues
+
+#### ❌ **appsettings.json not found (during test execution)**
+
+**Error**: `System.IO.FileNotFoundException: The configuration file 'appsettings.json' was not found and is not optional.`
+
+**Solution**:
+```bash
+# 1. Clean the build artifacts
+dotnet clean
+
+# 2. Rebuild the project (this copies appsettings.json)
+dotnet build
+
+# 3. Run tests again
+dotnet test
+
+# Verify file exists at:
+# Tests/bin/Debug/net8.0/appsettings.json
+```
+
+**Why it happens**: The project file must have the copy instruction configured. If you cloned/created the project without this setup, add this to `.csproj`:
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+```
 
 #### ❌ **Tests timeout**
 
@@ -591,6 +645,8 @@ jobs:
         working-directory: ./Tests
         run: |
           dotnet restore
+          dotnet clean
+          dotnet build
           dotnet test --verbosity detailed
 ```
 
@@ -602,8 +658,8 @@ jobs:
 
 ```
 Test Run Successful.
-Total tests: 37
-  Passed: 37
+Total tests: 39
+  Passed: 39
   Failed: 0
   Skipped: 0
 
@@ -662,9 +718,12 @@ A: Update `"BaseUrl"` in appsettings.json.
 1. **Install .NET 8 SDK**
 2. **Navigate to Tests folder**: `cd Tests`
 3. **Restore packages**: `dotnet restore`
-4. **Start portfolio**: `npm run dev` (in another terminal)
-5. **Run tests**: `dotnet test`
-6. **View results** ✓
+4. **Clean and rebuild**: `dotnet clean && dotnet build` (ensures appsettings.json is copied)
+5. **Start portfolio**: `npm run dev` (in another terminal, from project root)
+6. **Run tests**: `dotnet test --verbosity detailed`
+7. **View results** ✓
+
+**Important**: Always run `dotnet clean && dotnet build` when you first set up the tests or after pulling changes. This ensures `appsettings.json` is properly copied to the output directory.
 
 ---
 

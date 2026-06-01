@@ -1,9 +1,11 @@
+using System;
+using System.Threading;
 using NUnit.Framework;
-using SilvanaPortfolioTests.Pages;
-using SilvanaPortfolioTests.Utilities;
+using SilvinaPortfolioTests.Pages;
+using SilvinaPortfolioTests.Utilities;
 using OpenQA.Selenium;
 
-namespace SilvanaPortfolioTests.TestCases;
+namespace SilvinaPortfolioTests.TestCases;
 
 [TestFixture]
 public class NavigationTests
@@ -17,7 +19,6 @@ public class NavigationTests
     {
         _driver = DriverManager.InitializeDriver(headless: TestConfig.IsHeadless());
         _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(TestConfig.GetImplicitWait());
-        _driver.Manage().Timeouts().PageLoadTimeout = TimeSpan.FromSeconds(TestConfig.GetPageLoadTimeout());
         
         _navBarPage = new NavBarPage(_driver);
         _introPage = new IntroPage(_driver);
@@ -33,21 +34,21 @@ public class NavigationTests
     public void TestNavBarIsDisplayedOnHomePage()
     {
         _navBarPage.NavigateTo("/");
-        Assert.IsTrue(_navBarPage.IsNavBarDisplayed(), "NavBar should be displayed");
+        Assert.That(_navBarPage.IsNavBarDisplayed(), Is.True, "NavBar should be displayed");
     }
 
     [Test]
     public void TestNavMenuIsDisplayedOnHomePage()
     {
         _navBarPage.NavigateTo("/");
-        Assert.IsTrue(_navBarPage.IsNavMenuDisplayed(), "Nav menu should be displayed");
+        Assert.That(_navBarPage.IsNavMenuDisplayed(), Is.True, "Nav menu should be displayed");
     }
 
     [Test]
     public void TestLogoIsClickable()
     {
         _navBarPage.NavigateTo("/");
-        Assert.IsTrue(_navBarPage.IsLogoClickable(), "Logo should be clickable");
+        Assert.That(_navBarPage.IsLogoClickable(), Is.True, "Logo should be clickable");
     }
 
     [Test]
@@ -56,7 +57,7 @@ public class NavigationTests
         _navBarPage.NavigateTo("/projects");
         _navBarPage.ClickLogo();
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/", _driver.Url, "Logo should navigate to home");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/"), "Logo should navigate to home");
     }
 
     [Test]
@@ -65,7 +66,7 @@ public class NavigationTests
         _navBarPage.NavigateTo("/");
         _navBarPage.ClickAboutLink();
         Thread.Sleep(1000);
-        Assert.IsTrue(_driver.Url.Contains("#about"), "Should navigate to About section");
+        Assert.That(_driver.Url, Does.Contain("#about"), "Should navigate to About section");
     }
 
     [Test]
@@ -74,7 +75,7 @@ public class NavigationTests
         _navBarPage.NavigateTo("/");
         _navBarPage.ClickProjectsLink();
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/projects", _driver.Url, "Should navigate to Projects page");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/projects"), "Should navigate to Projects page");
     }
 
     [Test]
@@ -83,7 +84,7 @@ public class NavigationTests
         _navBarPage.NavigateTo("/");
         _navBarPage.ClickContactLink();
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/contact", _driver.Url, "Should navigate to Contact");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/contact"), "Should navigate to Contact");
     }
 
     [Test]
@@ -92,7 +93,7 @@ public class NavigationTests
         _introPage.NavigateTo("/");
         _introPage.ClickViewProjectsButton();
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/projects", _driver.Url, "Should navigate to Projects");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/projects"), "Should navigate to Projects");
     }
 
     [Test]
@@ -101,6 +102,6 @@ public class NavigationTests
         _introPage.NavigateTo("/");
         _introPage.ClickContactCTAButton();
         Thread.Sleep(1000);
-        Assert.AreEqual("http://localhost:3000/contact", _driver.Url, "Should navigate to Contact");
+        Assert.That(_driver.Url, Is.EqualTo("http://localhost:3000/contact"), "Should navigate to Contact");
     }
 }

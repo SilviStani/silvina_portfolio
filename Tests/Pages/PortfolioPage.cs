@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SilvanaPortfolioTests.Pages;
+namespace SilvinaPortfolioTests.Pages;
 
 public class PortfolioPage : BasePage
 {

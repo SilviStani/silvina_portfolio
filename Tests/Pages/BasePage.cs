@@ -1,7 +1,9 @@
+using System;
+using System.Threading;
 using OpenQA.Selenium;
-using SilvanaPortfolioTests.Utilities;
+using SilvinaPortfolioTests.Utilities;
 
-namespace SilvanaPortfolioTests.Pages;
+namespace SilvinaPortfolioTests.Pages;
 
 public abstract class BasePage
 {
@@ -16,66 +18,66 @@ public abstract class BasePage
         BaseUrl = TestConfig.GetBaseUrl();
     }
 
-    protected IWebElement FindElement(By locator)
+    public IWebElement FindElement(By locator)
     {
         return Wait.WaitForElementVisible(locator);
     }
 
-    protected void Click(By locator)
+    public void Click(By locator)
     {
         var element = Wait.WaitForElementClickable(locator);
         element.Click();
     }
 
-    protected void SendKeys(By locator, string text)
+    public void SendKeys(By locator, string text)
     {
         var element = FindElement(locator);
         element.Clear();
         element.SendKeys(text);
     }
 
-    protected string GetText(By locator)
+    public string GetText(By locator)
     {
         return FindElement(locator).Text;
     }
 
-    protected string GetAttribute(By locator, string attributeName)
+    public string GetAttribute(By locator, string attributeName)
     {
         return FindElement(locator).GetAttribute(attributeName);
     }
 
-    protected bool IsElementDisplayed(By locator)
+    public bool IsElementDisplayed(By locator)
     {
         return Wait.IsElementDisplayed(locator);
     }
 
-    protected void NavigateTo(string path)
+    public void NavigateTo(string path)
     {
         Driver.Navigate().GoToUrl($"{BaseUrl}{path}");
     }
 
-    protected void WaitForUrl(string urlPortion)
+    public void WaitForUrl(string urlPortion)
     {
         Wait.WaitForUrlContains(urlPortion);
     }
 
-    protected void ScrollToElement(By locator)
+    public void ScrollToElement(By locator)
     {
         var element = FindElement(locator);
         Wait.ScrollToElement(element);
     }
 
-    protected void ScrollToTop()
+    public void ScrollToTop()
     {
         Wait.ScrollToTop();
     }
 
-    protected void ScrollToBottom()
+    public void ScrollToBottom()
     {
         Wait.ScrollToBottom();
     }
 
-    protected void SetWindowSize(int width, int height)
+    public void SetWindowSize(int width, int height)
     {
         DriverManager.SetWindowSize(width, height);
     }
