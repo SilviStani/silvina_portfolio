@@ -18,7 +18,7 @@ const Intro = () => {
             <Link href={"/projects"} className="solidBtn" data-testid="btn-view-projects">
               <p>View Projects</p>
             </Link>
-            <Link href={"/contact"} className="contact" data-testid="btn-contact-cta">
+            <Link href={"/contact"} className="contact" data-testid="btn-contact-cta" target='_blank' rel='noopener noreferrer'>
               <div>Let's work together →</div>
             </Link>
           </div>
