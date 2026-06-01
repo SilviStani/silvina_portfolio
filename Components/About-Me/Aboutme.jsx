@@ -6,10 +6,10 @@ import Drives_Me from "../My_Info/Drives_Me";
 
 const Aboutme = () => {
   return (
-    <div className="mainContainer">
-      <section className="AboutMe-Container">
+    <div className="mainContainer" data-testid="about-container">
+      <section className="AboutMe-Container" id="about" data-testid="about-section">
         <My_Info />
-        <div className="rightContainer">
+        <div className="rightContainer" data-testid="about-right-container">
           <TechTools />
           <Drives_Me />
         </div>

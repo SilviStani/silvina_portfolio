@@ -18,34 +18,35 @@ const QA_Second = () => {
     const nextSlideTwo = () => setCurrentTwo((currentTwo + 1) % imagesTwo.length);
     const prevSlideTwo = () => setCurrentTwo((currentTwo - 1 + imagesTwo.length) % imagesTwo.length);
     return (
-        <div className="Container">
-            <section id="qa-projects" className="id_projects">
-                <div className="content" >
+        <div className="Container" data-testid="qa-second-container">
+            <section id="qa-projects" className="id_projects" data-testid="qa-second-section">
+                <div className="content" data-testid="qa-second-content">
                     {/* Título */}
-                    <h2 className="title">
+                    <h2 className="title" data-testid="qa-second-title">
                         Steps and Best Practices
                     </h2>
                     {/* Grid de proyectos */}
-                    <div className="projects-grid">
+                    <div className="projects-grid" data-testid="qa-second-projects-grid">
                         {/* Proyecto 2 */}
-                        <div className="project-card">
-                            <div className="project-content">
-                                <h3 className="project-title">BEST PRACTICES</h3>
-                                <div className="carousel">
-                                    <button className="carousel-button" onClick={prevSlideTwo}>{"<"}</button>
+                        <div className="project-card" data-testid="qa-second-project-card">
+                            <div className="project-content" data-testid="qa-second-project-content">
+                                <h3 className="project-title" data-testid="qa-second-project-title">BEST PRACTICES</h3>
+                                <div className="carousel" data-testid="qa-second-carousel">
+                                    <button className="carousel-button" onClick={prevSlideTwo} data-testid="carousel-second-prev-btn">{"<"}</button>
                                     <img
                                         src={imagesTwo[currentTwo]}
                                         alt={`slide-${currentTwo}`}
                                         className="carousel-image"
                                         style={{ width: "500px", height: "auto" }}
                                         loading="eager"
+                                        data-testid={`carousel-second-image-${currentTwo}`}
                                     />
-                                    <button className="carousel-button" onClick={nextSlideTwo}>{">"}</button>
+                                    <button className="carousel-button" onClick={nextSlideTwo} data-testid="carousel-second-next-btn">{">"}</button>
                                 </div>
                             </div>
                         </div>
-                        <a href="/assets/E2E_Testing_Best_Practices.pptx" download className="download_button">
-                            <p><img src="/assets/download.png" alt="Download Icon" style={{ height: "20px" }}/> 'Steps & Best Practices: E2E Testing'</p>
+                        <a href="/assets/E2E_Testing_Best_Practices.pptx" download className="download_button" data-testid="download-best-practices-link">
+                            <p data-testid="download-best-practices-button"><img src="/assets/download.png" alt="Download Icon" style={{ height: "20px" }}/> 'Steps & Best Practices: E2E Testing'</p>
                         </a>
                     </div>
                 </div>
