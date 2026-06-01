@@ -1,7 +1,7 @@
-import React from "react";
-import "./Skills.scss";
-import Link from "next/link";
-import { social } from "./Social.js";
+import React from 'react';
+import './Skills.scss';
+import Link from 'next/link';
+import { social } from './Social.js';
 
 const Skills = () => {
   return (
@@ -9,11 +9,14 @@ const Skills = () => {
       <div className="connect" data-testid="skills-connect">
         <p data-testid="skills-connect-title">LET'S CONNECT</p>
         <p data-testid="skills-connect-subtitle">
-          Let's build something amazing <span data-testid="skills-connect-highlight">together</span> !
+          Let's build something amazing <span data-testid="skills-connect-highlight">together</span>{' '}
+          !
         </p>
       </div>
       <div className="sendButton" data-testid="skills-cta-section">
-        <p data-testid="skills-cta-text">I'm always open to new opportunities and interesting projects.</p>
+        <p data-testid="skills-cta-text">
+          I'm always open to new opportunities and interesting projects.
+        </p>
         <Link
           target="_blank"
           className="button"
@@ -26,19 +29,19 @@ const Skills = () => {
         </Link>
       </div>
       <div className="social" data-testid="social-links-container">
-        {
-          social.map((item) => (
-            <Link
-              key={item.title} href={item.url}
-              target="_blank"
-              className="LinkItems"
-              data-testid={`social-link-${item.title.toLowerCase()}`}
-              id={`social-${item.title.toLowerCase()}`}>
-              <img src={item.src} alt={item.title} className="img" />
-              {item.title}
-            </Link>
-          ))
-        }
+        {social.map((item) => (
+          <Link
+            key={item.title}
+            href={item.url}
+            target="_blank"
+            className="LinkItems"
+            data-testid={`social-link-${item.title.toLowerCase()}`}
+            id={`social-${item.title.toLowerCase()}`}
+          >
+            <img src={item.src} alt={item.title} className="img" />
+            {item.title}
+          </Link>
+        ))}
       </div>
       <div className="imagen" data-testid="skills-image"></div>
     </div>

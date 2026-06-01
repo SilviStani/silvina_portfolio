@@ -1,25 +1,24 @@
-"use client";
-import { useState, useMemo } from "react";
-import { data } from "./data.js";
-import "./Portfolio.scss";
+'use client';
+import { useState, useMemo } from 'react';
+import { data } from './data.js';
+import './Portfolio.scss';
 
-const CATEGORIES = ["All", "Frontend", "Full Stack", "QA Automation", "Vanilla JS"];
+const CATEGORIES = ['All', 'Frontend', 'Full Stack', 'QA Automation', 'Vanilla JS'];
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const filtered = useMemo(
-    () =>
-      activeCategory === "All"
-        ? data
-        : data.filter((p) => p.category === activeCategory),
+    () => (activeCategory === 'All' ? data : data.filter((p) => p.category === activeCategory)),
     [activeCategory]
   );
 
   return (
     <section className="projectsPage" data-testid="portfolio-section">
       <div className="projectsHeader" data-testid="portfolio-header">
-        <p className="projectsSubtitle" data-testid="portfolio-subtitle">MY WORK</p>
+        <p className="projectsSubtitle" data-testid="portfolio-subtitle">
+          MY WORK
+        </p>
         <h1 className="projectsTitle" data-testid="portfolio-title">
           Projects <span>&</span> Case Studies
         </h1>
@@ -32,7 +31,7 @@ const Portfolio = () => {
         {CATEGORIES.map((cat) => (
           <button
             key={cat}
-            className={`filterBtn ${activeCategory === cat ? "active" : ""}`}
+            className={`filterBtn ${activeCategory === cat ? 'active' : ''}`}
             onClick={() => setActiveCategory(cat)}
             data-testid={`filter-btn-${cat.toLowerCase().replace(/\s+/g, '-')}`}
             aria-pressed={activeCategory === cat}
@@ -44,9 +43,18 @@ const Portfolio = () => {
 
       <div className="projectsGrid" data-testid="projects-grid">
         {filtered.map((project) => (
-          <article key={project.id} className="projectCard" data-testid={`project-card-${project.id}`} id={`project-${project.id}`}>
+          <article
+            key={project.id}
+            className="projectCard"
+            data-testid={`project-card-${project.id}`}
+            id={`project-${project.id}`}
+          >
             <div className="cardImage" data-testid={`project-image-${project.id}`}>
-              <img src={project.image} alt={project.title} data-testid={`project-img-${project.id}`} />
+              <img
+                src={project.image}
+                alt={project.title}
+                data-testid={`project-img-${project.id}`}
+              />
               <div className="cardOverlay" data-testid={`project-overlay-${project.id}`}>
                 {project.srcGit && (
                   <a
@@ -76,10 +84,16 @@ const Portfolio = () => {
             </div>
             <div className="cardBody" data-testid={`project-body-${project.id}`}>
               <div className="cardMeta" data-testid={`project-meta-${project.id}`}>
-                <span className="cardCategory" data-testid={`project-category-${project.id}`}>{project.category}</span>
+                <span className="cardCategory" data-testid={`project-category-${project.id}`}>
+                  {project.category}
+                </span>
               </div>
-              <h2 className="cardTitle" data-testid={`project-title-${project.id}`}>{project.title}</h2>
-              <p className="cardDesc" data-testid={`project-desc-${project.id}`}>{project.desc}</p>
+              <h2 className="cardTitle" data-testid={`project-title-${project.id}`}>
+                {project.title}
+              </h2>
+              <p className="cardDesc" data-testid={`project-desc-${project.id}`}>
+                {project.desc}
+              </p>
               <div className="cardTags" data-testid={`project-tags-${project.id}`}>
                 {project.tags.map((tag) => (
                   <span key={tag} className="tag" data-testid={`project-tag-${project.id}-${tag}`}>

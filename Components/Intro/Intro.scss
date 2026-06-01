@@ -1,4 +1,4 @@
-@import "../../src/app/globals.scss";
+@import '../../src/app/globals.scss';
 
 .hero {
   height: 100vh;
@@ -12,7 +12,7 @@
     height: 90vh;
     margin: auto;
     display: flex;
-    background: url("/assets/fondo-pantalla.png");
+    background: url('/assets/fondo-pantalla.png');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -46,11 +46,7 @@
         padding: 8% 6%;
         justify-content: center;
         gap: 24px;
-        background: linear-gradient(
-          to bottom,
-          rgba(11, 15, 26, 0.88) 55%,
-          rgba(11, 15, 26, 0.45)
-        );
+        background: linear-gradient(to bottom, rgba(11, 15, 26, 0.88) 55%, rgba(11, 15, 26, 0.45));
       }
       @media (min-width: 427px) and (max-width: 769px) {
         width: 70%;
@@ -65,9 +61,15 @@
 
       .title {
         font-size: 8vh;
-        @media (max-width: 426px) { font-size: 7.5vw; }
-        @media (min-width: 427px) and (max-width: 769px) { font-size: 5vw; }
-        @media (min-width: 770px) and (max-width: 1025px) { font-size: 4.5vw; }
+        @media (max-width: 426px) {
+          font-size: 7.5vw;
+        }
+        @media (min-width: 427px) and (max-width: 769px) {
+          font-size: 5vw;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          font-size: 4.5vw;
+        }
         span {
           color: var(--fuxia);
         }
@@ -94,11 +96,13 @@
         display: flex;
         gap: 20px;
         justify-content: space-around;
-        text-align: center;        @media (max-width: 426px) {
+        text-align: center;
+        @media (max-width: 426px) {
           flex-direction: column;
           gap: 12px;
           align-items: stretch;
-        }        .solidBtn {
+        }
+        .solidBtn {
           width: 250px;
           padding: 15px 25px;
           background-color: var(--fuxia);

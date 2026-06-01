@@ -1,4 +1,4 @@
-@import "../../src/app/globals.scss";
+@import '../../src/app/globals.scss';
 
 .navbarContainer {
   height: 8vh;
@@ -26,14 +26,18 @@
     }
     @media (max-width: 426px) {
       font-size: 3.5vw;
-      p { font-size: 3.5vw; }
+      p {
+        font-size: 3.5vw;
+      }
     }
     @media (min-width: 770px) and (max-width: 1025px) {
       font-size: 2.2vw;
-      p { font-size: 2.2vw; }
+      p {
+        font-size: 2.2vw;
+      }
     }
   }
-  .List{
+  .List {
     @include grid(repeat(5, 1fr), 20px);
     list-style: none;
     flex: 4;
@@ -49,19 +53,23 @@
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      &::-webkit-scrollbar { display: none; }
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
-    .List_Item{
+    .List_Item {
       @include flex-center(row, 5px, center);
       @media (max-width: 426px) {
         flex-shrink: 0;
         padding: 0 10px;
       }
       &.hide-mobile {
-        @media (max-width: 426px) { display: none; }
+        @media (max-width: 426px) {
+          display: none;
+        }
       }
-      
+
       // Hide QA Automation and Skills on mobile
       &:nth-child(3),
       &:nth-child(4) {
@@ -69,14 +77,20 @@
           display: none;
         }
       }
-      
+
       a {
         color: var(--texto_ppal);
         text-decoration: none;
         font-size: 15px;
-        @media (min-width: 427px) and (max-width: 769px) { font-size: 13px; }
-        @media (min-width: 770px) and (max-width: 1025px) { font-size: 14px; }
-        @media (max-width: 426px) { font-size: 12px; }
+        @media (min-width: 427px) and (max-width: 769px) {
+          font-size: 13px;
+        }
+        @media (min-width: 770px) and (max-width: 1025px) {
+          font-size: 14px;
+        }
+        @media (max-width: 426px) {
+          font-size: 12px;
+        }
         &:hover {
           color: var(--fuxia);
         }

@@ -1,10 +1,10 @@
-"use client";
-import "./Contact.scss";
-import React, { useRef, useState, useEffect, use } from "react";
-import emailjs from "@emailjs/browser";
-import { dataEn } from "./data";
-import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+'use client';
+import './Contact.scss';
+import React, { useRef, useState, useEffect, use } from 'react';
+import emailjs from '@emailjs/browser';
+import { dataEn } from './data';
+import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const variants = {
   initial: {
@@ -77,28 +77,40 @@ const ContactEn = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>
-          Let's Work{" "}
-          <motion.span whileHover={{ color: "orange", cursor: "arrow" }}>
-            {" "}
-            Together
-          </motion.span>
+          Let's Work{' '}
+          <motion.span whileHover={{ color: 'orange', cursor: 'arrow' }}> Together</motion.span>
         </motion.h1>
         {dataEn.map((e, i) => (
           <motion.div className="item" variants={variants} key={i}>
-            <motion.h2 whileHover={{ color: "orange" }}>{e.title}</motion.h2>
-            <motion.span whileHover={{ color: "orange" }}>{e.text}</motion.span>
+            <motion.h2 whileHover={{ color: 'orange' }}>{e.title}</motion.h2>
+            <motion.span whileHover={{ color: 'orange' }}>{e.text}</motion.span>
           </motion.div>
         ))}
       </motion.div>
       <div className="formContainer">
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" required placeholder="Name" name="user_name" />
-          <input whileHover={{ backgroundColor: "white", color: "black" }} type="email" required placeholder="E-Mail" name="user_email" />
-          <input whileHover={{ backgroundColor: "white", color: "black" }} type="title" required placeholder="Title" name="input_title" />
-          <textarea whileHover={{ backgroundColor: "white", color: "black" }} rows={10} placeholder="Message" name="user_message" />
-          <button >
-            Send
-          </button>
+          <input
+            whileHover={{ backgroundColor: 'white', color: 'black' }}
+            type="email"
+            required
+            placeholder="E-Mail"
+            name="user_email"
+          />
+          <input
+            whileHover={{ backgroundColor: 'white', color: 'black' }}
+            type="title"
+            required
+            placeholder="Title"
+            name="input_title"
+          />
+          <textarea
+            whileHover={{ backgroundColor: 'white', color: 'black' }}
+            rows={10}
+            placeholder="Message"
+            name="user_message"
+          />
+          <button>Send</button>
           {loading && <div className="loader">Sending...</div>}
           {error && <div className="error">Error</div>}
           {success && <div className="loader">Success</div>}

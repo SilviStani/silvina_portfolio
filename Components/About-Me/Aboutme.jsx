@@ -1,8 +1,8 @@
-import React from "react";
-import "./Aboutme.scss";
-import My_Info from "../My_Info/My_Info.jsx";
-import TechTools from "../TechTools/TechTools.jsx";
-import Drives_Me from "../My_Info/Drives_Me";
+import React from 'react';
+import './Aboutme.scss';
+import My_Info from '../My_Info/My_Info.jsx';
+import TechTools from '../TechTools/TechTools.jsx';
+import Drives_Me from '../My_Info/Drives_Me';
 
 const Aboutme = () => {
   return (
