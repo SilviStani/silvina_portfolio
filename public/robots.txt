@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://silvina-portfolio.vercel.app/sitemap.xml
+
+# Crawl delay (optional - no delay)
+# Crawl-delay: 0
+
+# Block specific crawlers if needed
+# User-agent: AhrefsBot
+# Disallow: /
