@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react';
 import { data } from './data.js';
 import './Portfolio.scss';
 
-const CATEGORIES = ['All', 'Frontend', 'Full Stack', 'QA Automation', 'Vanilla JS'];
+const CATEGORIES = ['All', 'Frontend', 'Full Stack', 'QA Automation', 'Prompt Engineering', 'Vanilla JS'];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('All');

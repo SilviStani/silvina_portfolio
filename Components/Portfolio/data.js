@@ -31,6 +31,17 @@ export const data = [
     srcWeb: '',
     image: '/assets/pom-selenium.png',
   },
+  // ── Prompt Engineering ───────────────────────────────────
+  {
+    id: 'ai-test-case-generator',
+    title: 'AI Test Case Generator',
+    category: 'Prompt Engineering',
+    desc: 'Intelligent test automation assistant. Generates structured test cases from requirements in seconds with requirement analysis, test scenario generation, faster test design, consistent coverage, and AI-powered workflow.',
+    tags: ['AI', 'Prompt Engineering', 'QA'],
+    srcGit: '/private-repo',
+    srcWeb: 'https://gen-ai-test-case.vercel.app/',
+    image: '/assets/ai-test-case-generator.png',
+  },
   // ── Frontend ─────────────────────────────────────────────
   {
     id: 'portfolio',
