@@ -25,12 +25,6 @@
     "prettier": "^3.8.3"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "next lint",
-      "prettier --write"
-    ],
-    "*.{scss,css}": "prettier --write",
-    "*.json": "prettier --write",
-    "*.md": "prettier --write"
+    "*.{js,jsx,scss,css,json,md}": "prettier --write"
   }
 }

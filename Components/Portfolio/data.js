@@ -31,6 +31,16 @@ export const data = [
     srcWeb: '',
     image: '/assets/pom-selenium.png',
   },
+  {
+    id: 'sauce_demo_playwright',
+    title: 'Playwright Sauce Demo Training',
+    category: 'QA Automation',
+    desc: 'Complete Playwright test suite for SauceDemo: 26 tests in 6 areas (Login, Inventory, Cart, Checkout, Logout, E2E) con Page Object Model y TypeScript',
+    tags: ['Playwright', 'TypeScript', 'Testing', 'MCP', 'Claude Agent'],
+    srcGit: 'https://github.com/SilviStani/Playwright_SauceDemo',
+    srcWeb: '',
+    image: '/assets/sauce-demo-playwright.png',
+  },
   // ── Prompt Engineering ───────────────────────────────────
   {
     id: 'ai-test-case-generator',
