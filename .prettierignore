@@ -6,3 +6,6 @@ build
 *.lock
 package-lock.json
 yarn.lock
+test-results
+playwright-report
+next-env.d.ts

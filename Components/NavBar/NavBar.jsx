@@ -12,34 +12,34 @@ const NavBar = () => {
       </Link>
       <ul className="List" data-testid="nav-menu">
         <li className="List_Item" data-testid="nav-item-about">
-          <a href="/#about" data-testid="nav-link-about">
+          <Link href="/#about" data-testid="nav-link-about">
             About
-          </a>
+          </Link>
         </li>
         <li className="List_Item" data-testid="nav-item-projects">
-          <a href="/projects" data-testid="nav-link-projects">
+          <Link href="/projects" data-testid="nav-link-projects">
             Projects
-          </a>
+          </Link>
         </li>
         <li className="List_Item" data-testid="nav-item-qa">
-          <a href="/projects" data-testid="nav-link-qa">
+          <Link href="/projects" data-testid="nav-link-qa">
             QA Automation
-          </a>
+          </Link>
         </li>
         <li className="List_Item" data-testid="nav-item-skills">
-          <a href="/#skills" data-testid="nav-link-skills">
+          <Link href="/#skills" data-testid="nav-link-skills">
             Skills
-          </a>
+          </Link>
         </li>
         <li className="List_Item" data-testid="nav-item-contact">
-          <a
+          <Link
             href="/contact"
             data-testid="nav-link-contact"
             target="_blank"
             rel="noopener noreferrer"
           >
             Let's Talk
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

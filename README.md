@@ -1,6 +1,8 @@
 # 🚀 Silvina Portfolio
 
-A modern, responsive portfolio website showcasing web development projects and skills. Built with Next.js 16, React 19, and SCSS.
+A bilingual portfolio for QA engineering and web development, built with Next.js 16, React 19, and TypeScript.
+
+**Current redesign documentation:** See [REDESIGN.md](./REDESIGN.md) for the active architecture, EN/ES routes, content sources, and validation commands. The component and SCSS details below document the retained original implementation.
 
 **Live Site**: https://silvina-portfolio.vercel.app
 

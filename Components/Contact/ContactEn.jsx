@@ -1,10 +1,9 @@
 'use client';
 import './Contact.scss';
-import React, { useRef, useState, useEffect, use } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { dataEn } from './data';
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 
 const variants = {
   initial: {
@@ -22,7 +21,6 @@ const variants = {
 };
 
 const ContactEn = () => {
-  const pathname = usePathname();
   const form = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
