@@ -423,7 +423,7 @@ svg {
   background: white;
 }
 .laptop-image img {
-  object-fit: cover;
+  object-fit: contain;
 }
 .laptop-base {
   position: relative;
@@ -457,8 +457,8 @@ svg {
   box-shadow: 7px 15px 25px #45136d20;
 }
 .phone img {
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: center;
 }
 .phone-camera {
   width: 35%;

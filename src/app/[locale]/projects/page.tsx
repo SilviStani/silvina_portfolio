@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import { dictionaries, isLocale } from '@/lib/i18n';
 import { pageMetadata } from '@/lib/metadata';
 import { ProjectGallery } from '@/components/project-gallery';
-import { projects } from '@/lib/projects';
+import { archiveProjects } from '@/lib/projects';
 import { Arrow } from '@/components/icons';
+import './showcase.css';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
@@ -25,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </h1>
         <p>{t.archiveIntro}</p>
       </header>
-      <ProjectGallery locale={locale} projects={projects} />
+      <ProjectGallery locale={locale} projects={archiveProjects} showcase />
       <section className="resources" aria-labelledby="resources-title">
         <div>
           <h2 id="resources-title">{t.resources}</h2>

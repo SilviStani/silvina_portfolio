@@ -5,12 +5,18 @@ export type ProjectCategory = 'qa' | 'development';
 export interface Project {
   id: string;
   title: string;
+  englishTitle?: string;
   category: ProjectCategory;
   description: Record<Locale, string>;
   tags: string[];
   image: string | null;
+  imageAlt?: string;
+  mobileImage?: string;
+  mobileImageAlt?: string;
+  quality?: Record<Locale, string>;
   code: string;
   live: string;
+  demoPreviews?: { label: Record<Locale, string>; href: string; screenshot: string }[];
 }
 
 const descriptions: Record<string, Record<Locale, string>> = {
@@ -100,9 +106,53 @@ export const projects: Project[] = data.map((project) => ({
   description: descriptions[project.id],
   tags: project.tags,
   image: project.id === 'mi-terra' ? null : project.image,
+  mobileImage: project.id === 'walter' ? '/assets/walter-mobile.png' : undefined,
+  quality:
+    project.id === 'portfolio'
+      ? {
+          en: 'Playwright tests cover localized navigation, project filters, and accessibility.',
+          es: 'Las pruebas con Playwright cubren la navegación bilingüe, los filtros y la accesibilidad.',
+        }
+      : undefined,
   code: project.srcGit,
   live: project.srcWeb,
 }));
+export const archiveProjects: Project[] = [
+  {
+    id: 'invitaciones-virtuales',
+    title: 'Invitaciones virtuales',
+    englishTitle: 'Virtual Invitations',
+    category: 'development',
+    description: {
+      en: 'Responsive invitations for weddings and celebrations, with RSVP, maps, and photo galleries.',
+      es: 'Invitaciones adaptables para bodas y celebraciones, con confirmación de asistencia, mapas y galerías de fotos.',
+    },
+    tags: ['Next.js', 'TypeScript', 'Responsive'],
+    image: '/assets/yuliana-sebastian-desktop.jpg',
+    imageAlt: 'Yuliana y Sebasti?n',
+    mobileImage: '/assets/ludmi-egresados-mobile.jpg',
+    mobileImageAlt: 'Ludmi ? Evento Egresados',
+    quality: {
+      en: 'Automated tests cover RSVP validation and duplicate submissions in Ludmi, and photo uploads in the wedding invitation.',
+      es: 'Pruebas automatizadas de confirmación de asistencia y envíos duplicados en Ludmi, y de carga de fotos en la invitación de boda.',
+    },
+    code: '',
+    live: '',
+    demoPreviews: [
+      {
+        label: { en: 'View Demo 1', es: 'Ver demo 1' },
+        href: 'https://invitation-demo-one.vercel.app/',
+        screenshot: '/images/projects/invitation-demo-1.webp',
+      },
+      {
+        label: { en: 'View Demo 2', es: 'Ver demo 2' },
+        href: 'https://invitation-demo-one.vercel.app/demo2/',
+        screenshot: '/images/projects/invitation-demo-2.webp',
+      },
+    ],
+  },
+  ...projects,
+];
 export const featuredProjects = ['henryapp', 'pom-selenium', 'walter'].map(
   (id) => projects.find((project) => project.id === id)!
 );

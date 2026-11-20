@@ -192,7 +192,7 @@ export function Home({ locale }: { locale: Locale }) {
               <ServiceIcon kind="qa" />
               <h3>{t.contact.qaTitle}</h3>
               <p>{t.contact.qaText}</p>
-              <a className="button primary" href={qaHref}>
+              <a className="button primary" href={qaHref} target="_blank" rel="noopener noreferrer">
                 {t.contact.qaCta}
                 <Arrow diagonal />
               </a>
@@ -214,7 +214,7 @@ export function Home({ locale }: { locale: Locale }) {
           </div>
           <p className="direct-email">
             {t.contact.email}{' '}
-            <a href={`mailto:${contact.email}`}>
+            <a href={`mailto:${contact.email}`} target="_blank" rel="noopener noreferrer">
               {contact.email}
               <Arrow diagonal />
             </a>

@@ -77,21 +77,56 @@ for (const locale of ['en', 'es']) {
     );
     await page.locator('.all-projects a').click();
     await expect(page).toHaveURL(new RegExp(`/${locale}/projects$`));
-    await expect(page.locator('.project-card')).toHaveCount(17);
+    await expect(page.locator('.project-card')).toHaveCount(18);
+    const invitations = page.getByTestId('project-invitaciones-virtuales');
+    await expect(invitations.getByRole('heading', { level: 3 })).toHaveText(
+      locale === 'es' ? 'Invitaciones virtuales' : 'Virtual Invitations'
+    );
+    await expect(invitations.locator('.showcase-laptop img')).toHaveAttribute(
+      'alt',
+      'Yuliana y Sebasti?n'
+    );
+    await expect(invitations.locator('.showcase-phone img')).toHaveAttribute(
+      'alt',
+      'Ludmi ? Evento Egresados'
+    );
+    await expect(invitations.locator('.showcase-quality h4')).toHaveText(
+      locale === 'es' ? 'Calidad y pruebas' : 'Quality & Testing'
+    );
+    await expect(invitations.locator('.project-links')).toHaveCount(0);
+    const previews = invitations.getByRole('region', {
+      name: locale === 'es' ? 'Explorá las demos' : 'Explore the demos',
+    });
+    await expect(invitations.locator('.project-body + section')).toHaveCount(1);
+    for (const number of [1, 2]) {
+      const preview = previews.getByRole('link', {
+        name: locale === 'es' ? `Ver demo ${number}` : `View Demo ${number}`,
+      });
+      await expect(preview).toHaveAttribute(
+        'href',
+        `https://invitation-demo-one.vercel.app/${number === 2 ? 'demo2/' : ''}`
+      );
+      await expect(preview).toHaveAttribute('target', '_blank');
+      await expect(preview.locator('img')).toHaveAttribute(
+        'src',
+        `/images/projects/invitation-demo-${number}.webp`
+      );
+    }
     await page.getByTestId('filter-qa').click();
     await expect(page.locator('.project-card')).toHaveCount(3);
     await page.getByTestId('filter-development').click();
-    await expect(page.locator('.project-card')).toHaveCount(14);
+    await expect(page.locator('.project-card')).toHaveCount(15);
     await page.getByTestId('filter-all').click();
     const privateLink = page
       .getByTestId('project-ai-test-case-generator')
       .locator('a[href$="private-repo"]');
-    await privateLink.click();
-    await expect(page).toHaveURL(new RegExp(`/${locale}/private-repo$`));
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText(
+    const [privateTab] = await Promise.all([page.waitForEvent('popup'), privateLink.click()]);
+    await expect(privateTab).toHaveURL(new RegExp(`/${locale}/private-repo$`));
+    await expect(privateTab.getByRole('heading', { level: 1 })).toHaveText(
       locale === 'es' ? 'Este repositorio es privado.' : 'This repository is private.'
     );
-    await page.goto(`/${locale}/projects`);
+    await privateTab.close();
+    await expect(page).toHaveURL(new RegExp(`/${locale}/projects$`));
     await page
       .getByRole('link', { name: locale === 'es' ? 'English' : 'Español', exact: true })
       .click();

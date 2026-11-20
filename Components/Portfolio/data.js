@@ -90,7 +90,7 @@ export const data = [
     desc: 'Limpieza de Tapizados en Corrientes y Chaco, Argentina.',
     tags: ['Next.js', 'JavaScript', 'CSS'],
     srcGit: 'https://github.com/SilviStani/walter-limpieza-tapizados-migration',
-    srcWeb: 'https://limpieza-tapizados-walter.vercel.app',
+    srcWeb: 'https://walter-limpieza-tapizados.digital/',
     image: '/assets/Walter-tapizados.png',
   },
   {
